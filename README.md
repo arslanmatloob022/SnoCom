@@ -1,0 +1,2 @@
+# SnoCom
+eCommerce website frontend
