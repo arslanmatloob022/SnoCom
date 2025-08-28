@@ -1,8 +1,8 @@
 <template>
-  <div class="search-wrapper">
+  <div class="search-wrapper" style="border-radius: 30px;">
     <div class="search-selector" @click="toggleSelector">
       <span class="p3">{{ selectedCategory }}</span>
-      <span>▼</span>
+      <span><i class="fa-solid fa-angle-down"></i></span>
     </div>
     <input 
       v-model="searchQuery" 
@@ -11,9 +11,12 @@
       placeholder="Search for stores and products"
       @keyup.enter="handleSearch"
     >
-    <button @click="handleSearch" class="search-btn">
-      🔍
-    </button>
+   <button 
+  @click="handleSearch" 
+  class="bg-red-500 text-white px-8 py-0 rounded-full"
+>
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
   </div>
 </template>
 
