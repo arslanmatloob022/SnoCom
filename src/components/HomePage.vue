@@ -7,7 +7,7 @@
       <div class="breadcrumbs">
         <a href="#" class="breadcrumb-link">Home Page</a>
         <span>›</span>
-        <span>Restaurants</span>
+        <span>Main</span>
       </div>
 
       <!-- Page Title -->
@@ -34,6 +34,9 @@
         :filters="activeFilters"
         @product-click="handleProductClick"
       />
+
+      <!-- Main Section with For You / Popular Toggle -->
+      <MainSection />
     </main>
 
     <Footer />
@@ -45,6 +48,7 @@ import Header from "./Header.vue";
 import MasterBanner from "./MasterBanner.vue";
 import CategoryCarousel from "./CategoryCarousel.vue";
 import FilterBar from "./FilterBar.vue";
+import MainSection from "./MainSection.vue";
 import ProductGrid from "./ProductGrid.vue";
 import Footer from "./Footer.vue";
 
@@ -55,6 +59,7 @@ export default {
     MasterBanner,
     CategoryCarousel,
     FilterBar,
+    MainSection,
     ProductGrid,
     Footer,
   },
