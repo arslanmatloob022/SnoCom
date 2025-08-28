@@ -16,7 +16,7 @@
       <h1 class="h1">Restaurants & Cafes</h1>
       <p class="p2 mb-24">Snoonu has what you are looking for in the online food delivery. Everyone's favorite restaurants</p>
 
-      <Categorymain/>
+      <MasterBanner/>
 
       <!-- Category Carousel -->
       <CategoryCarousel @select="handleCategorySelect" />
@@ -25,12 +25,19 @@
       <!-- Filters -->
       <FilterBar @filter-change="handleFilterChange" />
 
+
+      <!-- offer product grid -->
+       <OfferProductbanner/>
+
       <!-- Product Grid -->
       <ProductGrid
         :products="allProducts"
         :filters="activeFilters"
         @product-click="handleProductClick"
       />
+
+      <Brandlogos />
+
     </main>
 
     <Footer />
@@ -44,6 +51,9 @@ import CategoryCarousel from "./CategoryCarousel.vue";
 import FilterBar from "./FilterBar.vue";
 import ProductGrid from "./ProductGrid.vue";
 import Footer from "./Footer.vue";
+import OfferProductbanner from "./OfferProductbanner.vue";
+import Brandlogos from "./Brandlogos.vue";
+
 
 export default {
   name: "HomePage",
@@ -51,8 +61,10 @@ export default {
     Header,
     MasterBanner,
     CategoryCarousel,
+    OfferProductbanner,
     FilterBar,
     ProductGrid,
+    Brandlogos,
     Footer,
   },
   data() {
@@ -143,6 +155,7 @@ export default {
           minPrice: 15,
           takeaway: true,
         },
+        
       ],
       allProducts: [],
     };
