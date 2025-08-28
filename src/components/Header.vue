@@ -1,6 +1,32 @@
 <template>
   <header class="header">
-    <!-- Subheader -->
+   
+
+    <!-- Main Header -->
+    <div class="container">
+      <div class="header-nav">
+
+        <div class="flex gap-16 ">
+          <img src="https://snoonu.com/_next/static/media/logo.6da502f3.svg" alt="Snoonu" class="logo">
+          <button @click="toggleCatalog" class="btn btn-secondary btn-small">
+            <span><i class="fa-solid fa-bars"></i></span>
+            Catalog
+          </button>
+        </div>
+
+        <SearchBar />
+
+        <div class="flex gap-16">
+          <button class="btn btn-secondary btn-small">Login</button>
+          <button class="btn btn-primary btn-small">
+            🛒 2,597 QR
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- Subheader -->
     <div class="subheader">
       <div class="container">
         <div class="subheader-content">
@@ -19,29 +45,7 @@
           </nav>
         </div>
       </div>
-    </div>
-
-    <!-- Main Header -->
-    <div class="container">
-      <div class="header-nav">
-        <div class="flex gap-16">
-          <img src="https://snoonu.com/_next/static/media/logo.6da502f3.svg" alt="Snoonu" class="logo">
-          <button @click="toggleCatalog" class="btn btn-secondary btn-small">
-            <span>☰</span>
-            Catalog
-          </button>
-        </div>
-
-        <SearchBar />
-
-        <div class="flex gap-16">
-          <button class="btn btn-secondary btn-small">Login</button>
-          <button class="btn btn-primary btn-small">
-            🛒 2,597 QR
-          </button>
-        </div>
-      </div>
-    </div>
+    </div>  
 
     <!-- Catalog Menu -->
     <div :class="['catalog-overlay', { active: showCatalog }]" @click="closeCatalog"></div>

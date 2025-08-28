@@ -2,6 +2,8 @@
   <div class="home-page">
     <Header />
 
+    
+    
     <main class="container">
       <!-- Breadcrumbs -->
       <div class="breadcrumbs">
@@ -11,19 +13,14 @@
       </div>
 
       <!-- Page Title -->
-      <!-- <h1 class="h1">Restaurants & Cafes</h1>
-      <p class="p2 mb-24">
-        Snoonu has what you are looking for in the online food delivery.
-        Everyone's favorite restaurants
-      </p> -->
+      <h1 class="h1">Restaurants & Cafes</h1>
+      <p class="p2 mb-24">Snoonu has what you are looking for in the online food delivery. Everyone's favorite restaurants</p>
 
-      <!-- Master Banner -->
-      <div>
-        <MasterBanner @category-click="handleCategoryClick" />
-      </div>
+      <Categorymain/>
 
       <!-- Category Carousel -->
       <CategoryCarousel @select="handleCategorySelect" />
+
 
       <!-- Filters -->
       <FilterBar @filter-change="handleFilterChange" />
