@@ -1,52 +1,75 @@
 <template>
-  <div style="display: flex; gap: 20px; height: 300px;">
-    <!-- Left Side - Product Categories -->
-    <div class="categories-grid" style="width: 40%;  ">
-      <div
-        v-for="category in categories"
-        :key="category.id"
-        style=" display: flex; background-color: #ebebeb; width: 132px; height: 149px; flex-direction: column; align-items: center; justify-content: center; padding: 8px;
-         border-radius: 22px; cursor: pointer; text-align: center;"
-        @click="$emit('category-click', category)"
-      >
-        <div class="category-icon">
-          <img :src="category.image" :alt="category.name" />
-        </div>
-        <div class="category-text">
-          <h4>{{ category.name }}</h4>
+  <div class="flex flex-col md:flex-row gap-5">
+    <!-- Middle - Main Carousel -->
+    <div
+      class="order-1 md:order-2 w-full md:w-[35%] relative rounded-2xl overflow-hidden bg-gradient-to-r from-indigo-500 to-purple-600 h-[200px] md:h-[360px]"
+    >
+      <div class="relative w-full h-full">
+        <div
+          v-for="(slide, index) in slides"
+          :key="index"
+          class="absolute top-0 left-0 w-full h-full transition-transform duration-700"
+          :style="{ transform: `translateY(-${currentSlide * 100}%)` }"
+        >
+          <img
+            :src="slide.image"
+            :alt="slide.title"
+            class="w-full h-full object-cover"
+          />
         </div>
       </div>
     </div>
 
-
-    
-    <!-- Middle - Main Carousel -->
-    <div class="main-carousel" style=" width: 35%; height: 300px;">
-      <div class="carousel-container" style=" height: 300px;">
+    <!-- Left Side - Product Categories -->
+    <div
+      class="order-2 md:order-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 bg-gray-50 rounded-2xl p-4 w-full md:w-[40%] h-auto md:h-[360px]"
+    >
+      <div
+        v-for="category in categories"
+        :key="category.id"
+        class="flex flex-col items-center justify-start p-3 bg-white rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition cursor-pointer"
+        @click="$emit('category-click', category)"
+      >
+        <!-- Image Box -->
         <div
-          class="carousel-slide"
-          v-for="(slide, index) in slides"
-          :key="index"
-          :class="{ active: currentSlide === index }"
-          :style="{ transform: `translateY(-${currentSlide * 100}%)` }"
+          class="w-20 h-20 flex items-center justify-center mb-3 overflow-hidden rounded-xl bg-gray-100"
         >
-          <img :src="slide.image" :alt="slide.title" />
+          <img
+            :src="category.image"
+            :alt="category.name"
+            class="w-full h-full object-cover"
+          />
         </div>
+
+        <!-- Title -->
+        <h4
+          class="text-sm font-medium text-gray-800 text-center truncate w-full"
+        >
+          {{ category.name }}
+        </h4>
       </div>
     </div>
 
     <!-- Right Side - Promotional Banners -->
-    <div class="promo-banners" style="height: 300px; width: 25%;" >
-      <div class="promo-card promo-top">
+    <div
+      class="hidden md:flex order-3 flex-col gap-4 h-[350px] w-[25%] promo-banners"
+    >
+      <div
+        class="flex-1 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition"
+      >
         <img
           src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?w=400&h=200"
           alt="Back to School"
+          class="w-full h-full object-cover"
         />
       </div>
-      <div class="promo-card promo-bottom">
+      <div
+        class="flex-1 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition"
+      >
         <img
           src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=200"
           alt="Happy Dogs Today"
+          class="w-full h-full object-cover"
         />
       </div>
     </div>
@@ -153,161 +176,3 @@ export default {
   emits: ["category-click"],
 };
 </script>
-
-<style scoped>
-.master-banner {
-  display: grid;
-  grid-template-columns: 780px 1fr 400px;
-  gap: 16px;
-  margin: 32px 0;
-  height: 360px;
-}
-
-.categories-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr, 1fr);
-  gap: 14px;
-  background: #f8f9fa;
-  /* padding: 20px; */
-  border-radius: 16px;
-}
-
-.category-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  background: rgb(228, 227, 227);
-  border-radius: 22px;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.category-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.category-icon {
-  width: 90px;
-  height: 90px;
-  margin-bottom: 6px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.category-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.category-text h4 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #333;
-  line-height: 1.1;
-  margin: 0;
-}
-
-.main-carousel {
-  position: relative;
-  border-radius: 20px;
-  height: 360px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.carousel-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s ease-in-out;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.promo-banners {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  height: 360px;
-}
-
-.promo-card {
-  flex: 1;
-  height: 140px;
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.2s;
-  position: relative;
-}
-
-.promo-card:hover {
-  transform: scale(1.02);
-}
-
-.promo-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.promo-top {
-  background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
-}
-
-.promo-bottom {
-  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
-}
-
-@media (max-width: 1024px) {
-  .master-banner {
-    grid-template-columns: 240px 1fr 240px;
-    gap: 12px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  .master-banner {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    height: auto;
-    gap: 16px;
-  }
-
-  .main-carousel {
-    height: 180px;
-  }
-
-  .promo-banners {
-    flex-direction: row;
-    height: 120px;
-  }
-
-  .categories-grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    height: auto;
-  }
-}
-</style>
