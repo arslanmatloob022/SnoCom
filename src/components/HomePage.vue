@@ -9,7 +9,7 @@
       <div class="breadcrumbs">
         <a href="#" class="breadcrumb-link">Home Page</a>
         <span>›</span>
-        <span>Restaurants</span>
+        <span>Main</span>
       </div>
 
       <!-- Page Title -->
@@ -36,7 +36,12 @@
         @product-click="handleProductClick"
       />
 
+
       <Brandlogos />
+
+
+      <!-- Main Section with For You / Popular Toggle -->
+      <MainSection />
 
     </main>
 
@@ -49,6 +54,7 @@ import Header from "./Header.vue";
 import MasterBanner from "./MasterBanner.vue";
 import CategoryCarousel from "./CategoryCarousel.vue";
 import FilterBar from "./FilterBar.vue";
+import MainSection from "./MainSection.vue";
 import ProductGrid from "./ProductGrid.vue";
 import Footer from "./Footer.vue";
 import OfferProductbanner from "./OfferProductbanner.vue";
@@ -63,6 +69,7 @@ export default {
     CategoryCarousel,
     OfferProductbanner,
     FilterBar,
+    MainSection,
     ProductGrid,
     Brandlogos,
     Footer,
