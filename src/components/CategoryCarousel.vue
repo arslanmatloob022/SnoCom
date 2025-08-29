@@ -1,6 +1,6 @@
 <template>
-  <div class="category-carousel">
-    <div class="category-track" ref="track">
+  <div class="category-carousel" style=" text-align: center; margin: 80px 10px;">
+    <div style="text-align: center; display: flex; gap: 40px;" ref="track">
       <div 
         v-for="category in categories" 
         :key="category.id" 

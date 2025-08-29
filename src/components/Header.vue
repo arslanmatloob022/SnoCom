@@ -1,47 +1,63 @@
 <template>
   <header class="header">
-    <!-- Subheader -->
-    <div class="subheader">
-      <div class="container">
-        <div class="subheader-content">
-          <div class="flex gap-16">
-            <div class="p3">عربى</div>
-            <div class="flex gap-8">
-              <span>📍</span>
-              <span class="p3">Doha, Qatar</span>
-            </div>
-          </div>
-          <nav class="subheader-links">
-            <a href="#" class="subheader-link">Market</a>
-            <a href="#" class="subheader-link active">Restaurants</a>
-            <a href="#" class="subheader-link">Grocery</a>
-            <a href="#" class="subheader-link">S City</a>
-          </nav>
-        </div>
-      </div>
-    </div>
+   
 
     <!-- Main Header -->
-    <div class="container">
-      <div class="header-nav">
-        <div class="flex gap-16">
-          <img src="https://snoonu.com/_next/static/media/logo.6da502f3.svg" alt="Snoonu" class="logo">
-          <button @click="toggleCatalog" class="btn btn-secondary btn-small">
-            <span>☰</span>
-            Catalog
-          </button>
-        </div>
+   <div class="w-full pt-2 px-3 ">
+  <div class="grid grid-cols-12 items-center px-4">
+    <!-- Left (10%) -->
+    <div class="col-span-1 flex items-center">
+      <img
+        src="https://snoonu.com/_next/static/media/logo.6da502f3.svg"
+        alt="Snoonu"
+        class="logo"
+      />
+    </div>
 
-        <SearchBar />
+    <!-- Center (80%) -->
+    <div class="col-span-10 flex items-center justify-center gap-4">
+      <button @click="toggleCatalog" class="btn btn-secondary btn-small " style="border-radius: 30px;">
+        <span style="color: black; "><i class="fa-solid fa-bars"></i></span>
+        <span style="font-weight: 800; font-size: 17px;">Catalog</span>
+      </button>
+      <SearchBar />
+    </div>
 
-        <div class="flex gap-16">
-          <button class="btn btn-secondary btn-small">Login</button>
-          <button class="btn btn-primary btn-small">
-            🛒 2,597 QR
-          </button>
+    <!-- Right (10%) -->
+    <div >
+      <button class="btn btn-secondary btn-small" style="border-radius: 20px; font-weight: 800; color: black;">Login</button>
+     
+    </div>
+  </div>
+</div>
+
+
+
+     <!-- Subheader -->
+    <div class="subheader">
+      <div style="width: 100%;  padding: 8px 16px; ">
+        <div class="subheader-content " style=" padding: 0 30px; ">
+
+          <div class="flex gap-16">
+            <div class="p2" >عربى</div>
+            <div class="flex gap-8">
+              <span><i class="fa-solid fa-location-dot"></i></span>
+              <span class="p2">Doha, Qatar</span>
+            </div>
+          </div>
+
+
+
+         <nav class="flex gap-[26px]">
+  <a href="#" class="px-3 py-1 rounded-3xl hover:bg-gray-100">Market</a>
+  <a href="#" class="px-3 py-1 rounded-3xl bg-gray-200">Restaurants</a>
+  <a href="#" class="px-3 py-1 rounded-3xl hover:bg-gray-100">Grocery</a>
+  <a href="#" class="px-3 py-1 rounded-3xl hover:bg-gray-100">S City</a>
+</nav>
+
         </div>
       </div>
-    </div>
+    </div>  
 
     <!-- Catalog Menu -->
     <div :class="['catalog-overlay', { active: showCatalog }]" @click="closeCatalog"></div>

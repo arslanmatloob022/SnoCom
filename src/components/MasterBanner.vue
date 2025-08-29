@@ -1,11 +1,12 @@
 <template>
-  <div class="master-banner">
+  <div style="display: flex; gap: 20px; height: 300px;">
     <!-- Left Side - Product Categories -->
-    <div class="categories-grid">
+    <div class="categories-grid" style="width: 40%;  ">
       <div
         v-for="category in categories"
         :key="category.id"
-        class="category-card"
+        style=" display: flex; background-color: #ebebeb; width: 132px; height: 149px; flex-direction: column; align-items: center; justify-content: center; padding: 8px;
+         border-radius: 22px; cursor: pointer; text-align: center;"
         @click="$emit('category-click', category)"
       >
         <div class="category-icon">
@@ -17,9 +18,11 @@
       </div>
     </div>
 
+
+    
     <!-- Middle - Main Carousel -->
-    <div class="main-carousel">
-      <div class="carousel-container">
+    <div class="main-carousel" style=" width: 35%; height: 300px;">
+      <div class="carousel-container" style=" height: 300px;">
         <div
           class="carousel-slide"
           v-for="(slide, index) in slides"
@@ -33,7 +36,7 @@
     </div>
 
     <!-- Right Side - Promotional Banners -->
-    <div class="promo-banners">
+    <div class="promo-banners" style="height: 300px; width: 25%;" >
       <div class="promo-card promo-top">
         <img
           src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?w=400&h=200"

@@ -2,6 +2,8 @@
   <div class="home-page">
     <Header />
 
+    
+    
     <main class="container">
       <!-- Breadcrumbs -->
       <div class="breadcrumbs">
@@ -11,22 +13,21 @@
       </div>
 
       <!-- Page Title -->
-      <!-- <h1 class="h1">Restaurants & Cafes</h1>
-      <p class="p2 mb-24">
-        Snoonu has what you are looking for in the online food delivery.
-        Everyone's favorite restaurants
-      </p> -->
+      <h1 class="h1">Restaurants & Cafes</h1>
+      <p class="p2 mb-24">Snoonu has what you are looking for in the online food delivery. Everyone's favorite restaurants</p>
 
-      <!-- Master Banner -->
-      <div>
-        <MasterBanner @category-click="handleCategoryClick" />
-      </div>
+      <MasterBanner/>
 
       <!-- Category Carousel -->
       <CategoryCarousel @select="handleCategorySelect" />
 
+
       <!-- Filters -->
       <FilterBar @filter-change="handleFilterChange" />
+
+
+      <!-- offer product grid -->
+       <OfferProductbanner/>
 
       <!-- Product Grid -->
       <ProductGrid
@@ -35,8 +36,13 @@
         @product-click="handleProductClick"
       />
 
+
+      <Brandlogos />
+
+
       <!-- Main Section with For You / Popular Toggle -->
       <MainSection />
+
     </main>
 
     <Footer />
@@ -51,6 +57,9 @@ import FilterBar from "./FilterBar.vue";
 import MainSection from "./MainSection.vue";
 import ProductGrid from "./ProductGrid.vue";
 import Footer from "./Footer.vue";
+import OfferProductbanner from "./OfferProductbanner.vue";
+import Brandlogos from "./Brandlogos.vue";
+
 
 export default {
   name: "HomePage",
@@ -58,9 +67,11 @@ export default {
     Header,
     MasterBanner,
     CategoryCarousel,
+    OfferProductbanner,
     FilterBar,
     MainSection,
     ProductGrid,
+    Brandlogos,
     Footer,
   },
   data() {
@@ -151,6 +162,7 @@ export default {
           minPrice: 15,
           takeaway: true,
         },
+        
       ],
       allProducts: [],
     };

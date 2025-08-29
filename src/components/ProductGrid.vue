@@ -1,27 +1,40 @@
 <template>
-  <div class="product-grid">
+  <div class="grid grid-cols-6 gap-6">
     <div 
       v-for="product in filteredProducts" 
       :key="product.id" 
-      class="product-card"
+      class="product-card border rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition"
       @click="$emit('product-click', product)"
     >
-      <div class="product-image-wrapper" style="position: relative;">
-        <img :src="product.image" :alt="product.name" class="product-image">
-        <div v-if="product.discount" class="discount-badge">{{ product.discount }}% Off</div>
-        <div class="delivery-time">🚴 {{ product.deliveryTime }} mins</div>
-      </div>
-      <div class="product-info">
-        <h3 class="product-title">{{ product.name }}</h3>
-        <div class="product-rating">
-          <span>⭐ {{ product.rating }}</span>
-          <span class="p4">{{ product.priceRange }}</span>
+      <div class="relative">
+        <img :src="product.image" :alt="product.name" class="w-full h-40 object-cover rounded-md">
+        
+        <div 
+          v-if="product.discount" 
+          class="absolute top-3 left-3 bg-red-600 text-white px-2 py-1 text-xs font-semibold rounded"
+        >
+          {{ product.discount }}% Off
         </div>
-        <div class="product-tags p4">{{ product.tags }}</div>
+        
+        <div 
+          class="absolute bottom-3 right-3 bg-black/70 text-white px-2 py-1 text-xs rounded"
+        >
+          🚴 {{ product.deliveryTime }} mins
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <h3 class="font-semibold text-sm truncate">{{ product.name }}</h3>
+        <div class="flex justify-between text-xs mt-1">
+          <span>⭐ {{ product.rating }}</span>
+          <span class="text-gray-600">{{ product.priceRange }}</span>
+        </div>
+        <div class="text-gray-500 text-xs mt-1">{{ product.tags }}</div>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
