@@ -21,6 +21,7 @@
     </div>
 
     <!-- Left Side - Product Categories -->
+
     <div
       class="order-2 md:order-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 bg-gray-50 rounded-2xl p-4 w-full md:w-[40%] h-auto md:h-[360px]"
     >
