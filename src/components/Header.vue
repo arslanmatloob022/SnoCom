@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <!-- Main Header -->
+    <!-- Main Heade-->
 
     <!-- large screen -->
     <div class="hidden md:block w-full pt-2 px-3">
@@ -56,6 +56,51 @@
                 alt="Snoonu"
                 class="h-8 md:h-10"
               />
+    <div class="w-full pt-2 px-3">
+      <div class="grid grid-cols-12 items-center px-4">
+        <!-- Left (10%) -->
+        <div class="col-span-1 flex items-center">
+          <img
+            src="https://snoonu.com/_next/static/media/logo.6da502f3.svg"
+            alt="Snoonu"
+            class="logo"
+          />
+        </div>
+
+        <!-- Center (80%) -->
+        <div class="col-span-10 flex items-center justify-center gap-4">
+          <button
+            @click="toggleCatalog"
+            class="btn btn-secondary btn-small"
+            style="border-radius: 30px"
+          >
+            <span style="color: black"><i class="fa-solid fa-bars"></i></span>
+            <span style="font-weight: 800; font-size: 17px">Catalog</span>
+          </button>
+          <SearchBar />
+        </div>
+
+        <!-- Right (10%) -->
+        <div>
+          <button
+            class="btn btn-secondary btn-small"
+            style="border-radius: 20px; font-weight: 800; color: black"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subheader -->
+    <div class="subheader">
+      <div style="width: 100%; padding: 8px 16px">
+        <div class="subheader-content" style="padding: 0 30px">
+          <div class="flex gap-16">
+            <div class="p2">عربى</div>
+            <div class="flex gap-8">
+              <span><i class="fa-solid fa-location-dot"></i></span>
+              <span class="p2">Doha, Qatar</span>
             </div>
 
             <!-- Catalog Button -->
@@ -97,6 +142,20 @@
             <i class="fa-solid fa-location-dot"></i>
             <span>Doha, Qatar</span>
           </div>
+          <nav class="flex gap-[26px]">
+            <router-link
+              to="/"
+              class="px-3 py-1 rounded-3xl hover:bg-gray-100"
+              active-class="bg-gray-200"
+              >Home</router-link
+            >
+            <router-link
+              to="/food"
+              class="px-3 py-1 rounded-3xl hover:bg-gray-100"
+              active-class="bg-gray-200"
+              >Food Products</router-link
+            >
+          </nav>
         </div>
 
         <!-- Right: Navigation -->

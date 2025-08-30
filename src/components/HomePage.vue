@@ -1,13 +1,24 @@
 <template>
   <div class="home-page">
     <Header />
-
     <main class="container">
       <!-- Breadcrumbs -->
       <div class="breadcrumbs">
-        <a href="#" class="breadcrumb-link">Home Page</a>
+        <router-link to="/" class="breadcrumb-link">Home Page</router-link>
         <span>›</span>
         <span>Main</span>
+      </div>
+
+      <!-- Navigation Button -->
+      <div style="margin: 20px 0">
+        <button
+          @click="goToFood"
+          type="button"
+          class="btn btn-primary"
+          style="cursor: pointer"
+        >
+          View Food Products
+        </button>
       </div>
 
       <!-- Page Title -->
@@ -20,10 +31,10 @@
       <CategoryCarousel @select="handleCategorySelect" />
 
       <!-- Filters -->
-      <FilterBar @filter-change="handleFilterChange" />
 
       <!-- offer product grid -->
-      <OfferProductbanner />
+      <!-- <OfferProductbanner /> -->
+      <FilterBar @filter-change="handleFilterChange" />
 
       <!-- Product Grid -->
       <ProductGrid
@@ -31,6 +42,8 @@
         :filters="activeFilters"
         @product-click="handleProductClick"
       />
+
+      <FoodProducts />
 
       <Brandlogos />
 
@@ -177,6 +190,10 @@ export default {
     },
     handleCategoryClick(category) {
       console.log("Clicked category:", category);
+    },
+    goToFood(type = "button") {
+      // window.alert("Navigating to Food Products page!");
+      this.$router.push("/food");
     },
   },
 };
