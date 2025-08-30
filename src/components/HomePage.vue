@@ -1,56 +1,42 @@
 <template>
-  <div class="home-page">
-    <Header />
-    <main class="container">
-      <!-- Breadcrumbs -->
-      <div class="breadcrumbs">
-        <router-link to="/" class="breadcrumb-link">Home Page</router-link>
-        <span>›</span>
-        <span>Main</span>
-      </div>
+  <div>
 
-      <!-- Navigation Button -->
-      <div style="margin: 20px 0">
-        <button
-          @click="goToFood"
-          type="button"
-          class="btn btn-primary"
-          style="cursor: pointer"
-        >
-          View Food Products
-        </button>
-      </div>
+  
+   <Header />
+  <div class="ContentWrapper_container">
+   
 
-      <!-- Page Title -->
-      <!-- <h1 class="h1">Restaurants & Cafes</h1>
-      <p class="p2 mb-24">Snoonu has what you are looking for in the online food delivery. Everyone's favorite restaurants</p> -->
+
 
       <MasterBanner />
 
       <!-- Category Carousel -->
-      <CategoryCarousel @select="handleCategorySelect" />
+      <!-- <CategoryCarousel @select="handleCategorySelect" /> -->
 
       <!-- Filters -->
 
       <!-- offer product grid -->
-      <!-- <OfferProductbanner /> -->
-      <FilterBar @filter-change="handleFilterChange" />
-
+      <!-- <FilterBar @filter-change="handleFilterChange" /> -->
+      
       <!-- Product Grid -->
-      <ProductGrid
-        :products="allProducts"
-        :filters="activeFilters"
-        @product-click="handleProductClick"
-      />
-
-      <FoodProducts />
-
-      <Brandlogos />
-
+      <!-- <ProductGrid
+      :products="allProducts"
+      :filters="activeFilters"
+      @product-click="handleProductClick"
+      /> -->
+      
+      <!-- <FoodProducts /> -->
+      
+      
       <!-- Main Section with For You / Popular Toggle -->
       <MainSection />
-    </main>
+      
+      <OfferProductbanner />
+      <Brandlogos />
+     
 
+
+    </div>
     <Footer />
   </div>
 </template>
@@ -65,6 +51,7 @@ import ProductGrid from "./ProductGrid.vue";
 import Footer from "./Footer.vue";
 import OfferProductbanner from "./OfferProductbanner.vue";
 import Brandlogos from "./Brandlogos.vue";
+import SameCatCard from "./SameCatCard.vue";
 
 export default {
   name: "HomePage",

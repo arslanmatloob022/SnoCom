@@ -1366,3 +1366,25 @@ input:checked+*>.Switch_thumb {
 .FooterLinks_others___J_Gn>p:first-child {
     height: 14px
 }
+
+
+.FeedTabs_tabsContainer{
+    max-width: 544px;
+    background: var(--background-secondary);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row;
+    padding: 4px
+}
+
+.FeedTabs_feedTab {
+    padding: 12px 40px
+}
+
+@media(max-width: 575px) {
+    .FeedTabs_feedTab {
+        padding:12px 18px
+    }
+}
