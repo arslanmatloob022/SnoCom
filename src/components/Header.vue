@@ -295,7 +295,7 @@
           <div class="SearchSelector_wrapper__P_w2s">
             <div class="SearchSelector_selector">
               <p class="Typography_p8 SearchSelector_label">Market</p><span data-test-id=""
-                class="Icon_iconWrapper SearchSelector_chevronDown" style="width:16px;height:20px"><svg
+                class="Icon_iconWrapper SearchSelector_chevronDown" style="width:16px;height:16px"><svg
                   viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
                   <path d="m12 13.232-6-6L4.232 9 12 16.768 19.768 9 18 7.232l-6 6Z" fill="currentColor"></path>
                 </svg></span>

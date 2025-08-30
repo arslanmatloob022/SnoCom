@@ -610,7 +610,7 @@ font-family: arabicFont, arabicFont Fallback !important;
 }
 
 .Icon_icon {
-    display: inline-block;
+    display: block;
     max-width: 100%
 }
 
