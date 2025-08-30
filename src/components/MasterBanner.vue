@@ -117,7 +117,7 @@
       <div class="TopBanners_wrapper">
         <div class="TopBannersOffers_wrapper">
           <div
-            class="order-1 md:order-2 w-full relative rounded-2xl overflow-hidden bg-gradient-to-r from-indigo-500 to-purple-600 h-[200px] md:h-[360px]">
+            class="order-1 md:order-2 w-full relative rounded-2xl overflow-hidden  from-indigo-500 to-purple-600 h-[200px] md:h-[360px]">
             <div class="relative w-full h-full transition-transform duration-700"
               :style="{ transform: `translateY(-${currentSlide * 100}%)` }">
               <div v-for="(slide, index) in slides" :key="index" class="w-full h-full">

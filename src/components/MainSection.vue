@@ -1,22 +1,15 @@
 <template>
   <div class="MarketplaceContent_container">
- <div class="FeedTabs_tabsContainer">
-    <div
-      v-for="tab in tabs"
-      :key="tab.name"
-      class="FeedTabs_feedTab Tab_tab"
-      :class="{ Tab_active: activeTab === tab.name }"
-      @click="setActiveTab(tab.name)"
-    >
-      <img
-        width="20"
-        height="20"
-        :src="activeTab === tab.name ? tab.activeIcon : tab.inactiveIcon"
-        alt="tab icon"
-      />
-      <h5 class="Typography_h5">{{ tab.label }}</h5>
+    <div class="FeedTabs_tabsContainer">
+      <div v-for="tab in tabs" :key="tab.name" class="FeedTabs_feedTab Tab_tab px-5"
+        :class="{ Tab_active: activeTab === tab.name }" @click="setActiveTab(tab.name)">
+          <i
+    :class="activeTab === tab.name ? tab.activeIcon : tab.inactiveIcon"
+    class="text-lg"
+  ></i>
+        <h5 class="Typography_h5">{{ tab.label }}</h5>
+      </div>
     </div>
-  </div>
     <div class="FeedContent_group">
 
       <div class="TrendingCategories_container">
@@ -181,7 +174,7 @@
                         d="M12 1.88c.38 0 .727.208.889.533L15.7 8.07l6.268.91a.969.969 0 0 1 .782.622.89.89 0 0 1-.23.942l-4.562 4.413 1.079 6.246a.905.905 0 0 1-.404.908 1.03 1.03 0 0 1-1.04.053L12 19.244l-5.592 2.92a1.03 1.03 0 0 1-1.04-.053.905.905 0 0 1-.404-.908l1.078-6.246-4.562-4.413a.89.89 0 0 1-.23-.942.969.969 0 0 1 .783-.623L8.3 8.07l2.811-5.656a.988.988 0 0 1 .89-.533Z"
                         fill="currentColor"></path>
                     </svg></span></div>
-           
+
               </div>
               <p class="Typography_p9 ProductRating_count">(11)</p>
             </div>
@@ -227,7 +220,7 @@
         </div>
       </a>
 
-        <a rel="noopener noreferrer" data-analytic-label="ABC Glow Mask" target="_blank" class="productCard"
+      <a rel="noopener noreferrer" data-analytic-label="ABC Glow Mask" target="_blank" class="productCard"
         id="67c6d8d6ed7210215c5b0fa3"
         href="/product/abc-glow-mask/67c6d8d6ed7210215c5b0fa3?mpLevel=mp+home+page+feed&amp;mpCategoryLevel=mp+home+page+feed">
         <div data-analytic-label="productCardMarketplace" data-test-id="productCardMarketplace"
@@ -302,8 +295,8 @@
           </div>
         </div>
       </a>
-    </div><button class="Button_button Button_secondary MarketplaceContent_showMoreButton mb-4"  data-analytic-label=""><span
-        class="Button_content">Show more</span></button>
+    </div><button class="Button_button Button_secondary MarketplaceContent_showMoreButton mb-4"
+      data-analytic-label=""><span class="Button_content">Show more</span></button>
   </div>
 </template>
 
@@ -319,24 +312,24 @@ export default {
   data() {
     return {
       activeTab: "Popular",
-           tabs: [
+      tabs: [
         {
           name: "ForYou",
           label: "For You",
-          activeIcon: "/public/static/media/sparkle-white.790eae2e.svg",
-          inactiveIcon: "/public/static/media/sparkle-black.b822e2b0.svg",
+          activeIcon: "fa-solid fa-star text-white-500",
+          inactiveIcon: "fa-regular fa-star text-black-500",
         },
         {
           name: "Popular",
           label: "Popular",
-          activeIcon: "/public/static/media/fire-white.c78befed.svg",
-          inactiveIcon: "/public/static/media/fire-black.97476aab.svg",
+          activeIcon: "fa-solid fa-fire text-white-500",
+          inactiveIcon: "fa-solid fa-fire text-black-500",
         },
       ],
     };
   },
   methods: {
- 
+
     setActiveTab(tabName) {
       this.activeTab = tabName;
     },
