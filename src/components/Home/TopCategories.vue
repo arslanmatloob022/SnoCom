@@ -6,7 +6,7 @@ const slides = ref([
     {
         "id": 1,
         "title": "million-awaits",
-        "image": "/public/static/media/million_awaits.bb051329.webp"
+        "image": "https://images.snoonu.com/promo_banners/2025-08/9eb3d28c-e3c4-4a87-b5bb-0e5e677c492c_output.png?format=webp"
     },
     {
         "id": 2,
@@ -130,7 +130,7 @@ const categories = ref([
 const allServices = ref({
     name: "All Services",
     alt: "All Services",
-    img: "/public/static/media/all_services.4cfc71b5.png",
+    img: "https://images.snoonu.com/image_category/2024-04/9…-4741-a59c-917ba01bd6a6_phpcgnYzC.png?format=webp",
 });
 const startSlideshow = () => {
     slideInterval.value = setInterval(() => {
