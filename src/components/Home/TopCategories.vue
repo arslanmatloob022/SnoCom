@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { link } from 'node:fs';
+
 
 const slideInterval = ref(null);
 const currentSlide = ref(4);
@@ -113,25 +115,33 @@ const categories = ref([
         link: "/snoonu-market/household-and-garden",
         img: "https://images.snoonu.com/image_category/2024-04/c069a933-0d63-41cb-83f9-3702a4c087e9_phpXaMBzR.png?format=webp",
     },
-    {
-        name: "Sports & Outdoors",
-        alt: "Sports & Outdoors",
-        link: "/snoonu-market/sport-and-outdoors",
-        img: "https://images.snoonu.com/image_category/2024-04/dbf4698b-f937-4f54-b2e8-5b40f86d3fef_php1uIukT.png?format=webp",
-    },
-    {
-        name: "Stationery & Supplies",
-        alt: "Stationery & Supplies",
-        link: "/snoonu-market/books-and-stationery",
-        img: "https://images.snoonu.com/image_category/2024-04/de34a290-188a-49b6-a39b-980af9f05704_phpSnATBz.png?format=webp",
-    },
+    // {
+    //     name: "Sports & Outdoors",
+    //     alt: "Sports & Outdoors",
+    //     link: "/snoonu-market/sport-and-outdoors",
+    //     img: "https://images.snoonu.com/image_category/2024-04/dbf4698b-f937-4f54-b2e8-5b40f86d3fef_php1uIukT.png?format=webp",
+    // },
+    // {
+    //     name: "Stationery & Supplies",
+    //     alt: "Stationery & Supplies",
+    //     link: "/snoonu-market/books-and-stationery",
+    //     img: "https://images.snoonu.com/image_category/2024-04/de34a290-188a-49b6-a39b-980af9f05704_phpSnATBz.png?format=webp",
+    // },
+
+    // {
+    // name: "All Services",
+    // alt: "All Services",
+    // link: "/snoonu-market/all-services",
+    // img: "https://images.snoonu.com/image_category/2024-04/9768712b-5f65-4741-a59c-917ba01bd6a6_phpcgnYzC.png?format=webp",
+    // }
 ]);
 
-const allServices = ref({
-    name: "All Services",
-    alt: "All Services",
-    img: "https://images.snoonu.com/image_category/2024-04/9…-4741-a59c-917ba01bd6a6_phpcgnYzC.png?format=webp",
-});
+// const allServices = ref({
+//     name: "All Services",
+//     alt: "All Services",
+//     link: "/snoonu-market/all-services",
+//     img: "https://images.snoonu.com/image_category/2024-04/9768712b-5f65-4741-a59c-917ba01bd6a6_phpcgnYzC.png?format=webp",
+// });
 const startSlideshow = () => {
     slideInterval.value = setInterval(() => {
         console.log("interval")
@@ -162,8 +172,7 @@ onBeforeUnmount(() => {
         <div class="HeroSection_wrapper">
             <!-- categories -->
             <div class="Categories_marketWrapper">
-                <a v-for="(cat, index) in categories" :key="index" rel="noopener noreferrer"
-                    data-analytic-label="category" data-test-id="categoryIcon" :data-analytic-event-content="cat.name"
+                <a v-for="(cat, index) in categories" :key="index" 
                     :href="cat.link">
                     <div class="CategoryThumbnail_category">
                         <div class="CategoryThumbnail_imageWrapper">
@@ -172,19 +181,10 @@ onBeforeUnmount(() => {
                                 style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
                                 :src="cat.img" />
                         </div>
-                        <p class="Typography_p4 CategoryThumbnail_label">{{ cat.name }}</p>
+                        <p class="Typography_p4 CategoryThumbnail_label">{{ cat.name }} 23</p>
                     </div>
                 </a>
 
-                <!-- All Services (last block, not a link) -->
-                <div class="AllServices_wrapper">
-                    <div class="AllServices_imageWrapper">
-                        <img :alt="allServices.alt" decoding="async" data-nimg="fill" class="AllServices_allServicesImg"
-                            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-                            :src="allServices.img" />
-                    </div>
-                    <p class="Typography_p4 AllServices_label">{{ allServices.name }}</p>
-                </div>
             </div>
             <div class="TopBanners_wrapper">
                 <div class="TopBannersOffers_wrapper">

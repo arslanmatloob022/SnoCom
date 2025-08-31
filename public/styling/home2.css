@@ -124,7 +124,7 @@
 
 .Categories_marketWrapper a:nth-child(-n+2),
 .Categories_marketWrapper a:nth-child(n+10) {
-    display: none
+    /* display: none */
 }
 
 @media(max-width:1360px) {
