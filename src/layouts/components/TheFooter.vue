@@ -99,19 +99,19 @@ const appStores = ref([
   {
     name: "AppGallery",
     href: "https://appgallery.huawei.com/app/C105119593",
-    img: "/public/static/media/appGallery.7c233d60.svg",
+    img: "/src/assets/media/appGallery.7c233d60.svg",
     alt: "Snoonu in AppGallery"
   },
   {
     name: "App Store",
     href: "https://apps.apple.com/qa/app/snoonu-%D8%B3%D9%86%D9%88%D9%86%D9%88-food-shopping/id1457458384",
-    img: "/public/static/media/appStore.d144cd17.svg",
+    img: "/src/assets/media/appStore.d144cd17.svg",
     alt: "Snoonu in App Store"
   },
   {
     name: "Google Play",
     href: "https://play.google.com/store/apps/details?id=com.snoonu.customerapp",
-    img: "/public/static/media/googlePlay.0c329634.svg",
+    img: "/src/assets/media/googlePlay.0c329634.svg",
     alt: "Snoonu in Google Play"
   }
 ]);
@@ -121,35 +121,35 @@ const snoonuServices = ref([
     name: "S Laundry",
     description: "Fast & Clean",
     href: "https://snoonu.onelink.me/U3EL/w3j5xt1n",
-    img: "/public/static/media/laundary.fa407b25.png",
+    img: "/src/assets/media/laundary.fa407b25.png",
     alt: "S Laundry"
   },
   {
     name: "S City",
     description: "Events & Tickets",
     href: "/scity?source=footer",
-    img: "/public/static/media/s-city.421e9dc1.png",
+    img: "/src/assets/media/s-city.421e9dc1.png",
     alt: "S City"
   },
   {
     name: "Snoosend",
     description: "On-Spot Delivery",
     href: "https://snoonu.onelink.me/U3EL/udzfy8ji",
-    img: "/public/static/media/snoosend.bcf70373.png",
+    img: "/src/assets/media/snoosend.bcf70373.png",
     alt: "Snoosend"
   },
   {
     name: "Prime",
     description: "Fine Dining",
     href: "https://snoonu.onelink.me/U3EL/pg1refdk",
-    img: "/public/static/media/prime.cbfa8192.png",
+    img: "/src/assets/media/prime.cbfa8192.png",
     alt: "Prime"
   },
   {
     name: "Takeaway",
     description: "Discover Qatar",
     href: "https://snoonu.onelink.me/U3EL/jfz589dq",
-    img: "/public/static/media/takeaway.88873d50.png",
+    img: "/src/assets/media/takeaway.88873d50.png",
     alt: "Takeaway"
   }
 ]);
