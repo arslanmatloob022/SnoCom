@@ -67,18 +67,18 @@ const slides = ref([
     }
 ])
 const categories = ref([
-    {
-        name: "Restaurants",
-        alt: "Restaurants",
-        link: "/restaurants",
-        img: "/public/static/media/restaurants.279e620f.png",
-    },
-    {
-        name: "Grocery",
-        alt: "Grocery",
-        link: "/groceries",
-        img: "/public/static/media/grocery.d9e25ccc.png",
-    },
+    // {
+    //     name: "Restaurants",
+    //     alt: "Restaurants",
+    //     link: "/restaurants",
+    //     img: "/public/static/media/restaurants.279e620f.png",
+    // },
+    // {
+    //     name: "Grocery",
+    //     alt: "Grocery",
+    //     link: "/groceries",
+    //     img: "/public/static/media/grocery.d9e25ccc.png",
+    // },
     {
         name: "Health & Beauty",
         alt: "Health & Beauty",
@@ -115,18 +115,18 @@ const categories = ref([
         link: "/snoonu-market/household-and-garden",
         img: "https://images.snoonu.com/image_category/2024-04/c069a933-0d63-41cb-83f9-3702a4c087e9_phpXaMBzR.png?format=webp",
     },
-    // {
-    //     name: "Sports & Outdoors",
-    //     alt: "Sports & Outdoors",
-    //     link: "/snoonu-market/sport-and-outdoors",
-    //     img: "https://images.snoonu.com/image_category/2024-04/dbf4698b-f937-4f54-b2e8-5b40f86d3fef_php1uIukT.png?format=webp",
-    // },
-    // {
-    //     name: "Stationery & Supplies",
-    //     alt: "Stationery & Supplies",
-    //     link: "/snoonu-market/books-and-stationery",
-    //     img: "https://images.snoonu.com/image_category/2024-04/de34a290-188a-49b6-a39b-980af9f05704_phpSnATBz.png?format=webp",
-    // },
+    {
+        name: "Sports & Outdoors",
+        alt: "Sports & Outdoors",
+        link: "/snoonu-market/sport-and-outdoors",
+        img: "https://images.snoonu.com/image_category/2024-04/dbf4698b-f937-4f54-b2e8-5b40f86d3fef_php1uIukT.png?format=webp",
+    },
+    {
+        name: "Stationery & Supplies",
+        alt: "Stationery & Supplies",
+        link: "/snoonu-market/books-and-stationery",
+        img: "https://images.snoonu.com/image_category/2024-04/de34a290-188a-49b6-a39b-980af9f05704_phpSnATBz.png?format=webp",
+    },
 
     // {
     // name: "All Services",
@@ -181,7 +181,7 @@ onBeforeUnmount(() => {
                                 style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
                                 :src="cat.img" />
                         </div>
-                        <p class="Typography_p4 CategoryThumbnail_label">{{ cat.name }} 23</p>
+                        <p class="Typography_p4 CategoryThumbnail_label">{{ cat.name }}</p>
                     </div>
                 </a>
 
