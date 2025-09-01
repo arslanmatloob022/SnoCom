@@ -62,7 +62,7 @@ const catalogCategories = ref([
     label: "S City",
     alt: "S City",
     href: "/scity?source=catalog",
-    img: "/public/static/images/categories/scity.png",
+    img: "/static/images/categories/scity.png",
     external: true,
     hasIcon: false,
   },
@@ -185,7 +185,7 @@ onBeforeUnmount(() => {
               <div class="LocationBlock_mapWrapper"><span
                   style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
                     style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 44.4444% 0px 0px;"></span><img
-                    alt="map" decoding="async" data-nimg="responsive" src="/public/static/media/map.527f1b44.png"
+                    alt="map" decoding="async" data-nimg="responsive" src="/static/media/map.527f1b44.png"
                     style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover; object-position: center center;"><noscript></noscript></span>
               </div>
               <div class="LocationBlock_mapButtons"><button
@@ -223,7 +223,7 @@ onBeforeUnmount(() => {
           data-analytic-element-location="header" data-test-id="snoonulogo" class="Logo_logo__oq6_b" href="/"><img
             alt="Snoonu" decoding="async" data-nimg="fill" class="Logo_fullLogo"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            src="/public/static/media/logo.6da502f3.svg" /><span data-test-id=""
+            src="/static/media/logo.6da502f3.svg" /><span data-test-id=""
             class="Icon_iconWrapper Logo_miniLogo"><svg width="35" height="36" fill="none"
               xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -260,7 +260,7 @@ onBeforeUnmount(() => {
                 class="Logo_logo__oq6_b Logo_isFullForm" href="/"><img alt="Snoonu" decoding="async" data-nimg="fill"
                   class="Logo_fullLogo"
                   style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-                  src="/public/static/media/logo.6da502f3.svg" /><span data-test-id=""
+                  src="/static/media/logo.6da502f3.svg" /><span data-test-id=""
                   class="Icon_iconWrapper Logo_miniLogo"><svg width="35" height="36" fill="none"
                     xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -344,7 +344,7 @@ onBeforeUnmount(() => {
                     </svg></span></div><a rel="noopener noreferrer" data-analytic-label="logo"
                   data-analytic-element-location="header" data-test-id="snoonulogo"
                   class="Logo_logo__oq6_b Logo_isFullForm" href="/"><img alt="Snoonu" decoding="async" data-nimg="fill"
-                    class="Logo_fullLogo" src="/public/static/media/logo.6da502f3.svg"
+                    class="Logo_fullLogo" src="/static/media/logo.6da502f3.svg"
                     style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"><span
                     data-test-id="" class="Icon_iconWrapper Logo_miniLogo"><svg width="35" height="36" fill="none"
                       xmlns="http://www.w3.org/2000/svg" class="Icon_icon">

@@ -99,19 +99,19 @@ const appStores = ref([
   {
     name: "AppGallery",
     href: "https://appgallery.huawei.com/app/C105119593",
-    img: "	https://snoonu.com/_next/static/media/appGallery.7c233d60.svg",
+    img: "https://snoonu.com/_next/static/media/appGallery.7c233d60.svg",
     alt: "Snoonu in AppGallery"
   },
   {
     name: "App Store",
     href: "https://apps.apple.com/qa/app/snoonu-%D8%B3%D9%86%D9%88%D9%86%D9%88-food-shopping/id1457458384",
-    img: "	https://snoonu.com/_next/static/media/appStore.d144cd17.svg",
+    img: "https://snoonu.com/_next/static/media/appStore.d144cd17.svg",
     alt: "Snoonu in App Store"
   },
   {
     name: "Google Play",
     href: "https://play.google.com/store/apps/details?id=com.snoonu.customerapp",
-    img: "	https://snoonu.com/_next/static/media/googlePlay.0c329634.svg",
+    img: "https://snoonu.com/_next/static/media/googlePlay.0c329634.svg",
     alt: "Snoonu in Google Play"
   }
 ]);
@@ -121,21 +121,21 @@ const snoonuServices = ref([
     name: "S Laundry",
     description: "Fast & Clean",
     href: "https://snoonu.onelink.me/U3EL/w3j5xt1n",
-    img: "	https://snoonu.com/_next/static/media/laundary.fa407b25.png",
+    img: "https://snoonu.com/_next/static/media/laundary.fa407b25.png",
     alt: "S Laundry"
   },
   {
     name: "S City",
     description: "Events & Tickets",
     href: "/scity?source=footer",
-    img: "	https://snoonu.com/_next/static/media/s-city.421e9dc1.png",
+    img: "https://snoonu.com/_next/static/media/s-city.421e9dc1.png",
     alt: "S City"
   },
   {
     name: "Snoosend",
     description: "On-Spot Delivery",
     href: "https://snoonu.onelink.me/U3EL/udzfy8ji",
-    img: "	https://snoonu.com/_next/static/media/snoosend.bcf70373.png",
+    img: "https://snoonu.com/_next/static/media/snoosend.bcf70373.png",
     alt: "Snoosend"
   },
   {
@@ -149,7 +149,7 @@ const snoonuServices = ref([
     name: "Takeaway",
     description: "Discover Qatar",
     href: "https://snoonu.onelink.me/U3EL/jfz589dq",
-    img: "	https://snoonu.com/_next/static/media/takeaway.88873d50.png",
+    img: "https://snoonu.com/_next/static/media/takeaway.88873d50.png",
     alt: "Takeaway"
   }
 ]);

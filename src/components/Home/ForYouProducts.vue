@@ -131,8 +131,13 @@ const setActiveTab = (tabName: string) => {
 
 
 
-            <a v-for="(product, i) in products" :key="product.id" class="productCard" :id="product.id"
-                :href="product.href" target="_blank" rel="noopener noreferrer" :data-analytic-label="product.name">
+          <router-link
+                v-for="(product, i) in products"
+                :key="product.id"
+                :to="`/products/detail/`"
+                class="productCard"
+                :data-analytic-label="product.name"
+                >
                 <div class="ProductCardMarketplace_imageWrapper">
                     <div class="ProductImage_wrapper">
                         <div class="ProductImage_imageWrapper">
@@ -183,7 +188,7 @@ const setActiveTab = (tabName: string) => {
                         </p>
                     </div>
                 </div>
-            </a>
+            </router-link>
 
 
         </div><button class="Button_button Button_secondary MarketplaceContent_showMoreButton mb-4"
