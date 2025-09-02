@@ -44,6 +44,7 @@ declare module 'vue-router/auto/routes' {
     'ComponentsPopularTags': RouteRecordInfo<'ComponentsPopularTags', '/components/PopularTags', Record<never, never>, Record<never, never>>,
   }  '$All': RouteRecordInfo<'$All', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     'Login': RouteRecordInfo<'Login', '/login', Record<never, never>, Record<never, never>>,
+    'MarketElectronics': RouteRecordInfo<'MarketElectronics', '/market/electronics', Record<never, never>, Record<never, never>>,
     'ProductVue': RouteRecordInfo<'ProductVue', '/product/vue', Record<never, never>, Record<never, never>>,
     'ProductsId?': RouteRecordInfo<'ProductsId?', '/products/:id?', { id?: ParamValueZeroOrOne<true> }, { id?: ParamValueZeroOrOne<false> }>,
     'ProductsComponentsArticleForm': RouteRecordInfo<'ProductsComponentsArticleForm', '/products/components/ArticleForm', Record<never, never>, Record<never, never>>,

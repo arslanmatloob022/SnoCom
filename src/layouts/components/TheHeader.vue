@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import CartPopup from '@/components/cart/CartPopup.vue'
+import { UsePannelsStore } from '@/stores/UsePannelsStore'
 import { useUserStore } from '@/stores/useUserStore'
 
 const store = useUserStore()
@@ -10,6 +12,12 @@ const { isLoggedIn, userInfo } = storeToRefs(store)
 const showMap = ref(false)
 const isCatalogOpen = ref(false)
 const isShowingChild = ref(false)
+const cartPopup = ref<{ open: () => void } | null>(null)
+const pannel = UsePannelsStore()
+
+function openCart() {
+  cartPopup.value?.open()
+}
 const catalogCategories = ref([
   {
     label: "Restaurants",
@@ -120,6 +128,78 @@ const marketCategories = ref([
   },
 ]);
 
+const category = ref({
+  title: "Electronics",
+  href: "/snoonu-market/electronics?source=catalog",
+  items: [
+    {
+      name: "Mobiles",
+      href: "/snoonu-market/electronics/mobiles?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/d568238c-d133-4616-b274-1f57c6722bfa_Mobiles.png?format=webp",
+    },
+    {
+      name: "Digital Cards",
+      href: "/snoonu-market/electronics/digital-cards?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/0beadaa9-8a6f-4ee6-9e6d-0ff3c2d09093_ecards.png?format=webp",
+    },
+    {
+      name: "Accessories",
+      href: "/snoonu-market/electronics/accessories?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/ba1ddf54-4714-4466-82f2-4990eb08f996_accessories.png?format=webp",
+    },
+    {
+      name: "Wearable Gadgets",
+      href: "/snoonu-market/electronics/wearable-gadgets?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/0629e2c7-5ecf-4c09-b630-693dd465b8c5_WearableGadgets.png?format=webp",
+    },
+    {
+      name: "Headphones",
+      href: "/snoonu-market/electronics/headphones?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/ff9457cf-5b6a-4722-a627-c81cc6eaeac0_Headphones.png?format=webp",
+    },
+    {
+      name: "Video Games",
+      href: "/snoonu-market/electronics/video-games?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/b0086852-8843-414c-8487-bbf939aaf182_videogames.png?format=webp",
+    },
+    {
+      name: "Home Appliances",
+      href: "/snoonu-market/electronics/home-appliances?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/d919e5e0-f9e9-4451-afbc-e7b6267a3aa5_home_appliances.png?format=webp",
+    },
+    {
+      name: "Home Entertainment",
+      href: "/snoonu-market/electronics/tv-audio?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/109450a1-78e6-4aac-ba22-09a0193af1d1_tvaudio.png?format=webp",
+    },
+    {
+      name: "Beauty & Grooming Devices",
+      href: "/snoonu-market/electronics/health-beauty-devices?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/edd742d6-e607-491d-a924-107e87c23221_beauty_devices.png?format=webp",
+    },
+    {
+      name: "iPads & Tablets",
+      href: "/snoonu-market/electronics/tablets?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/573cfd96-5114-4deb-b067-8862333d1eb6_tablets.png?format=webp",
+    },
+    {
+      name: "Camera & Photo",
+      href: "/snoonu-market/electronics/camera-photo?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/d6db7333-2994-4a47-ac35-62406040cfbe_cameraphoto.png?format=webp",
+    },
+    {
+      name: "Laptops and Computers",
+      href: "/snoonu-market/electronics/laptops-and-computers?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/7ba2a2f7-86f6-4b53-8f06-1a843f246c4f_laptopsandcomputers.png?format=webp",
+    },
+    {
+      name: "Office Electronics",
+      href: "/snoonu-market/electronics/office-electronics?source=catalog",
+      img: "https://images.snoonu.com/market_place_category/2025-4/c032fa3c-0a1a-4601-af97-9c686898861e_officeelectronics.png?format=webp",
+    },
+  ],
+})
+
 // const handleClickOutside = (event) => {
 //   if (drawer.value && drawer.value.contains(event.target)) {
 //     if (isCatalogOpen.value) {
@@ -132,9 +212,9 @@ const marketCategories = ref([
 // };
 
 const handleClickOutside = (event) => {
-  console.log("outside clein")
-  if (drawer.value && drawer.value.contains(event.target)) {
-    drawer.value = false
+ 
+  if (drawer.value && !drawer.value.contains(event.target as Node)) {
+    // isCatalogOpen.value = false
   }
   if (mapContainer.value && !mapContainer.value.contains(event.target)) {
     // 👆 now it checks "outside" instead of "inside"
@@ -223,14 +303,13 @@ onBeforeUnmount(() => {
           data-analytic-element-location="header" data-test-id="snoonulogo" class="Logo_logo__oq6_b" href="/"><img
             alt="Snoonu" decoding="async" data-nimg="fill" class="Logo_fullLogo"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            src="/static/media/logo.6da502f3.svg" /><span data-test-id=""
-            class="Icon_iconWrapper Logo_miniLogo"><svg width="35" height="36" fill="none"
-              xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+            src="/static/media/logo.6da502f3.svg" /><span data-test-id="" class="Icon_iconWrapper Logo_miniLogo"><svg
+              width="35" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M20.366 32.5c8.12 0 12.979-4.404 12.979-9.953 0-8.582-14.282-7.723-14.282-10.638 0-.972 1.068-1.943 3.199-1.943 3.439 0 6.872 1.889 8.354 3.433L35 7.964C31.857 5.162 27.06 3.5 22.256 3.5H0l.045.26c.978 4.473 3.87 7.237 8.964 8.554-1.247.264-2.578.885-3.523 1.565 1.756 2.958 6.928 5.44 12.716 7.038 3.154.972 6.017 1.582 6.017 3.174 0 1.085-1.186 2.002-3.026 2.002-4.031 0-8.415-2.46-10.194-4.29l-4.803 5.661C9.69 30.724 15.087 32.5 20.36 32.5h.006Z"
                 fill="currentColor"></path>
             </svg></span></a>
-        <div ref="drawer" class="CatalogMenu_wrapper"><button @click="() => { isCatalogOpen = !isCatalogOpen }"
+        <div  class="CatalogMenu_wrapper"><button @click.stop="() => { isCatalogOpen = !isCatalogOpen }"
             class="Button_button Button_secondary Button_small CatalogButton_button"
             data-analytic-label="catalogMenuButton" data-analytic-element-location="header"><span
               class="Button_content"><span data-test-id="" class="Icon_iconWrapper Button_icon"><svg width="20"
@@ -238,17 +317,17 @@ onBeforeUnmount(() => {
                   <path d="M0 5h20v2.5H0V5ZM20 15H0v-2.5h20V15Z" fill="currentColor">
                   </path>
                 </svg></span><span class="CatalogButton_text">Catalog</span></span></button>
-          <div v-if="isCatalogOpen" class="CatalogDrawer_overlay"></div>
-          <div  v-if="isCatalogOpen" class="CatalogDrawer_drawer catalog-drawer" :class="{ 'CatalogDrawer_open': isCatalogOpen }">
+          <div v-show="isCatalogOpen" class="CatalogDrawer_overlay" >
+          <div class="CatalogDrawer_drawer catalog-drawer"
+            :class="{ 'CatalogDrawer_open': isCatalogOpen }">
             <span data-test-id="" @click="() => { isCatalogOpen = false }"
-              class="Icon_iconWrapper CatalogDrawer_icon CatalogDrawer_open"
-              style="width:24px;height:24px"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="Icon_icon">
+              class="Icon_iconWrapper CatalogDrawer_icon CatalogDrawer_open" style="width:24px;height:24px"><svg
+                viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M11.82 10 18 3.82 16.18 2 10 8.18 3.82 2 2 3.82 8.18 10 2 16.18 3.82 18 10 11.82 16.18 18 18 16.18 11.82 10Z"
                   fill="currentColor"></path>
               </svg></span>
-            <div class="CatalogDrawer_header">
+            <div  class="CatalogDrawer_header">
               <div class="CatalogDrawer_cross" @click="() => { isCatalogOpen = false }"><span data-test-id=""
                   class="Icon_iconWrapper" style="width:16px;height:16px"><svg viewBox="0 0 20 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
@@ -274,7 +353,8 @@ onBeforeUnmount(() => {
               </div>
             </div>
 
-            <div v-if="!isShowingChild" class="CatalogCategoryList_wrapper">
+           <div ref="drawer">
+             <div v-if="!isShowingChild" class="CatalogCategoryList_wrapper">
               <!-- First List -->
               <div class="CatalogCategoryList_list">
                 <template v-for="cat in catalogCategories" :key="cat.label">
@@ -334,154 +414,36 @@ onBeforeUnmount(() => {
                   </svg></span>
                 <p class="Typography_p6" @click="() => { isShowingChild = false }">Go back</p>
               </div>
-              <div class="CatalogMarketplaceCategory_headerMobile">
-                <div class="CatalogMarketplaceCategory_backMobile__yU_Tw"><span data-test-id=""
-                    class="Icon_iconWrapper CatalogMarketplaceCategory_backIcon"><svg viewBox="0 0 20 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+              <!-- dynamic -->
+              <div>
+                <!-- Category Title -->
+                <a :href="category.href" class="CatalogMarketplaceCategory_title" rel="noopener noreferrer"
+                  data-analytic-label="category">
+                  <h3 class="Typography_h3">{{ category.title }}</h3>
+                  <span data-test-id="" class="Icon_iconWrapper CatalogMarketplaceCategory_rightIcon">
+                    <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
                       <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="m1 10 9.325-8L12 3.956 6.412 8.75H19v2.5H6.412L12 16.044 10.325 18 1 10Z"
-                        fill="currentColor"></path>
-                    </svg></span></div><a rel="noopener noreferrer" data-analytic-label="logo"
-                  data-analytic-element-location="header" data-test-id="snoonulogo"
-                  class="Logo_logo__oq6_b Logo_isFullForm" href="/"><img alt="Snoonu" decoding="async" data-nimg="fill"
-                    class="Logo_fullLogo" src="/static/media/logo.6da502f3.svg"
-                    style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"><span
-                    data-test-id="" class="Icon_iconWrapper Logo_miniLogo"><svg width="35" height="36" fill="none"
-                      xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M20.366 32.5c8.12 0 12.979-4.404 12.979-9.953 0-8.582-14.282-7.723-14.282-10.638 0-.972 1.068-1.943 3.199-1.943 3.439 0 6.872 1.889 8.354 3.433L35 7.964C31.857 5.162 27.06 3.5 22.256 3.5H0l.045.26c.978 4.473 3.87 7.237 8.964 8.554-1.247.264-2.578.885-3.523 1.565 1.756 2.958 6.928 5.44 12.716 7.038 3.154.972 6.017 1.582 6.017 3.174 0 1.085-1.186 2.002-3.026 2.002-4.031 0-8.415-2.46-10.194-4.29l-4.803 5.661C9.69 30.724 15.087 32.5 20.36 32.5h.006Z"
-                        fill="currentColor"></path>
-                    </svg></span></a>
-                <div class="LocaleSwitcher_wrapper CatalogMarketplaceCategory_languageSwitcher">
-                  <div data-analytic-label="locale[ar]" class="LocaleSwitcher_locale">
-                    <p class="Typography_p6">عربى</p>
-                  </div>
+                        d="m7.8 2 9.325 8L7.8 18l-1.675-1.956L13.17 10 6.125 3.956 7.8 2Z" fill="currentColor" />
+                    </svg>
+                  </span>
+                </a>
+
+                <!-- Subcategories -->
+                <div class="CatalogMarketplaceCategory_list">
+                  <a v-for="(item, index) in category.items" :key="index" :href="item.href"
+                    class="CatalogMarketplaceCategory_category" rel="noopener noreferrer" data-analytic-label="category"
+                    :data-analytic-event-content="item.name" data-analytic-element-location="catalog">
+                    <div class="CatalogMarketplaceCategory_imageWrapper___jHu5">
+                      <img :src="item.img" :alt="item.name" decoding="async" loading="lazy" data-nimg="fill"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" />
+                    </div>
+                    <p class="Typography_p5 CatalogMarketplaceCategory_label">{{ item.name }}</p>
+                  </a>
                 </div>
-              </div><a rel="noopener noreferrer" data-analytic-label="category" class="CatalogMarketplaceCategory_title"
-                href="/snoonu-market/electronics?source=catalog">
-                <h3 class="Typography_h3">Electronics</h3><span data-test-id=""
-                  class="Icon_iconWrapper CatalogMarketplaceCategory_rightIcon"><svg viewBox="0 0 21 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="m7.8 2 9.325 8L7.8 18l-1.675-1.956L13.17 10 6.125 3.956 7.8 2Z" fill="currentColor"></path>
-                  </svg></span>
-              </a>
-              <div class="CatalogMarketplaceCategory_list"><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Mobiles" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category" href="/snoonu-market/electronics/mobiles?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Mobiles" loading="lazy"
-                      decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/d568238c-d133-4616-b274-1f57c6722bfa_Mobiles.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Mobiles</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Digital Cards" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/digital-cards?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Digital Cards" loading="lazy"
-                      decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/0beadaa9-8a6f-4ee6-9e6d-0ff3c2d09093_ecards.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Digital Cards</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Accessories" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/accessories?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Accessories" loading="lazy"
-                      decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/ba1ddf54-4714-4466-82f2-4990eb08f996_accessories.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Accessories</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Wearable Gadgets" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/wearable-gadgets?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Wearable Gadgets" loading="lazy"
-                      decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/0629e2c7-5ecf-4c09-b630-693dd465b8c5_WearableGadgets.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Wearable Gadgets</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category" data-analytic-event-content="Headphones"
-                  data-analytic-element-location="catalog" class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/headphones?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Headphones" loading="lazy"
-                      decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/ff9457cf-5b6a-4722-a627-c81cc6eaeac0_Headphones.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Headphones</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Video Games" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/video-games?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Video Games" loading="lazy"
-                      decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/b0086852-8843-414c-8487-bbf939aaf182_videogames.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Video Games</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Home Appliances" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/home-appliances?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Home Appliances" loading="lazy"
-                      decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/d919e5e0-f9e9-4451-afbc-e7b6267a3aa5_home_appliances.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Home Appliances</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Home Entertainment" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category" href="/snoonu-market/electronics/tv-audio?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Home Entertainment"
-                      loading="lazy" decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/109450a1-78e6-4aac-ba22-09a0193af1d1_tvaudio.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Home Entertainment</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Beauty &amp; Grooming Devices" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/health-beauty-devices?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Beauty &amp; Grooming Devices"
-                      loading="lazy" decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/edd742d6-e607-491d-a924-107e87c23221_beauty_devices.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Beauty &amp; Grooming Devices
-                  </p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="iPads &amp; Tablets" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category" href="/snoonu-market/electronics/tablets?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="iPads &amp; Tablets"
-                      loading="lazy" decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/573cfd96-5114-4deb-b067-8862333d1eb6_tablets.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">iPads &amp; Tablets</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Camera &amp; Photo" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/camera-photo?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Camera &amp; Photo"
-                      loading="lazy" decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/d6db7333-2994-4a47-ac35-62406040cfbe_cameraphoto.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Camera &amp; Photo</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Laptops and Computers" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/laptops-and-computers?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Laptops and Computers"
-                      loading="lazy" decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/7ba2a2f7-86f6-4b53-8f06-1a843f246c4f_laptopsandcomputers.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Laptops and Computers</p>
-                </a><a rel="noopener noreferrer" data-analytic-label="category"
-                  data-analytic-event-content="Office Electronics" data-analytic-element-location="catalog"
-                  class="CatalogMarketplaceCategory_category"
-                  href="/snoonu-market/electronics/office-electronics?source=catalog">
-                  <div class="CatalogMarketplaceCategory_imageWrapper___jHu5"><img alt="Office Electronics"
-                      loading="lazy" decoding="async" data-nimg="fill"
-                      src="https://images.snoonu.com/market_place_category/2025-4/c032fa3c-0a1a-4601-af97-9c686898861e_officeelectronics.png?format=webp"
-                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
-                  <p class="Typography_p5 CatalogMarketplaceCategory_label">Office Electronics</p>
-                </a></div>
+              </div>
             </div>
+           </div>
+
 
 
             <span data-test-id="" class="Icon_iconWrapper CatalogDrawer_icon" style="width:24px;height:24px"><svg
@@ -491,9 +453,10 @@ onBeforeUnmount(() => {
                   fill="currentColor"></path>
               </svg></span>
           </div>
+          </div>
         </div>
       </div>
-       <div :class="['Search_wrapper___mZGv', { Search_focused: isFocused }]">
+      <div :class="['Search_wrapper___mZGv', { Search_focused: isFocused }]">
         <form class="Search_searchWrapper__Fa_4X">
           <div class="SearchSelector_wrapper__P_w2s">
             <div class="SearchSelector_selector">
@@ -504,11 +467,8 @@ onBeforeUnmount(() => {
                 </svg></span>
             </div>
           </div>
-          <div class="Autocomplete_wrapper"><input data-test-id="searchField"
-
-             @focus="isFocused = true"
-          @blur="isFocused = false"
-              class="Autocomplete_input Autocomplete_small Search_input__djH_7"
+          <div class="Autocomplete_wrapper"><input data-test-id="searchField" @focus="isFocused = true"
+              @blur="isFocused = false" class="Autocomplete_input Autocomplete_small Search_input__djH_7"
               placeholder="Search for stores and products" autoComplete="off" type="search" name="search" value="" />
             <div class="Autocomplete_rightSection"><button data-test-id="searchFieldBtn"
                 class="SearchButton_button"><span data-test-id="" class="Icon_iconWrapper SearchButton_searchIcon"
@@ -525,7 +485,24 @@ onBeforeUnmount(() => {
         <div class="LoginButton_wrapper__by23_"><button class="Button_button Button_secondary Button_small"
             data-test-id="loginBtn" data-analytic-label="loginButton" data-analytic-element-location="header"><span
               class="Button_content">Login</span></button></div>
+
+        <div class="CartButton_wrapper__DN_bX"><button
+              @click.stop="pannel.setCartModal(true)"
+
+            class="Button_button Button_primary Button_small" data-test-id="cartBtn"
+            data-analytic-label="cartButton" data-analytic-element-location="header"><span
+              class="Button_content"><span data-test-id=""
+                class="Icon_iconWrapper Button_icon"><svg viewBox="0 0 20 19" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                  <path
+                    d="M4.784 13.668c-.561.306-.983.813-1.179 1.417a2.468 2.468 0 0 0 .124 1.832 2.5 2.5 0 0 0 1.359 1.249c.597.229 1.26.223 1.852-.017a2.5 2.5 0 0 0 1.336-1.272 2.467 2.467 0 0 0 .091-1.834h3.571a2.463 2.463 0 0 0 .187 2.016 2.502 2.502 0 0 0 1.64 1.208 2.522 2.522 0 0 0 2.002-.405 2.47 2.47 0 0 0 .406-3.676 2.515 2.515 0 0 0-1.867-.825H6.462l-.211-1.694h11.326L20 3.343l-15.352.328-.154-1.379L.848.833 0 2.293l2.917 1.05 1.867 10.325Z"
+                    fill="currentColor"></path>
+                </svg></span>
+              <div class="CartButton_cartButton">541 QR</div>
+            </span></button></div>
       </div>
     </div>
+
+    <CartPopup v-if="pannel.cartModalOpen" />
   </header>
 </template>

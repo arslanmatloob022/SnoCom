@@ -144,9 +144,7 @@ const categories = ref([
 // });
 const startSlideshow = () => {
     slideInterval.value = setInterval(() => {
-        console.log("interval")
         currentSlide.value = (currentSlide.value + 1) % slides.value.length;
-        console.log("Current slide:", currentSlide.value);
     }, 3000);
 };
 const stopSlideshow = () => {
@@ -172,8 +170,8 @@ onBeforeUnmount(() => {
         <div class="HeroSection_wrapper">
             <!-- categories -->
             <div class="Categories_marketWrapper">
-                <a v-for="(cat, index) in categories" :key="index" 
-                    :href="cat.link">
+                <router-link v-for="(cat, index) in categories" :key="index" 
+                    to="market/electronics">
                     <div class="CategoryThumbnail_category">
                         <div class="CategoryThumbnail_imageWrapper">
                             <img :alt="cat.alt" decoding="async" data-nimg="fill"
@@ -183,7 +181,7 @@ onBeforeUnmount(() => {
                         </div>
                         <p class="Typography_p4 CategoryThumbnail_label">{{ cat.name }}</p>
                     </div>
-                </a>
+                </router-link>
 
             </div>
             <div class="TopBanners_wrapper">
