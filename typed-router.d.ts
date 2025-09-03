@@ -54,6 +54,8 @@ declare module 'vue-router/auto/routes' {
     'ProductsEditorId?': RouteRecordInfo<'ProductsEditorId?', '/products/editor/:id?', { id?: ParamValueZeroOrOne<true> }, { id?: ParamValueZeroOrOne<false> }>,
     'ProfileId?': RouteRecordInfo<'ProfileId?', '/profile/:id?', { id?: ParamValueZeroOrOne<true> }, { id?: ParamValueZeroOrOne<false> }>,
     'Register': RouteRecordInfo<'Register', '/register', Record<never, never>, Record<never, never>>,
+    'Restaurants': RouteRecordInfo<'Restaurants', '/restaurants', Record<never, never>, Record<never, never>>,
+    'RestaurantsDetails': RouteRecordInfo<'RestaurantsDetails', '/restaurants/details', Record<never, never>, Record<never, never>>,
     'Settings': RouteRecordInfo<'Settings', '/settings', Record<never, never>, Record<never, never>>,
   }
 }

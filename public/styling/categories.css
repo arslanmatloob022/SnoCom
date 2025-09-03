@@ -1,106 +1,3 @@
-<script lang="ts" setup>
-
-</script>
-
-<template>
-
-    <div class="ContentWrapper_container">
-        <Categories />
-        <CategoryImages/>
-        <Brands/>
-        <RelatedProducts/>
-    </div>
-</template>
-<style>
-.Carousel_wrapper {
-    position: relative
-}
-
-@media(max-width:1360px) {
-    .Carousel_wrapper {
-        margin-right: var(--content-wrapper-side-padding-negative);
-        margin-left: var(--content-wrapper-side-padding-negative)
-    }
-
-    .Carousel_wrapper .Carousel_navButtonWrapper__gL_66 {
-        display: none
-    }
-}
-
-.Carousel_carousel {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-flow: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    gap: 24px
-}
-
-.Carousel_carousel::-webkit-scrollbar {
-    display: none
-}
-
-.Carousel_enter__Jz_dI {
-    opacity: 0;
-    transition: opacity .2s ease
-}
-
-.Carousel_enterActive__o_jK8 {
-    opacity: 1
-}
-
-.Carousel_exit {
-    opacity: 1;
-    transition: opacity .2s ease
-}
-
-.Carousel_exitActive {
-    opacity: 0
-}
-
-@media(max-width:1360px) {
-    :root[lang=en] .Carousel_carousel>:first-of-type {
-        padding-left: var(--content-wrapper-side-padding)
-    }
-
-    :root[lang=ar] .Carousel_carousel>:first-of-type,
-    :root[lang=en] .Carousel_carousel>:last-of-type {
-        padding-right: var(--content-wrapper-side-padding)
-    }
-
-    :root[lang=ar] .Carousel_carousel>:last-of-type {
-        padding-left: var(--content-wrapper-side-padding)
-    }
-}
-
-.NavButton_wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row;
-    border-radius: 24px;
-    width: 48px;
-    height: 48px;
-    background: var(--control-tertiary);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 2;
-    box-shadow: var(--box-shadow-56)
-}
-
-.NavButton_wrapper.NavButton_prev {
-    left: -32px
-}
-
-.NavButton_wrapper.NavButton_next__x_uZ2 {
-    right: -32px
-}
 
 .ProductCardHorizontal_wrapper {
     background: var(--background-secondary);
@@ -669,6 +566,81 @@
     text-align: right
 }
 
+.SkeletonVerticalProductCard_card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+    width: 188px;
+    background: var(--background-secondary);
+    border-radius: 32px
+}
+
+@media(max-width:1024px) {
+    .SkeletonVerticalProductCard_card {
+        width: 156px;
+        border-radius: 28px
+    }
+}
+
+@media(max-width:575px) {
+    .SkeletonVerticalProductCard_card {
+        width: 150px
+    }
+}
+
+.SkeletonVerticalProductCard_image__vt9_K {
+    width: 172px;
+    height: 172px;
+    margin: 8px;
+    border-radius: 26px 26px 6px 6px !important;
+    overflow: hidden
+}
+
+@media(max-width:1024px) {
+    .SkeletonVerticalProductCard_image__vt9_K {
+        width: 140px;
+        height: 140px;
+        border-radius: 20px 20px 6px 6px !important
+    }
+}
+
+@media(max-width:575px) {
+    .SkeletonVerticalProductCard_image__vt9_K {
+        margin: 6px;
+        width: 134px;
+        height: 134px
+    }
+}
+
+.SkeletonVerticalProductCard_info__4y__L {
+    width: 100%;
+    padding: 8px 12px 18px
+}
+
+@media(max-width:1024px) {
+    .SkeletonVerticalProductCard_info__4y__L {
+        padding-bottom: 12px
+    }
+}
+
+.SkeletonVerticalProductCard_price {
+    width: 60px;
+    height: 20px;
+    margin-bottom: 6px
+}
+
+.SkeletonVerticalProductCard_name {
+    width: 100%;
+    height: 24px
+}
+
+.SkeletonVerticalProductCard_button {
+    width: calc(100% - 24px);
+    height: 52px;
+    margin: 0 12px 12px
+}
+
 .ProductInfo_wrapper___tfgf {
     margin-top: 10px
 }
@@ -709,6 +681,123 @@
     text-align: right
 }
 
+.SkeletonSearchMerchantCard_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row
+}
+
+.SkeletonSearchMerchantCard_image {
+    width: 144px;
+    height: 72px;
+    position: relative;
+    -webkit-margin-end: 16px;
+    margin-inline-end: 16px
+}
+
+@media(max-width:1024px) {
+    .SkeletonSearchMerchantCard_image {
+        width: 120px;
+        height: 60px;
+        border-radius: 16px !important
+    }
+}
+
+@media(max-width:575px) {
+    .SkeletonSearchMerchantCard_image {
+        width: 104px;
+        height: 52px
+    }
+}
+
+.SkeletonSearchMerchantCard_info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+    gap: 4px
+}
+
+.SkeletonSearchMerchantCard_name {
+    width: 260px;
+    height: 44px
+}
+
+@media(max-width:1024px) {
+    .SkeletonSearchMerchantCard_name {
+        height: 36px
+    }
+}
+
+@media(max-width:575px) {
+    .SkeletonSearchMerchantCard_name {
+        width: 160px;
+        height: 28px
+    }
+}
+
+.SkeletonSearchMerchantCard_details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+    gap: 6px
+}
+
+.SkeletonSearchMerchantCard_time__EB_XU {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+    gap: 4px
+}
+
+.SkeletonSearchMerchantCard_icon {
+    width: 24px;
+    height: 24px
+}
+
+@media(max-width:1024px) {
+    .SkeletonSearchMerchantCard_icon {
+        width: 20px;
+        height: 20px
+    }
+}
+
+.SkeletonSearchMerchantCard_timeValue {
+    width: 72px;
+    height: 20px
+}
+
+.SkeletonSearchMerchantCard_dot {
+    width: 4px;
+    height: 4px
+}
+
+.SkeletonSearchMerchantCard_cats {
+    width: 120px;
+    height: 20px
+}
+
+.SkeletonSearchMerchantCard_carousel {
+    margin-top: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+    gap: 16px
+}
+
+.SkeletonSearchMerchantCard_carousel::-webkit-scrollbar {
+    display: none
+}
+
 .ProductCardMarketplace_imageWrapper {
     position: relative
 }
@@ -718,6 +807,167 @@
     top: 12px;
     right: 16px;
     padding: 0
+}
+
+.Feedback_wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: var(--text-brand);
+    cursor: pointer
+}
+
+.Feedback_icon {
+    width: 24px;
+    height: 24px
+}
+
+:root[lang=ar] .Feedback_icon {
+    transform: scaleX(-1)
+}
+
+.Carousel_wrapper {
+    position: relative
+}
+
+@media(max-width:1360px) {
+    .Carousel_wrapper {
+        margin-right: var(--content-wrapper-side-padding-negative);
+        margin-left: var(--content-wrapper-side-padding-negative)
+    }
+
+    .Carousel_wrapper .Carousel_navButtonWrapper__gL_66 {
+        display: none
+    }
+}
+
+.Carousel_carousel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    gap: 24px
+}
+
+.Carousel_carousel::-webkit-scrollbar {
+    display: none
+}
+
+.Carousel_enter__Jz_dI {
+    opacity: 0;
+    transition: opacity .2s ease
+}
+
+.Carousel_enterActive__o_jK8 {
+    opacity: 1
+}
+
+.Carousel_exit {
+    opacity: 1;
+    transition: opacity .2s ease
+}
+
+.Carousel_exitActive {
+    opacity: 0
+}
+
+@media(max-width:1360px) {
+    :root[lang=en] .Carousel_carousel>:first-of-type {
+        padding-left: var(--content-wrapper-side-padding)
+    }
+
+    :root[lang=ar] .Carousel_carousel>:first-of-type,
+    :root[lang=en] .Carousel_carousel>:last-of-type {
+        padding-right: var(--content-wrapper-side-padding)
+    }
+
+    :root[lang=ar] .Carousel_carousel>:last-of-type {
+        padding-left: var(--content-wrapper-side-padding)
+    }
+}
+
+.FeedbackModal_modal {
+    width: 448px
+}
+
+.FeedbackModal_wrapper__Sx_nr {
+    width: 100%
+}
+
+.FeedbackModal_textarea {
+    margin-top: 16px;
+    margin-bottom: 24px
+}
+
+@media(max-width:575px) {
+    .FeedbackModal_textarea {
+        margin-bottom: 16px
+    }
+}
+
+.NavButton_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    border-radius: 24px;
+    width: 48px;
+    height: 48px;
+    background: var(--control-tertiary);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: var(--box-shadow-56)
+}
+
+.NavButton_wrapper.NavButton_prev {
+    left: -32px
+}
+
+.NavButton_wrapper.NavButton_next__x_uZ2 {
+    right: -32px
+}
+
+.EmptyResult_wrapper {
+    margin-top: 112px;
+    margin-bottom: 112px;
+    color: var(--text-secondary);
+    text-align: center
+}
+
+.EmptyResult_title {
+    margin-top: 0;
+    margin-bottom: 8px
+}
+
+.EmptyResult_description {
+    margin-top: 8px;
+    margin-bottom: 8px
+}
+
+@media(max-width:1024px) {
+    .EmptyResult_description {
+        margin-bottom: 12px
+    }
+}
+
+@media(max-width:575px) {
+    .EmptyResult_description {
+        margin-bottom: 8px
+    }
+}
+
+:root[lang=ar] .EmptyResult_title {
+    text-align: center;
+    margin-bottom: 15px
 }
 
 .SeeAll_wrapper__OQnx_ {
@@ -770,144 +1020,230 @@
     }
 }
 
-.ShowMore_wrapper {
-    cursor: pointer;
+.SearchMerchant_wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-flow: column;
-    align-self: flex-start;
-    justify-self: center
+    flex-flow: row;
+    width: -moz-fit-content;
+    width: fit-content
 }
 
-.ShowMore_iconWrapper {
-    width: 68px;
-    height: 68px;
+.SearchMerchant_imageWrapper__m92_k {
+    width: 144px;
+    height: 72px;
+    position: relative;
     border-radius: 20px;
-    background: var(--background-secondary);
+    overflow: hidden;
+    -webkit-margin-end: 16px;
+    margin-inline-end: 16px;
+    flex-shrink: 0
+}
+
+@media(max-width:1024px) {
+    .SearchMerchant_imageWrapper__m92_k {
+        width: 120px;
+        height: 60px;
+        border-radius: 16px
+    }
+}
+
+@media(max-width:575px) {
+    .SearchMerchant_imageWrapper__m92_k {
+        width: 104px;
+        height: 52px
+    }
+}
+
+.SearchMerchant_imageWrapper__m92_k:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .08)
+}
+
+.SearchMerchant_info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+    gap: 4px
+}
+
+.SearchMerchant_name {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+@supports(-webkit-line-clamp:1) {
+    .SearchMerchant_name {
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical
+    }
+}
+
+.SearchMerchant_details {
+    gap: 6px
+}
+
+.SearchMerchant_details,
+.SearchMerchant_time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row
+}
+
+.SearchMerchant_time {
+    gap: 4px;
+    flex-shrink: 0
+}
+
+.SearchMerchant_icon {
+    width: 24px;
+    height: 24px
+}
+
+@media(max-width:1024px) {
+    .SearchMerchant_icon {
+        width: 20px;
+        height: 20px
+    }
+}
+
+.SearchMerchant_dot___bcfS {
+    color: var(--text-secondary)
+}
+
+.SearchMerchant_cats {
+    color: var(--text-secondary);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+@supports(-webkit-line-clamp:1) {
+    .SearchMerchant_cats {
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical
+    }
+}
+
+.SearchMerchant_carousel {
+    align-items: stretch !important;
+    gap: 16px !important;
+    margin-top: 16px
+}
+
+@media(max-width:575px) {
+    .SearchMerchant_carousel {
+        gap: 8px !important
+    }
+}
+
+.SearchMerchant_carouselNavButton {
+    display: none
+}
+
+.SearchMerchant_closed__MVI__ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    color: var(--text-invert-primary);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: row
 }
 
-@media(max-width:1024px) {
-    .ShowMore_iconWrapper {
-        width: 60px;
-        height: 60px
+.SearchMerchant_card {
+    background: var(--background-secondary)
+}
+
+.SearchMerchant_card .SearchMerchant_cardButton__xN_2S {
+    background: var(--background-primary)
+}
+
+:root[lang=ar] .SearchMerchant_icon {
+    transform: scaleX(-1)
+}
+
+.Categories_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+@media(max-width:1360px) {
+    .Categories_wrapper {
+        margin-left: var(--content-wrapper-side-padding-negative);
+        margin-right: var(--content-wrapper-side-padding-negative);
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        flex-wrap: nowrap;
+        white-space: nowrap
     }
-}
 
-.ShowMore_label {
-    text-align: center;
-    margin-top: 4px
-}
-
-.Subcategories_wrapper {
-    display: grid;
-    grid-row-gap: 24px;
-    grid-column-gap: 24px;
-    grid-template-columns: repeat(10, minmax(0, 1fr))
-}
-
-@media(max-width:1710px) {
-    .Subcategories_wrapper {
-        grid-template-columns: repeat(9, minmax(0, 1fr))
+    .Categories_wrapper::-webkit-scrollbar {
+        display: none
     }
 }
 
 @media(max-width:1360px) {
-    .Subcategories_wrapper {
-        grid-template-columns: repeat(7, minmax(0, 1fr))
+    .Categories_wrapper .Categories_categoryWrapper__3_FRF:first-of-type>.Categories_category {
+        -webkit-margin-start: var(--content-wrapper-side-padding);
+        margin-inline-start: var(--content-wrapper-side-padding)
+    }
+
+    .Categories_wrapper .Categories_categoryWrapper__3_FRF:last-of-type>.Categories_category {
+        -webkit-margin-end: var(--content-wrapper-side-padding);
+        margin-inline-end: var(--content-wrapper-side-padding)
     }
 }
 
-@media(max-width:1024px) {
-    .Subcategories_wrapper {
-        margin: 0 auto;
-        grid-template-columns: repeat(6, minmax(0, 1fr))
-    }
-}
-
-@media(max-width:767px) {
-    .Subcategories_wrapper {
-        grid-template-columns: repeat(5, minmax(0, 1fr))
-    }
-}
-
-@media(max-width:575px) {
-    .Subcategories_wrapper {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-column-gap: 0
-    }
-}
-
-@media(max-width:355px) {
-    .Subcategories_wrapper {
-        grid-template-columns: repeat(3, minmax(0, 1fr))
-    }
-}
-
-.Subcategories_category {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-flow: column;
+.Categories_category {
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: var(--control-secondary);
     cursor: pointer
 }
 
-.Subcategories_category .Subcategories_imageWrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1;
-    border-radius: 24px;
-    overflow: hidden
+.Categories_category.Categories_active {
+    background: var(--control-active);
+    color: var(--constant-white)
+}
+
+.SearchResults_group>div {
+    margin-bottom: 40px
+}
+
+.SearchResultsCategories_wrapper {
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding-top: 0;
+    padding-bottom: 0
 }
 
 @media(max-width:575px) {
-    .Subcategories_category .Subcategories_imageWrapper {
-        border-radius: 20px;
-        width: 60px;
-        height: 60px
-    }
-}
-
-.Subcategories_category .Subcategories_label {
-    text-align: center;
-    margin-top: 8px;
-    overflow-wrap: anywhere
-}
-
-@media(max-width:575px) {
-    .Subcategories_category .Subcategories_label {
-        margin-top: 4px
-    }
-}
-
-.Subcategories_showMore {
-    display: none
-}
-
-@media(max-width:575px) {
-    .Subcategories_showMore {
-        display: flex
-    }
-}
-
-.Title_title {
-    margin-bottom: 32px
-}
-
-@media(max-width:1024px) {
-    .Title_title {
-        margin-top: 0
-    }
-}
-
-@media(max-width:575px) {
-    .Title_title {
+    .SearchResultsCategories_wrapper {
         margin-bottom: 24px
     }
 }
-</style>

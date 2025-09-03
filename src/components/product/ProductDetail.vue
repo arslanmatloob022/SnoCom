@@ -69,13 +69,7 @@ const setActive = (index: number) => {
 
 <template>
     <ProductImages v-if="showImages" @close="closeImages" />
-    <BreadCrum
-  :crumbs="[
-    { name: 'Home Page', href: '/' },
-    { name: 'Electronics', href: '/snoonu-market/electronics' },
-    { name: 'New Mini Smartphone' }
-  ]"
-/>
+
 
 
     <div class="ProductDetail_wrapper">

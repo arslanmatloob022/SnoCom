@@ -1,10 +1,10 @@
-.Description_text__qN1Uu {
+.Description_text {
     text-align: start;
     margin-bottom: 26px
 }
 
 @media(max-width:575px) {
-    .Description_text__qN1Uu {
+    .Description_text {
         margin-bottom: 16px
     }
 }
@@ -29,11 +29,11 @@
     display: none
 }
 
-.FilterPresets_filterWrapper__LDL7z {
+.FilterPresets_filterWrapper {
     white-space: nowrap
 }
 
-.FilterPresets_filter__czMu5 {
+.FilterPresets_filter {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -46,34 +46,34 @@
 }
 
 @media(max-width:575px) {
-    .FilterPresets_filter__czMu5 {
+    .FilterPresets_filter {
         border-radius: 12px
     }
 }
 
-.FilterPresets_filter__czMu5.FilterPresets_active {
+.FilterPresets_filter.FilterPresets_active {
     background: var(--constant-black);
     color: var(--constant-white)
 }
 
-.FilterPresets_filter__czMu5.FilterPresets_first__ID2kE {
+.FilterPresets_filter.FilterPresets_first {
     margin-left: var(--content-wrapper-side-padding)
 }
 
-.FilterPresets_filter__czMu5.FilterPresets_last__3dQB8 {
+.FilterPresets_filter.FilterPresets_last {
     margin-right: var(--content-wrapper-side-padding)
 }
 
-.FilterPresets_filter__czMu5 .FilterPresets_icon__i64jU {
+.FilterPresets_filter .FilterPresets_icon {
     margin: -2px 0
 }
 
-:root[lang=ar] .FilterPresets_filter__czMu5.FilterPresets_first__ID2kE {
+:root[lang=ar] .FilterPresets_filter.FilterPresets_first {
     margin-left: unset;
     margin-right: var(--content-wrapper-side-padding)
 }
 
-:root[lang=ar] .FilterPresets_filter__czMu5.FilterPresets_last__3dQB8 {
+:root[lang=ar] .FilterPresets_filter.FilterPresets_last {
     margin-right: unset;
     margin-left: var(--content-wrapper-side-padding)
 }
@@ -86,32 +86,32 @@
     transform: translateZ(0)
 }
 
-.SkeletonMerchantCard_card .SkeletonMerchantCard_image__CgJa0 {
+.SkeletonMerchantCard_card .SkeletonMerchantCard_image {
     width: 100%;
     height: 172px
 }
 
 @media(max-width:1360px) {
-    .SkeletonMerchantCard_card .SkeletonMerchantCard_image__CgJa0 {
+    .SkeletonMerchantCard_card .SkeletonMerchantCard_image {
         height: 148px
     }
 }
 
 @media(max-width:575px) {
-    .SkeletonMerchantCard_card .SkeletonMerchantCard_image__CgJa0 {
+    .SkeletonMerchantCard_card .SkeletonMerchantCard_image {
         height: 172px
     }
 }
 
-.SkeletonMerchantCard_card .SkeletonMerchantCard_content__h3Q0a {
+.SkeletonMerchantCard_card .SkeletonMerchantCard_content {
     padding: 12px 16px
 }
 
-.SkeletonMerchantCard_card .SkeletonMerchantCard_content__h3Q0a .SkeletonMerchantCard_name {
+.SkeletonMerchantCard_card .SkeletonMerchantCard_content .SkeletonMerchantCard_name {
     height: 20px
 }
 
-.SkeletonMerchantCard_card .SkeletonMerchantCard_content__h3Q0a .SkeletonMerchantCard_primaryDetails {
+.SkeletonMerchantCard_card .SkeletonMerchantCard_content .SkeletonMerchantCard_primaryDetails {
     height: 16px;
     margin-top: 4px;
     margin-bottom: 4px
@@ -124,11 +124,11 @@
     flex-flow: row
 }
 
-.MerchantPriceRange_averagePrice .MerchantPriceRange_price__XHs4b {
+.MerchantPriceRange_averagePrice .MerchantPriceRange_price {
     color: var(--text-secondary)
 }
 
-.MerchantPriceRange_averagePrice .MerchantPriceRange_priceActive__8rgoP {
+.MerchantPriceRange_averagePrice .MerchantPriceRange_priceActive {
     color: var(--text-primary)
 }
 
@@ -152,15 +152,15 @@
     padding: 8px
 }
 
-.MerchantPromoTag_promoTag.MerchantPromoTag_normal__zn41N {
+.MerchantPromoTag_promoTag.MerchantPromoTag_normal {
     border-radius: 42px;
     padding: 12px
 }
 
-.MerchantPromoTag_bundleDeals__4sBjs,
-.MerchantPromoTag_exclusiveOffers__ih56L,
-.MerchantPromoTag_percentageOff__nlGd7,
-.MerchantPromoTag_supportLocal__q0RXl {
+.MerchantPromoTag_bundleDeals,
+.MerchantPromoTag_exclusiveOffers,
+.MerchantPromoTag_percentageOff,
+.MerchantPromoTag_supportLocal {
     background: var(--constant-discount);
     color: var(--constant-white)
 }
@@ -179,17 +179,17 @@
     width: 12px
 }
 
-.MerchantPromoTag_getOneByOne__Wpxa9 {
+.MerchantPromoTag_getOneByOne {
     background: var(--constant-x-get-y)
 }
 
-.MerchantCard_wrapper__ATC0P {
+.MerchantCard_wrapper {
     overflow: hidden;
     box-shadow: var(--box-shadow-56-blur);
     border-radius: 24px
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_imageWrapper__l7i6p {
+.MerchantCard_wrapper .MerchantCard_imageWrapper {
     position: relative;
     width: 100%;
     height: 172px;
@@ -197,22 +197,22 @@
 }
 
 @media(max-width:1360px) {
-    .MerchantCard_wrapper__ATC0P .MerchantCard_imageWrapper__l7i6p {
+    .MerchantCard_wrapper .MerchantCard_imageWrapper {
         height: 148px
     }
 }
 
 @media(max-width:575px) {
-    .MerchantCard_wrapper__ATC0P .MerchantCard_imageWrapper__l7i6p {
+    .MerchantCard_wrapper .MerchantCard_imageWrapper {
         height: 172px
     }
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_imageWrapper__l7i6p .MerchantCard_image__T9fOe {
+.MerchantCard_wrapper .MerchantCard_imageWrapper .MerchantCard_image {
     object-fit: cover
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_imageWrapper__l7i6p .MerchantCard_promotion__ahhw_ {
+.MerchantCard_wrapper .MerchantCard_imageWrapper .MerchantCard_promotion__ahhw_ {
     position: absolute;
     top: 0;
     display: flex;
@@ -228,7 +228,7 @@
     margin-inline-start: 8px
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_imageWrapper__l7i6p .MerchantCard_deliveryTime__hFF6r {
+.MerchantCard_wrapper .MerchantCard_imageWrapper .MerchantCard_deliveryTime {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,7 +244,7 @@
     z-index: 1
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_imageWrapper__l7i6p .MerchantCard_closed__6cJzK {
+.MerchantCard_wrapper .MerchantCard_imageWrapper .MerchantCard_closed {
     z-index: 1;
     position: absolute;
     top: 0;
@@ -259,18 +259,18 @@
     flex-flow: row
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_content {
+.MerchantCard_wrapper .MerchantCard_content {
     padding: 12px 16px
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_content .MerchantCard_name__e7RSA {
+.MerchantCard_wrapper .MerchantCard_content .MerchantCard_name {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis
 }
 
 @supports(-webkit-line-clamp:1) {
-    .MerchantCard_wrapper__ATC0P .MerchantCard_content .MerchantCard_name__e7RSA {
+    .MerchantCard_wrapper .MerchantCard_content .MerchantCard_name {
         white-space: normal;
         display: -webkit-box;
         -webkit-line-clamp: 1;
@@ -278,7 +278,7 @@
     }
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_content .MerchantCard_primaryDetails {
+.MerchantCard_wrapper .MerchantCard_content .MerchantCard_primaryDetails {
     display: flex;
     justify-content: flex-start;
     flex-flow: row;
@@ -286,14 +286,14 @@
     gap: 8px
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_content .MerchantCard_primaryDetails .MerchantCard_ad__4vF3q {
+.MerchantCard_wrapper .MerchantCard_content .MerchantCard_primaryDetails .MerchantCard_ad {
     padding: 1px 4px 3px;
     background: var(--constant-grey-light);
     border-radius: 100px;
     color: var(--text-secondary)
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K {
+.MerchantCard_wrapper .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K {
     margin-top: 4px;
     margin-bottom: 4px;
     display: flex;
@@ -303,7 +303,7 @@
     gap: 8px
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K .MerchantCard_rating__yd2Tt {
+.MerchantCard_wrapper .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K .MerchantCard_rating {
     display: flex;
     justify-content: flex-start;
     flex-flow: row;
@@ -311,11 +311,11 @@
     gap: 4px
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K .MerchantCard_starIcon {
+.MerchantCard_wrapper .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K .MerchantCard_starIcon {
     color: var(--constant-top-rated)
 }
 
-.MerchantCard_wrapper__ATC0P .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K .MerchantCard_tags___u15_ {
+.MerchantCard_wrapper .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K .MerchantCard_tags___u15_ {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -324,7 +324,7 @@
 }
 
 @supports(-webkit-line-clamp:1) {
-    .MerchantCard_wrapper__ATC0P .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K .MerchantCard_tags___u15_ {
+    .MerchantCard_wrapper .MerchantCard_content .MerchantCard_secondaryDetails__c9r_K .MerchantCard_tags___u15_ {
         white-space: normal;
         display: -webkit-box;
         -webkit-line-clamp: 1;
@@ -332,12 +332,12 @@
     }
 }
 
-:root[lang=ar] .MerchantCard_name__e7RSA,
+:root[lang=ar] .MerchantCard_name,
 :root[lang=ar] .MerchantCard_tags___u15_ {
     text-align: right
 }
 
-:root[lang=ar] .MerchantCard_deliveryTime__hFF6r {
+:root[lang=ar] .MerchantCard_deliveryTime {
     left: 0;
     right: auto;
     border-radius: 0 16px 0 0
@@ -347,41 +347,41 @@
     transform: scaleX(-1)
 }
 
-.Merchants_wrapper__d1ic4 {
+.Merchants_wrapper {
     display: grid;
     grid-gap: 24px;
     grid-template-columns: repeat(4, minmax(0, 1fr))
 }
 
 @media(max-width:1710px) {
-    .Merchants_wrapper__d1ic4 {
+    .Merchants_wrapper {
         grid-template-columns: repeat(3, minmax(0, 1fr))
     }
 }
 
 @media(max-width:1024px) {
-    .Merchants_wrapper__d1ic4 {
+    .Merchants_wrapper {
         grid-template-columns: repeat(2, minmax(0, 1fr))
     }
 }
 
 @media(max-width:575px) {
-    .Merchants_wrapper__d1ic4 {
+    .Merchants_wrapper {
         grid-template-columns: minmax(0, 1fr)
     }
 }
 
-.Carousel_wrapper__Z5oJV {
+.Carousel_wrapper {
     position: relative
 }
 
 @media(max-width:1360px) {
-    .Carousel_wrapper__Z5oJV {
+    .Carousel_wrapper {
         margin-right: var(--content-wrapper-side-padding-negative);
         margin-left: var(--content-wrapper-side-padding-negative)
     }
 
-    .Carousel_wrapper__Z5oJV .Carousel_navButtonWrapper__gL_66 {
+    .Carousel_wrapper .Carousel_navButtonWrapper__gL_66 {
         display: none
     }
 }
@@ -412,7 +412,7 @@
     opacity: 1
 }
 
-.Carousel_exit__7C2QB {
+.Carousel_exit {
     opacity: 1;
     transition: opacity .2s ease
 }
@@ -436,7 +436,7 @@
     }
 }
 
-.NavButton_wrapper__iJpe4 {
+.NavButton_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -453,33 +453,33 @@
     box-shadow: var(--box-shadow-56)
 }
 
-.NavButton_wrapper__iJpe4.NavButton_prev {
+.NavButton_wrapper.NavButton_prev {
     left: -32px
 }
 
-.NavButton_wrapper__iJpe4.NavButton_next__x_uZ2 {
+.NavButton_wrapper.NavButton_next__x_uZ2 {
     right: -32px
 }
 
-.FoodSubCategoryCard_fakeWrapper__wi0Cm {
+.FoodSubCategoryCard_fakeWrapper {
     height: 100%;
     position: relative
 }
 
-.FoodSubCategoryCard_mainImageWrapper__splY7 {
+.FoodSubCategoryCard_mainImageWrapper {
     height: 108px;
     width: 108px
 }
 
 @media(max-width:1024px) {
-    .FoodSubCategoryCard_mainImageWrapper__splY7 {
+    .FoodSubCategoryCard_mainImageWrapper {
         width: 88px;
         height: 88px
     }
 }
 
 @media(max-width:575px) {
-    .FoodSubCategoryCard_mainImageWrapper__splY7 {
+    .FoodSubCategoryCard_mainImageWrapper {
         width: 80px;
         height: 80px
     }
@@ -506,22 +506,22 @@
 }
 
 .FoodSubCategoryCard_imageWrapper {
-    width: 108px;
-    height: 144px;
+    width: 115px;
+    height: 106px;
     position: relative
 }
 
 @media(max-width:1024px) {
     .FoodSubCategoryCard_imageWrapper {
         width: 88px;
-        height: 120px
+        height: 88px
     }
 }
 
 @media(max-width:575px) {
     .FoodSubCategoryCard_imageWrapper {
         width: 80px;
-        height: 112px
+        height: 80px
     }
 }
 
@@ -568,30 +568,30 @@
     }
 }
 
-.FoodSubCategoryCard_labelSlider__w9hLY {
+.FoodSubCategoryCard_labelSlider {
     text-align: center;
     margin-top: 14px
 }
 
-.SubCategories_row__Me86p {
+.SubCategories_row {
     align-items: flex-start;
     margin-bottom: 40px
 }
 
 @media(max-width:1360px) {
-    .SubCategories_row__Me86p {
+    .SubCategories_row {
         margin-bottom: 32px
     }
 }
 
 @media(max-width:1024px) {
-    .SubCategories_row__Me86p {
+    .SubCategories_row {
         margin-bottom: 28px
     }
 }
 
 @media(max-width:575px) {
-    .SubCategories_row__Me86p {
+    .SubCategories_row {
         margin-bottom: 32px;
         gap: 16px
     }
@@ -631,7 +631,7 @@
     }
 }
 
-.SubCategoryCard_cross__3XAok {
+.SubCategoryCard_cross {
     position: absolute;
     top: 0;
     right: 0;

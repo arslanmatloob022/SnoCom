@@ -1,3 +1,4 @@
+
 .BestSelling_wrapper {
     --outer-margin: 24px;
     --outer-margin-negative: -24px;
@@ -770,7 +771,7 @@
     gap: 16px
 }
 
-._slugantDetailsWrapper__Ni_d0 {
+._slugantDetailsWrapper {
     margin-top: 24px;
     display: flex;
     align-items: center;
@@ -804,7 +805,7 @@
     }
 }
 
-._slugiption___UXGB {
+._slugiption {
     order: 3;
     display: none;
     background: var(--background-secondary);
@@ -816,7 +817,7 @@
 }
 
 @media(max-width:1024px) {
-    ._slugiption___UXGB {
+    ._slugiption {
         order: 2
     }
 }
