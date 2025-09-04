@@ -84,7 +84,7 @@ const currentIndex = ref(0);
 
             <Swiper :modules="[Navigation, Pagination]" :slides-per-view="6.2" :space-between="20" navigation pagination
                 :breakpoints="{
-                    320: { slidesPerView: 1.2, spaceBetween: 10 },
+                    320: { slidesPerView: 1, spaceBetween: 10 },
                     640: { slidesPerView: 2.2, spaceBetween: 15 },
                     1024: { slidesPerView: 2.8, spaceBetween: 20 },
                     1440: { slidesPerView: 3.8, spaceBetween: 24 }
@@ -208,7 +208,7 @@ const currentIndex = ref(0);
 
 @media(max-width:575px) {
     .TimedBannerList_wrapper {
-        display: none
+        /* display: none */
     }
 }
 
