@@ -11,7 +11,9 @@
   <div class="ContentWrapper_container">
 
     <TopCategories/>
+    <!-- <Scity/> -->
     <ForYouProducts/>
+          <CategoryImages/>
     <SameProductCollection/>
     <Brands/>
   </div>

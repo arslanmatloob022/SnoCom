@@ -34,6 +34,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SameProductCollection: typeof import('./src/components/Home/SameProductCollection.vue')['default']
+    Scity: typeof import('./src/components/Scity.vue')['default']
     TagList: typeof import('./src/components/TagList.vue')['default']
     TopCategories: typeof import('./src/components/Home/TopCategories.vue')['default']
   }

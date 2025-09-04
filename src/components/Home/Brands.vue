@@ -128,49 +128,30 @@ const brands = ref([
       <div class="Carousel_navButtonWrapper__gL_66"></div>
 
       <div class="Carousel_carousel">
-            <Swiper
-  :modules="[Navigation, Pagination]"
-  :slides-per-view="6.2"  
-  :space-between="20"
-  navigation
-  pagination
-
-  :breakpoints="{
-    320: { slidesPerView: 3.2, spaceBetween: 10 },
-    640: { slidesPerView: 5.2, spaceBetween: 15 },
-    1024: { slidesPerView: 7.4, spaceBetween: 20 },
-    1440: { slidesPerView: 10.4, spaceBetween: 24 }
-  }"
-  :centered-slides="false"
-  :centered-slides-bounds="true"
->
-      <SwiperSlide v-for="brand in brands" :key="brand.id">
-          <a
-            rel="noopener noreferrer"
-            data-analytic-label="favouriteBrand"
-            :data-analytic-event-content="brand.analytic"
-            :href="brand.href"
-          >
-            <div class="BrandCard_brand">
-              <div class="BrandCard_imgWrap">
-                <span
-                  style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"
-                >
-                  <img
-                    :alt="brand.name"
-                    decoding="async"
-                    data-nimg="fill"
-                    :src="brand.img"
-                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover; object-position: center center;"
-                  />
-                  <noscript></noscript>
-                </span>
+        <Swiper :modules="[Navigation, Pagination]" :slides-per-view="6.2" :space-between="20" navigation pagination
+          :breakpoints="{
+            320: { slidesPerView: 2.2, spaceBetween: 10 },
+            640: { slidesPerView: 4.2, spaceBetween: 15 },
+            1024: { slidesPerView: 7.4, spaceBetween: 20 },
+            1440: { slidesPerView: 10.4, spaceBetween: 24 }
+          }" :centered-slides="false" :centered-slides-bounds="true">
+          <SwiperSlide v-for="brand in brands" :key="brand.id">
+            <a rel="noopener noreferrer" data-analytic-label="favouriteBrand"
+              :data-analytic-event-content="brand.analytic" :href="brand.href">
+              <div class="BrandCard_brand">
+                <div class="BrandCard_imgWrap">
+                  <span
+                    style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
+                    <img :alt="brand.name" decoding="async" data-nimg="fill" :src="brand.img"
+                      style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover; object-position: center center;" />
+                    <noscript></noscript>
+                  </span>
+                </div>
+                <h5 class="Typography_h5 BrandCard_title">{{ brand.name }}</h5>
+                <p class="Typography_p8 BrandCard_label">{{ brand.time }}</p>
               </div>
-              <h5 class="Typography_h5 BrandCard_title">{{ brand.name }}</h5>
-              <p class="Typography_p8 BrandCard_label">{{ brand.time }}</p>
-            </div>
-          </a>
-        </SwiperSlide>
+            </a>
+          </SwiperSlide>
         </Swiper>
       </div>
 
@@ -180,11 +161,10 @@ const brands = ref([
 </template>
 
 <style scoped>
-
-
 :deep(.swiper-pagination) {
   display: none !important;
 }
+
 /* Make arrows smaller and circular with white background */
 :deep(.swiper-button-next),
 :deep(.swiper-button-prev) {
@@ -192,12 +172,14 @@ const brands = ref([
   width: 50px;
   height: 50px;
   border-radius: 9999px;
-top: 30%;
+  top: 30%;
   /* look & feel */
   background: #ffffff;
-  color: #6b7280; /* gray-500 */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #f1f5f9; /* subtle border */
+  color: #6b7280;
+  /* gray-500 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f5f9;
+  /* subtle border */
 
   /* center the icon */
   display: flex;
@@ -208,7 +190,8 @@ top: 30%;
   z-index: 10;
 
   /* shrink icon size */
-  --swiper-navigation-size: 16px; /* default is 44px */
+  --swiper-navigation-size: 16px;
+  /* default is 44px */
 }
 
 /* Use text color for the pseudo icon */
@@ -221,8 +204,9 @@ top: 30%;
 /* Hover/active states */
 :deep(.swiper-button-next:hover),
 :deep(.swiper-button-prev:hover) {
-  color: #4b5563; /* gray-600 */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  color: #4b5563;
+  /* gray-600 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 /* Disabled state */
@@ -239,12 +223,14 @@ top: 30%;
 :deep(.swiper-button-prev) {
   left: 0px;
 }
+
 :deep(.swiper-button-next) {
   right: 0px;
 }
 
 /* Smaller on small screens */
 @media (max-width: 640px) {
+
   :deep(.swiper-button-next),
   :deep(.swiper-button-prev) {
     width: 30px;
@@ -252,5 +238,4 @@ top: 30%;
     --swiper-navigation-size: 14px;
   }
 }
-
 </style>
