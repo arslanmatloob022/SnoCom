@@ -1,23 +1,11 @@
-<script></script>
+<script>
+import EventImageComponent from "./EventImageComponent.vue";
+import EventQRScan from "./EventQRScan.vue";
+</script>
 <template>
   <div class="EventDetails_wrapper">
-    <div class="ImageSection_imageWrapper">
-      <img
-        alt="Fällä – Self-Driven Solar-Powered Boat"
-        loading="lazy"
-        decoding="async"
-        data-nimg="fill"
-        class="ImageSection_image"
-        src="https://images.snoonu.com/snoofun/2025-07/c6d47ba7-cf7e-47c6-9ff7-a3729da0804a_output.png"
-        style="
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          inset: 0px;
-          color: transparent;
-        "
-      />
-    </div>
+    <EventImageComponent />
+
     <div class="ContentSection_wrapper">
       <div class="MainInfo_header___Ascn">
         <div class="MainInfo_inAppRegistration">
@@ -152,97 +140,102 @@
         </div>
       </div>
     </div>
-    <div class="QRSection_wrapper">
-      <div class="QRSection_logoWrapper">
-        <!-- src="/_next/static/media/logo.2496d3eb.svg" -->
-        <img
-          alt="S City"
-          loading="lazy"
-          decoding="async"
-          data-nimg="fill"
-          style="
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            inset: 0px;
-            color: transparent;
-          "
-        />
-      </div>
-      <p class="Typography_p1">
-        Browse events &amp; book your tickets in the app for a better experience
-      </p>
-      <div class="QRSection_qrContent">
-        <div class="QRSection_qr">
-          <svg
-            class="QRSection_qrCode"
-            height="256"
-            viewBox="0 0 33 33"
-            width="256"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="       M 7 0 l 1 0 0 1 -1 0 Z M 8 0 l 1 0 0 1 -1 0 Z M 9 0 l 1 0 0 1 -1 0 Z   M 12 0 l 1 0 0 1 -1 0 Z     M 17 0 l 1 0 0 1 -1 0 Z   M 20 0 l 1 0 0 1 -1 0 Z M 21 0 l 1 0 0 1 -1 0 Z   M 24 0 l 1 0 0 1 -1 0 Z M 25 0 l 1 0 0 1 -1 0 Z         M 1 1 l 1 0 0 1 -1 0 Z M 2 1 l 1 0 0 1 -1 0 Z M 3 1 l 1 0 0 1 -1 0 Z M 4 1 l 1 0 0 1 -1 0 Z M 5 1 l 1 0 0 1 -1 0 Z  M 7 1 l 1 0 0 1 -1 0 Z  M 9 1 l 1 0 0 1 -1 0 Z   M 12 1 l 1 0 0 1 -1 0 Z M 13 1 l 1 0 0 1 -1 0 Z   M 16 1 l 1 0 0 1 -1 0 Z   M 19 1 l 1 0 0 1 -1 0 Z M 20 1 l 1 0 0 1 -1 0 Z M 21 1 l 1 0 0 1 -1 0 Z    M 25 1 l 1 0 0 1 -1 0 Z  M 27 1 l 1 0 0 1 -1 0 Z M 28 1 l 1 0 0 1 -1 0 Z M 29 1 l 1 0 0 1 -1 0 Z M 30 1 l 1 0 0 1 -1 0 Z M 31 1 l 1 0 0 1 -1 0 Z   M 1 2 l 1 0 0 1 -1 0 Z    M 5 2 l 1 0 0 1 -1 0 Z  M 7 2 l 1 0 0 1 -1 0 Z  M 9 2 l 1 0 0 1 -1 0 Z  M 11 2 l 1 0 0 1 -1 0 Z M 12 2 l 1 0 0 1 -1 0 Z M 13 2 l 1 0 0 1 -1 0 Z  M 15 2 l 1 0 0 1 -1 0 Z      M 21 2 l 1 0 0 1 -1 0 Z M 22 2 l 1 0 0 1 -1 0 Z M 23 2 l 1 0 0 1 -1 0 Z  M 25 2 l 1 0 0 1 -1 0 Z  M 27 2 l 1 0 0 1 -1 0 Z    M 31 2 l 1 0 0 1 -1 0 Z   M 1 3 l 1 0 0 1 -1 0 Z    M 5 3 l 1 0 0 1 -1 0 Z  M 7 3 l 1 0 0 1 -1 0 Z M 8 3 l 1 0 0 1 -1 0 Z M 9 3 l 1 0 0 1 -1 0 Z    M 13 3 l 1 0 0 1 -1 0 Z M 14 3 l 1 0 0 1 -1 0 Z   M 17 3 l 1 0 0 1 -1 0 Z M 18 3 l 1 0 0 1 -1 0 Z   M 21 3 l 1 0 0 1 -1 0 Z    M 25 3 l 1 0 0 1 -1 0 Z  M 27 3 l 1 0 0 1 -1 0 Z    M 31 3 l 1 0 0 1 -1 0 Z   M 1 4 l 1 0 0 1 -1 0 Z    M 5 4 l 1 0 0 1 -1 0 Z  M 7 4 l 1 0 0 1 -1 0 Z  M 9 4 l 1 0 0 1 -1 0 Z M 10 4 l 1 0 0 1 -1 0 Z   M 13 4 l 1 0 0 1 -1 0 Z M 14 4 l 1 0 0 1 -1 0 Z  M 16 4 l 1 0 0 1 -1 0 Z M 17 4 l 1 0 0 1 -1 0 Z M 18 4 l 1 0 0 1 -1 0 Z M 19 4 l 1 0 0 1 -1 0 Z   M 22 4 l 1 0 0 1 -1 0 Z  M 24 4 l 1 0 0 1 -1 0 Z M 25 4 l 1 0 0 1 -1 0 Z  M 27 4 l 1 0 0 1 -1 0 Z    M 31 4 l 1 0 0 1 -1 0 Z   M 1 5 l 1 0 0 1 -1 0 Z M 2 5 l 1 0 0 1 -1 0 Z M 3 5 l 1 0 0 1 -1 0 Z M 4 5 l 1 0 0 1 -1 0 Z M 5 5 l 1 0 0 1 -1 0 Z  M 7 5 l 1 0 0 1 -1 0 Z    M 11 5 l 1 0 0 1 -1 0 Z      M 17 5 l 1 0 0 1 -1 0 Z M 18 5 l 1 0 0 1 -1 0 Z    M 22 5 l 1 0 0 1 -1 0 Z M 23 5 l 1 0 0 1 -1 0 Z  M 25 5 l 1 0 0 1 -1 0 Z  M 27 5 l 1 0 0 1 -1 0 Z M 28 5 l 1 0 0 1 -1 0 Z M 29 5 l 1 0 0 1 -1 0 Z M 30 5 l 1 0 0 1 -1 0 Z M 31 5 l 1 0 0 1 -1 0 Z         M 7 6 l 1 0 0 1 -1 0 Z  M 9 6 l 1 0 0 1 -1 0 Z  M 11 6 l 1 0 0 1 -1 0 Z  M 13 6 l 1 0 0 1 -1 0 Z  M 15 6 l 1 0 0 1 -1 0 Z  M 17 6 l 1 0 0 1 -1 0 Z  M 19 6 l 1 0 0 1 -1 0 Z  M 21 6 l 1 0 0 1 -1 0 Z  M 23 6 l 1 0 0 1 -1 0 Z  M 25 6 l 1 0 0 1 -1 0 Z        M 0 7 l 1 0 0 1 -1 0 Z M 1 7 l 1 0 0 1 -1 0 Z M 2 7 l 1 0 0 1 -1 0 Z M 3 7 l 1 0 0 1 -1 0 Z M 4 7 l 1 0 0 1 -1 0 Z M 5 7 l 1 0 0 1 -1 0 Z M 6 7 l 1 0 0 1 -1 0 Z M 7 7 l 1 0 0 1 -1 0 Z   M 10 7 l 1 0 0 1 -1 0 Z   M 13 7 l 1 0 0 1 -1 0 Z M 14 7 l 1 0 0 1 -1 0 Z M 15 7 l 1 0 0 1 -1 0 Z M 16 7 l 1 0 0 1 -1 0 Z  M 18 7 l 1 0 0 1 -1 0 Z  M 20 7 l 1 0 0 1 -1 0 Z  M 22 7 l 1 0 0 1 -1 0 Z M 23 7 l 1 0 0 1 -1 0 Z  M 25 7 l 1 0 0 1 -1 0 Z M 26 7 l 1 0 0 1 -1 0 Z M 27 7 l 1 0 0 1 -1 0 Z M 28 7 l 1 0 0 1 -1 0 Z M 29 7 l 1 0 0 1 -1 0 Z M 30 7 l 1 0 0 1 -1 0 Z M 31 7 l 1 0 0 1 -1 0 Z M 32 7 l 1 0 0 1 -1 0 Z   M 2 8 l 1 0 0 1 -1 0 Z  M 4 8 l 1 0 0 1 -1 0 Z M 5 8 l 1 0 0 1 -1 0 Z   M 8 8 l 1 0 0 1 -1 0 Z M 9 8 l 1 0 0 1 -1 0 Z      M 15 8 l 1 0 0 1 -1 0 Z M 16 8 l 1 0 0 1 -1 0 Z M 17 8 l 1 0 0 1 -1 0 Z  M 19 8 l 1 0 0 1 -1 0 Z M 20 8 l 1 0 0 1 -1 0 Z  M 22 8 l 1 0 0 1 -1 0 Z M 23 8 l 1 0 0 1 -1 0 Z  M 25 8 l 1 0 0 1 -1 0 Z    M 29 8 l 1 0 0 1 -1 0 Z   M 32 8 l 1 0 0 1 -1 0 Z   M 2 9 l 1 0 0 1 -1 0 Z  M 4 9 l 1 0 0 1 -1 0 Z M 5 9 l 1 0 0 1 -1 0 Z M 6 9 l 1 0 0 1 -1 0 Z  M 8 9 l 1 0 0 1 -1 0 Z M 9 9 l 1 0 0 1 -1 0 Z M 10 9 l 1 0 0 1 -1 0 Z M 11 9 l 1 0 0 1 -1 0 Z   M 14 9 l 1 0 0 1 -1 0 Z M 15 9 l 1 0 0 1 -1 0 Z M 16 9 l 1 0 0 1 -1 0 Z   M 19 9 l 1 0 0 1 -1 0 Z    M 23 9 l 1 0 0 1 -1 0 Z M 24 9 l 1 0 0 1 -1 0 Z   M 27 9 l 1 0 0 1 -1 0 Z M 28 9 l 1 0 0 1 -1 0 Z  M 30 9 l 1 0 0 1 -1 0 Z M 31 9 l 1 0 0 1 -1 0 Z    M 2 10 l 1 0 0 1 -1 0 Z M 3 10 l 1 0 0 1 -1 0 Z M 4 10 l 1 0 0 1 -1 0 Z M 5 10 l 1 0 0 1 -1 0 Z  M 7 10 l 1 0 0 1 -1 0 Z    M 11 10 l 1 0 0 1 -1 0 Z M 12 10 l 1 0 0 1 -1 0 Z   M 15 10 l 1 0 0 1 -1 0 Z  M 17 10 l 1 0 0 1 -1 0 Z   M 20 10 l 1 0 0 1 -1 0 Z M 21 10 l 1 0 0 1 -1 0 Z  M 23 10 l 1 0 0 1 -1 0 Z M 24 10 l 1 0 0 1 -1 0 Z M 25 10 l 1 0 0 1 -1 0 Z M 26 10 l 1 0 0 1 -1 0 Z M 27 10 l 1 0 0 1 -1 0 Z   M 30 10 l 1 0 0 1 -1 0 Z M 31 10 l 1 0 0 1 -1 0 Z    M 2 11 l 1 0 0 1 -1 0 Z M 3 11 l 1 0 0 1 -1 0 Z M 4 11 l 1 0 0 1 -1 0 Z  M 6 11 l 1 0 0 1 -1 0 Z M 7 11 l 1 0 0 1 -1 0 Z  M 9 11 l 1 0 0 1 -1 0 Z M 10 11 l 1 0 0 1 -1 0 Z  M 12 11 l 1 0 0 1 -1 0 Z  M 14 11 l 1 0 0 1 -1 0 Z M 15 11 l 1 0 0 1 -1 0 Z M 16 11 l 1 0 0 1 -1 0 Z M 17 11 l 1 0 0 1 -1 0 Z   M 20 11 l 1 0 0 1 -1 0 Z  M 22 11 l 1 0 0 1 -1 0 Z  M 24 11 l 1 0 0 1 -1 0 Z M 25 11 l 1 0 0 1 -1 0 Z M 26 11 l 1 0 0 1 -1 0 Z M 27 11 l 1 0 0 1 -1 0 Z  M 29 11 l 1 0 0 1 -1 0 Z M 30 11 l 1 0 0 1 -1 0 Z   M 0 12 l 1 0 0 1 -1 0 Z   M 3 12 l 1 0 0 1 -1 0 Z M 4 12 l 1 0 0 1 -1 0 Z M 5 12 l 1 0 0 1 -1 0 Z  M 7 12 l 1 0 0 1 -1 0 Z M 8 12 l 1 0 0 1 -1 0 Z M 9 12 l 1 0 0 1 -1 0 Z M 10 12 l 1 0 0 1 -1 0 Z M 11 12 l 1 0 0 1 -1 0 Z M 12 12 l 1 0 0 1 -1 0 Z   M 15 12 l 1 0 0 1 -1 0 Z   M 18 12 l 1 0 0 1 -1 0 Z  M 20 12 l 1 0 0 1 -1 0 Z  M 22 12 l 1 0 0 1 -1 0 Z M 23 12 l 1 0 0 1 -1 0 Z    M 27 12 l 1 0 0 1 -1 0 Z M 28 12 l 1 0 0 1 -1 0 Z  M 30 12 l 1 0 0 1 -1 0 Z M 31 12 l 1 0 0 1 -1 0 Z     M 3 13 l 1 0 0 1 -1 0 Z   M 6 13 l 1 0 0 1 -1 0 Z M 7 13 l 1 0 0 1 -1 0 Z    M 11 13 l 1 0 0 1 -1 0 Z M 12 13 l 1 0 0 1 -1 0 Z M 13 13 l 1 0 0 1 -1 0 Z  M 15 13 l 1 0 0 1 -1 0 Z M 16 13 l 1 0 0 1 -1 0 Z  M 18 13 l 1 0 0 1 -1 0 Z  M 20 13 l 1 0 0 1 -1 0 Z M 21 13 l 1 0 0 1 -1 0 Z M 22 13 l 1 0 0 1 -1 0 Z M 23 13 l 1 0 0 1 -1 0 Z M 24 13 l 1 0 0 1 -1 0 Z M 25 13 l 1 0 0 1 -1 0 Z  M 27 13 l 1 0 0 1 -1 0 Z          M 4 14 l 1 0 0 1 -1 0 Z M 5 14 l 1 0 0 1 -1 0 Z   M 8 14 l 1 0 0 1 -1 0 Z M 9 14 l 1 0 0 1 -1 0 Z M 10 14 l 1 0 0 1 -1 0 Z     M 15 14 l 1 0 0 1 -1 0 Z  M 17 14 l 1 0 0 1 -1 0 Z  M 19 14 l 1 0 0 1 -1 0 Z M 20 14 l 1 0 0 1 -1 0 Z M 21 14 l 1 0 0 1 -1 0 Z   M 24 14 l 1 0 0 1 -1 0 Z    M 28 14 l 1 0 0 1 -1 0 Z  M 30 14 l 1 0 0 1 -1 0 Z  M 32 14 l 1 0 0 1 -1 0 Z   M 2 15 l 1 0 0 1 -1 0 Z M 3 15 l 1 0 0 1 -1 0 Z M 4 15 l 1 0 0 1 -1 0 Z  M 6 15 l 1 0 0 1 -1 0 Z    M 10 15 l 1 0 0 1 -1 0 Z M 11 15 l 1 0 0 1 -1 0 Z            M 23 15 l 1 0 0 1 -1 0 Z  M 25 15 l 1 0 0 1 -1 0 Z   M 28 15 l 1 0 0 1 -1 0 Z  M 30 15 l 1 0 0 1 -1 0 Z  M 32 15 l 1 0 0 1 -1 0 Z M 0 16 l 1 0 0 1 -1 0 Z  M 2 16 l 1 0 0 1 -1 0 Z     M 7 16 l 1 0 0 1 -1 0 Z    M 11 16 l 1 0 0 1 -1 0 Z  M 13 16 l 1 0 0 1 -1 0 Z  M 15 16 l 1 0 0 1 -1 0 Z       M 22 16 l 1 0 0 1 -1 0 Z   M 25 16 l 1 0 0 1 -1 0 Z    M 29 16 l 1 0 0 1 -1 0 Z M 30 16 l 1 0 0 1 -1 0 Z M 31 16 l 1 0 0 1 -1 0 Z       M 5 17 l 1 0 0 1 -1 0 Z M 6 17 l 1 0 0 1 -1 0 Z        M 14 17 l 1 0 0 1 -1 0 Z M 15 17 l 1 0 0 1 -1 0 Z M 16 17 l 1 0 0 1 -1 0 Z M 17 17 l 1 0 0 1 -1 0 Z  M 19 17 l 1 0 0 1 -1 0 Z M 20 17 l 1 0 0 1 -1 0 Z M 21 17 l 1 0 0 1 -1 0 Z   M 24 17 l 1 0 0 1 -1 0 Z  M 26 17 l 1 0 0 1 -1 0 Z M 27 17 l 1 0 0 1 -1 0 Z M 28 17 l 1 0 0 1 -1 0 Z   M 31 17 l 1 0 0 1 -1 0 Z M 32 17 l 1 0 0 1 -1 0 Z M 0 18 l 1 0 0 1 -1 0 Z M 1 18 l 1 0 0 1 -1 0 Z    M 5 18 l 1 0 0 1 -1 0 Z     M 10 18 l 1 0 0 1 -1 0 Z M 11 18 l 1 0 0 1 -1 0 Z M 12 18 l 1 0 0 1 -1 0 Z M 13 18 l 1 0 0 1 -1 0 Z  M 15 18 l 1 0 0 1 -1 0 Z M 16 18 l 1 0 0 1 -1 0 Z  M 18 18 l 1 0 0 1 -1 0 Z M 19 18 l 1 0 0 1 -1 0 Z M 20 18 l 1 0 0 1 -1 0 Z  M 22 18 l 1 0 0 1 -1 0 Z M 23 18 l 1 0 0 1 -1 0 Z M 24 18 l 1 0 0 1 -1 0 Z  M 26 18 l 1 0 0 1 -1 0 Z M 27 18 l 1 0 0 1 -1 0 Z M 28 18 l 1 0 0 1 -1 0 Z  M 30 18 l 1 0 0 1 -1 0 Z   M 0 19 l 1 0 0 1 -1 0 Z     M 5 19 l 1 0 0 1 -1 0 Z M 6 19 l 1 0 0 1 -1 0 Z   M 9 19 l 1 0 0 1 -1 0 Z    M 13 19 l 1 0 0 1 -1 0 Z M 14 19 l 1 0 0 1 -1 0 Z  M 16 19 l 1 0 0 1 -1 0 Z   M 19 19 l 1 0 0 1 -1 0 Z M 20 19 l 1 0 0 1 -1 0 Z  M 22 19 l 1 0 0 1 -1 0 Z   M 25 19 l 1 0 0 1 -1 0 Z  M 27 19 l 1 0 0 1 -1 0 Z M 28 19 l 1 0 0 1 -1 0 Z  M 30 19 l 1 0 0 1 -1 0 Z M 31 19 l 1 0 0 1 -1 0 Z M 32 19 l 1 0 0 1 -1 0 Z  M 1 20 l 1 0 0 1 -1 0 Z  M 3 20 l 1 0 0 1 -1 0 Z M 4 20 l 1 0 0 1 -1 0 Z M 5 20 l 1 0 0 1 -1 0 Z  M 7 20 l 1 0 0 1 -1 0 Z   M 10 20 l 1 0 0 1 -1 0 Z  M 12 20 l 1 0 0 1 -1 0 Z  M 14 20 l 1 0 0 1 -1 0 Z   M 17 20 l 1 0 0 1 -1 0 Z   M 20 20 l 1 0 0 1 -1 0 Z  M 22 20 l 1 0 0 1 -1 0 Z M 23 20 l 1 0 0 1 -1 0 Z   M 26 20 l 1 0 0 1 -1 0 Z M 27 20 l 1 0 0 1 -1 0 Z M 28 20 l 1 0 0 1 -1 0 Z  M 30 20 l 1 0 0 1 -1 0 Z  M 32 20 l 1 0 0 1 -1 0 Z M 0 21 l 1 0 0 1 -1 0 Z M 1 21 l 1 0 0 1 -1 0 Z    M 5 21 l 1 0 0 1 -1 0 Z M 6 21 l 1 0 0 1 -1 0 Z    M 10 21 l 1 0 0 1 -1 0 Z M 11 21 l 1 0 0 1 -1 0 Z M 12 21 l 1 0 0 1 -1 0 Z M 13 21 l 1 0 0 1 -1 0 Z M 14 21 l 1 0 0 1 -1 0 Z M 15 21 l 1 0 0 1 -1 0 Z M 16 21 l 1 0 0 1 -1 0 Z   M 19 21 l 1 0 0 1 -1 0 Z   M 22 21 l 1 0 0 1 -1 0 Z M 23 21 l 1 0 0 1 -1 0 Z  M 25 21 l 1 0 0 1 -1 0 Z   M 28 21 l 1 0 0 1 -1 0 Z M 29 21 l 1 0 0 1 -1 0 Z  M 31 21 l 1 0 0 1 -1 0 Z    M 2 22 l 1 0 0 1 -1 0 Z  M 4 22 l 1 0 0 1 -1 0 Z M 5 22 l 1 0 0 1 -1 0 Z   M 8 22 l 1 0 0 1 -1 0 Z  M 10 22 l 1 0 0 1 -1 0 Z M 11 22 l 1 0 0 1 -1 0 Z   M 14 22 l 1 0 0 1 -1 0 Z M 15 22 l 1 0 0 1 -1 0 Z  M 17 22 l 1 0 0 1 -1 0 Z M 18 22 l 1 0 0 1 -1 0 Z  M 20 22 l 1 0 0 1 -1 0 Z M 21 22 l 1 0 0 1 -1 0 Z  M 23 22 l 1 0 0 1 -1 0 Z M 24 22 l 1 0 0 1 -1 0 Z M 25 22 l 1 0 0 1 -1 0 Z     M 30 22 l 1 0 0 1 -1 0 Z M 31 22 l 1 0 0 1 -1 0 Z  M 0 23 l 1 0 0 1 -1 0 Z   M 3 23 l 1 0 0 1 -1 0 Z M 4 23 l 1 0 0 1 -1 0 Z  M 6 23 l 1 0 0 1 -1 0 Z     M 11 23 l 1 0 0 1 -1 0 Z M 12 23 l 1 0 0 1 -1 0 Z  M 14 23 l 1 0 0 1 -1 0 Z M 15 23 l 1 0 0 1 -1 0 Z M 16 23 l 1 0 0 1 -1 0 Z M 17 23 l 1 0 0 1 -1 0 Z  M 19 23 l 1 0 0 1 -1 0 Z M 20 23 l 1 0 0 1 -1 0 Z     M 25 23 l 1 0 0 1 -1 0 Z   M 28 23 l 1 0 0 1 -1 0 Z  M 30 23 l 1 0 0 1 -1 0 Z    M 1 24 l 1 0 0 1 -1 0 Z M 2 24 l 1 0 0 1 -1 0 Z M 3 24 l 1 0 0 1 -1 0 Z M 4 24 l 1 0 0 1 -1 0 Z    M 8 24 l 1 0 0 1 -1 0 Z M 9 24 l 1 0 0 1 -1 0 Z   M 12 24 l 1 0 0 1 -1 0 Z   M 15 24 l 1 0 0 1 -1 0 Z     M 20 24 l 1 0 0 1 -1 0 Z  M 22 24 l 1 0 0 1 -1 0 Z       M 29 24 l 1 0 0 1 -1 0 Z M 30 24 l 1 0 0 1 -1 0 Z M 31 24 l 1 0 0 1 -1 0 Z M 32 24 l 1 0 0 1 -1 0 Z M 0 25 l 1 0 0 1 -1 0 Z M 1 25 l 1 0 0 1 -1 0 Z M 2 25 l 1 0 0 1 -1 0 Z M 3 25 l 1 0 0 1 -1 0 Z M 4 25 l 1 0 0 1 -1 0 Z M 5 25 l 1 0 0 1 -1 0 Z M 6 25 l 1 0 0 1 -1 0 Z M 7 25 l 1 0 0 1 -1 0 Z  M 9 25 l 1 0 0 1 -1 0 Z M 10 25 l 1 0 0 1 -1 0 Z M 11 25 l 1 0 0 1 -1 0 Z M 12 25 l 1 0 0 1 -1 0 Z   M 15 25 l 1 0 0 1 -1 0 Z M 16 25 l 1 0 0 1 -1 0 Z M 17 25 l 1 0 0 1 -1 0 Z M 18 25 l 1 0 0 1 -1 0 Z M 19 25 l 1 0 0 1 -1 0 Z   M 22 25 l 1 0 0 1 -1 0 Z   M 25 25 l 1 0 0 1 -1 0 Z M 26 25 l 1 0 0 1 -1 0 Z M 27 25 l 1 0 0 1 -1 0 Z   M 30 25 l 1 0 0 1 -1 0 Z M 31 25 l 1 0 0 1 -1 0 Z         M 7 26 l 1 0 0 1 -1 0 Z   M 10 26 l 1 0 0 1 -1 0 Z  M 12 26 l 1 0 0 1 -1 0 Z M 13 26 l 1 0 0 1 -1 0 Z M 14 26 l 1 0 0 1 -1 0 Z M 15 26 l 1 0 0 1 -1 0 Z M 16 26 l 1 0 0 1 -1 0 Z  M 18 26 l 1 0 0 1 -1 0 Z M 19 26 l 1 0 0 1 -1 0 Z M 20 26 l 1 0 0 1 -1 0 Z  M 22 26 l 1 0 0 1 -1 0 Z M 23 26 l 1 0 0 1 -1 0 Z  M 25 26 l 1 0 0 1 -1 0 Z  M 27 26 l 1 0 0 1 -1 0 Z  M 29 26 l 1 0 0 1 -1 0 Z   M 32 26 l 1 0 0 1 -1 0 Z  M 1 27 l 1 0 0 1 -1 0 Z M 2 27 l 1 0 0 1 -1 0 Z M 3 27 l 1 0 0 1 -1 0 Z M 4 27 l 1 0 0 1 -1 0 Z M 5 27 l 1 0 0 1 -1 0 Z  M 7 27 l 1 0 0 1 -1 0 Z M 8 27 l 1 0 0 1 -1 0 Z M 9 27 l 1 0 0 1 -1 0 Z     M 14 27 l 1 0 0 1 -1 0 Z        M 22 27 l 1 0 0 1 -1 0 Z M 23 27 l 1 0 0 1 -1 0 Z  M 25 27 l 1 0 0 1 -1 0 Z M 26 27 l 1 0 0 1 -1 0 Z M 27 27 l 1 0 0 1 -1 0 Z  M 29 27 l 1 0 0 1 -1 0 Z M 30 27 l 1 0 0 1 -1 0 Z M 31 27 l 1 0 0 1 -1 0 Z M 32 27 l 1 0 0 1 -1 0 Z  M 1 28 l 1 0 0 1 -1 0 Z    M 5 28 l 1 0 0 1 -1 0 Z  M 7 28 l 1 0 0 1 -1 0 Z M 8 28 l 1 0 0 1 -1 0 Z   M 11 28 l 1 0 0 1 -1 0 Z M 12 28 l 1 0 0 1 -1 0 Z M 13 28 l 1 0 0 1 -1 0 Z  M 15 28 l 1 0 0 1 -1 0 Z     M 20 28 l 1 0 0 1 -1 0 Z   M 23 28 l 1 0 0 1 -1 0 Z       M 30 28 l 1 0 0 1 -1 0 Z M 31 28 l 1 0 0 1 -1 0 Z M 32 28 l 1 0 0 1 -1 0 Z  M 1 29 l 1 0 0 1 -1 0 Z    M 5 29 l 1 0 0 1 -1 0 Z  M 7 29 l 1 0 0 1 -1 0 Z  M 9 29 l 1 0 0 1 -1 0 Z M 10 29 l 1 0 0 1 -1 0 Z  M 12 29 l 1 0 0 1 -1 0 Z M 13 29 l 1 0 0 1 -1 0 Z M 14 29 l 1 0 0 1 -1 0 Z M 15 29 l 1 0 0 1 -1 0 Z M 16 29 l 1 0 0 1 -1 0 Z   M 19 29 l 1 0 0 1 -1 0 Z M 20 29 l 1 0 0 1 -1 0 Z  M 22 29 l 1 0 0 1 -1 0 Z     M 27 29 l 1 0 0 1 -1 0 Z  M 29 29 l 1 0 0 1 -1 0 Z M 30 29 l 1 0 0 1 -1 0 Z    M 1 30 l 1 0 0 1 -1 0 Z    M 5 30 l 1 0 0 1 -1 0 Z  M 7 30 l 1 0 0 1 -1 0 Z M 8 30 l 1 0 0 1 -1 0 Z M 9 30 l 1 0 0 1 -1 0 Z M 10 30 l 1 0 0 1 -1 0 Z M 11 30 l 1 0 0 1 -1 0 Z M 12 30 l 1 0 0 1 -1 0 Z M 13 30 l 1 0 0 1 -1 0 Z  M 15 30 l 1 0 0 1 -1 0 Z  M 17 30 l 1 0 0 1 -1 0 Z  M 19 30 l 1 0 0 1 -1 0 Z  M 21 30 l 1 0 0 1 -1 0 Z M 22 30 l 1 0 0 1 -1 0 Z M 23 30 l 1 0 0 1 -1 0 Z  M 25 30 l 1 0 0 1 -1 0 Z M 26 30 l 1 0 0 1 -1 0 Z   M 29 30 l 1 0 0 1 -1 0 Z     M 1 31 l 1 0 0 1 -1 0 Z M 2 31 l 1 0 0 1 -1 0 Z M 3 31 l 1 0 0 1 -1 0 Z M 4 31 l 1 0 0 1 -1 0 Z M 5 31 l 1 0 0 1 -1 0 Z  M 7 31 l 1 0 0 1 -1 0 Z  M 9 31 l 1 0 0 1 -1 0 Z  M 11 31 l 1 0 0 1 -1 0 Z M 12 31 l 1 0 0 1 -1 0 Z M 13 31 l 1 0 0 1 -1 0 Z M 14 31 l 1 0 0 1 -1 0 Z  M 16 31 l 1 0 0 1 -1 0 Z      M 22 31 l 1 0 0 1 -1 0 Z       M 29 31 l 1 0 0 1 -1 0 Z M 30 31 l 1 0 0 1 -1 0 Z M 31 31 l 1 0 0 1 -1 0 Z M 32 31 l 1 0 0 1 -1 0 Z        M 7 32 l 1 0 0 1 -1 0 Z   M 10 32 l 1 0 0 1 -1 0 Z     M 15 32 l 1 0 0 1 -1 0 Z  M 17 32 l 1 0 0 1 -1 0 Z M 18 32 l 1 0 0 1 -1 0 Z  M 20 32 l 1 0 0 1 -1 0 Z  M 22 32 l 1 0 0 1 -1 0 Z M 23 32 l 1 0 0 1 -1 0 Z  M 25 32 l 1 0 0 1 -1 0 Z  M 27 32 l 1 0 0 1 -1 0 Z  M 29 32 l 1 0 0 1 -1 0 Z M 30 32 l 1 0 0 1 -1 0 Z  M 32 32 l 1 0 0 1 -1 0 Z"
-              fill="#FFFFFF"
-            ></path>
-            <path
-              d="M 0 0 l 1 0 0 1 -1 0 Z M 1 0 l 1 0 0 1 -1 0 Z M 2 0 l 1 0 0 1 -1 0 Z M 3 0 l 1 0 0 1 -1 0 Z M 4 0 l 1 0 0 1 -1 0 Z M 5 0 l 1 0 0 1 -1 0 Z M 6 0 l 1 0 0 1 -1 0 Z    M 10 0 l 1 0 0 1 -1 0 Z M 11 0 l 1 0 0 1 -1 0 Z  M 13 0 l 1 0 0 1 -1 0 Z M 14 0 l 1 0 0 1 -1 0 Z M 15 0 l 1 0 0 1 -1 0 Z M 16 0 l 1 0 0 1 -1 0 Z  M 18 0 l 1 0 0 1 -1 0 Z M 19 0 l 1 0 0 1 -1 0 Z   M 22 0 l 1 0 0 1 -1 0 Z M 23 0 l 1 0 0 1 -1 0 Z   M 26 0 l 1 0 0 1 -1 0 Z M 27 0 l 1 0 0 1 -1 0 Z M 28 0 l 1 0 0 1 -1 0 Z M 29 0 l 1 0 0 1 -1 0 Z M 30 0 l 1 0 0 1 -1 0 Z M 31 0 l 1 0 0 1 -1 0 Z M 32 0 l 1 0 0 1 -1 0 Z M 0 1 l 1 0 0 1 -1 0 Z      M 6 1 l 1 0 0 1 -1 0 Z  M 8 1 l 1 0 0 1 -1 0 Z  M 10 1 l 1 0 0 1 -1 0 Z M 11 1 l 1 0 0 1 -1 0 Z   M 14 1 l 1 0 0 1 -1 0 Z M 15 1 l 1 0 0 1 -1 0 Z  M 17 1 l 1 0 0 1 -1 0 Z M 18 1 l 1 0 0 1 -1 0 Z    M 22 1 l 1 0 0 1 -1 0 Z M 23 1 l 1 0 0 1 -1 0 Z M 24 1 l 1 0 0 1 -1 0 Z  M 26 1 l 1 0 0 1 -1 0 Z      M 32 1 l 1 0 0 1 -1 0 Z M 0 2 l 1 0 0 1 -1 0 Z  M 2 2 l 1 0 0 1 -1 0 Z M 3 2 l 1 0 0 1 -1 0 Z M 4 2 l 1 0 0 1 -1 0 Z  M 6 2 l 1 0 0 1 -1 0 Z  M 8 2 l 1 0 0 1 -1 0 Z  M 10 2 l 1 0 0 1 -1 0 Z    M 14 2 l 1 0 0 1 -1 0 Z  M 16 2 l 1 0 0 1 -1 0 Z M 17 2 l 1 0 0 1 -1 0 Z M 18 2 l 1 0 0 1 -1 0 Z M 19 2 l 1 0 0 1 -1 0 Z M 20 2 l 1 0 0 1 -1 0 Z    M 24 2 l 1 0 0 1 -1 0 Z  M 26 2 l 1 0 0 1 -1 0 Z  M 28 2 l 1 0 0 1 -1 0 Z M 29 2 l 1 0 0 1 -1 0 Z M 30 2 l 1 0 0 1 -1 0 Z  M 32 2 l 1 0 0 1 -1 0 Z M 0 3 l 1 0 0 1 -1 0 Z  M 2 3 l 1 0 0 1 -1 0 Z M 3 3 l 1 0 0 1 -1 0 Z M 4 3 l 1 0 0 1 -1 0 Z  M 6 3 l 1 0 0 1 -1 0 Z    M 10 3 l 1 0 0 1 -1 0 Z M 11 3 l 1 0 0 1 -1 0 Z M 12 3 l 1 0 0 1 -1 0 Z   M 15 3 l 1 0 0 1 -1 0 Z M 16 3 l 1 0 0 1 -1 0 Z   M 19 3 l 1 0 0 1 -1 0 Z M 20 3 l 1 0 0 1 -1 0 Z  M 22 3 l 1 0 0 1 -1 0 Z M 23 3 l 1 0 0 1 -1 0 Z M 24 3 l 1 0 0 1 -1 0 Z  M 26 3 l 1 0 0 1 -1 0 Z  M 28 3 l 1 0 0 1 -1 0 Z M 29 3 l 1 0 0 1 -1 0 Z M 30 3 l 1 0 0 1 -1 0 Z  M 32 3 l 1 0 0 1 -1 0 Z M 0 4 l 1 0 0 1 -1 0 Z  M 2 4 l 1 0 0 1 -1 0 Z M 3 4 l 1 0 0 1 -1 0 Z M 4 4 l 1 0 0 1 -1 0 Z  M 6 4 l 1 0 0 1 -1 0 Z  M 8 4 l 1 0 0 1 -1 0 Z   M 11 4 l 1 0 0 1 -1 0 Z M 12 4 l 1 0 0 1 -1 0 Z   M 15 4 l 1 0 0 1 -1 0 Z     M 20 4 l 1 0 0 1 -1 0 Z M 21 4 l 1 0 0 1 -1 0 Z  M 23 4 l 1 0 0 1 -1 0 Z   M 26 4 l 1 0 0 1 -1 0 Z  M 28 4 l 1 0 0 1 -1 0 Z M 29 4 l 1 0 0 1 -1 0 Z M 30 4 l 1 0 0 1 -1 0 Z  M 32 4 l 1 0 0 1 -1 0 Z M 0 5 l 1 0 0 1 -1 0 Z      M 6 5 l 1 0 0 1 -1 0 Z  M 8 5 l 1 0 0 1 -1 0 Z M 9 5 l 1 0 0 1 -1 0 Z M 10 5 l 1 0 0 1 -1 0 Z  M 12 5 l 1 0 0 1 -1 0 Z M 13 5 l 1 0 0 1 -1 0 Z M 14 5 l 1 0 0 1 -1 0 Z M 15 5 l 1 0 0 1 -1 0 Z M 16 5 l 1 0 0 1 -1 0 Z   M 19 5 l 1 0 0 1 -1 0 Z M 20 5 l 1 0 0 1 -1 0 Z M 21 5 l 1 0 0 1 -1 0 Z   M 24 5 l 1 0 0 1 -1 0 Z  M 26 5 l 1 0 0 1 -1 0 Z      M 32 5 l 1 0 0 1 -1 0 Z M 0 6 l 1 0 0 1 -1 0 Z M 1 6 l 1 0 0 1 -1 0 Z M 2 6 l 1 0 0 1 -1 0 Z M 3 6 l 1 0 0 1 -1 0 Z M 4 6 l 1 0 0 1 -1 0 Z M 5 6 l 1 0 0 1 -1 0 Z M 6 6 l 1 0 0 1 -1 0 Z  M 8 6 l 1 0 0 1 -1 0 Z  M 10 6 l 1 0 0 1 -1 0 Z  M 12 6 l 1 0 0 1 -1 0 Z  M 14 6 l 1 0 0 1 -1 0 Z  M 16 6 l 1 0 0 1 -1 0 Z  M 18 6 l 1 0 0 1 -1 0 Z  M 20 6 l 1 0 0 1 -1 0 Z  M 22 6 l 1 0 0 1 -1 0 Z  M 24 6 l 1 0 0 1 -1 0 Z  M 26 6 l 1 0 0 1 -1 0 Z M 27 6 l 1 0 0 1 -1 0 Z M 28 6 l 1 0 0 1 -1 0 Z M 29 6 l 1 0 0 1 -1 0 Z M 30 6 l 1 0 0 1 -1 0 Z M 31 6 l 1 0 0 1 -1 0 Z M 32 6 l 1 0 0 1 -1 0 Z         M 8 7 l 1 0 0 1 -1 0 Z M 9 7 l 1 0 0 1 -1 0 Z  M 11 7 l 1 0 0 1 -1 0 Z M 12 7 l 1 0 0 1 -1 0 Z     M 17 7 l 1 0 0 1 -1 0 Z  M 19 7 l 1 0 0 1 -1 0 Z  M 21 7 l 1 0 0 1 -1 0 Z   M 24 7 l 1 0 0 1 -1 0 Z         M 0 8 l 1 0 0 1 -1 0 Z M 1 8 l 1 0 0 1 -1 0 Z  M 3 8 l 1 0 0 1 -1 0 Z   M 6 8 l 1 0 0 1 -1 0 Z M 7 8 l 1 0 0 1 -1 0 Z   M 10 8 l 1 0 0 1 -1 0 Z M 11 8 l 1 0 0 1 -1 0 Z M 12 8 l 1 0 0 1 -1 0 Z M 13 8 l 1 0 0 1 -1 0 Z M 14 8 l 1 0 0 1 -1 0 Z    M 18 8 l 1 0 0 1 -1 0 Z   M 21 8 l 1 0 0 1 -1 0 Z   M 24 8 l 1 0 0 1 -1 0 Z  M 26 8 l 1 0 0 1 -1 0 Z M 27 8 l 1 0 0 1 -1 0 Z M 28 8 l 1 0 0 1 -1 0 Z  M 30 8 l 1 0 0 1 -1 0 Z M 31 8 l 1 0 0 1 -1 0 Z  M 0 9 l 1 0 0 1 -1 0 Z M 1 9 l 1 0 0 1 -1 0 Z  M 3 9 l 1 0 0 1 -1 0 Z    M 7 9 l 1 0 0 1 -1 0 Z     M 12 9 l 1 0 0 1 -1 0 Z M 13 9 l 1 0 0 1 -1 0 Z    M 17 9 l 1 0 0 1 -1 0 Z M 18 9 l 1 0 0 1 -1 0 Z  M 20 9 l 1 0 0 1 -1 0 Z M 21 9 l 1 0 0 1 -1 0 Z M 22 9 l 1 0 0 1 -1 0 Z   M 25 9 l 1 0 0 1 -1 0 Z M 26 9 l 1 0 0 1 -1 0 Z   M 29 9 l 1 0 0 1 -1 0 Z   M 32 9 l 1 0 0 1 -1 0 Z M 0 10 l 1 0 0 1 -1 0 Z M 1 10 l 1 0 0 1 -1 0 Z     M 6 10 l 1 0 0 1 -1 0 Z  M 8 10 l 1 0 0 1 -1 0 Z M 9 10 l 1 0 0 1 -1 0 Z M 10 10 l 1 0 0 1 -1 0 Z   M 13 10 l 1 0 0 1 -1 0 Z M 14 10 l 1 0 0 1 -1 0 Z  M 16 10 l 1 0 0 1 -1 0 Z  M 18 10 l 1 0 0 1 -1 0 Z M 19 10 l 1 0 0 1 -1 0 Z   M 22 10 l 1 0 0 1 -1 0 Z      M 28 10 l 1 0 0 1 -1 0 Z M 29 10 l 1 0 0 1 -1 0 Z   M 32 10 l 1 0 0 1 -1 0 Z M 0 11 l 1 0 0 1 -1 0 Z M 1 11 l 1 0 0 1 -1 0 Z    M 5 11 l 1 0 0 1 -1 0 Z   M 8 11 l 1 0 0 1 -1 0 Z   M 11 11 l 1 0 0 1 -1 0 Z  M 13 11 l 1 0 0 1 -1 0 Z     M 18 11 l 1 0 0 1 -1 0 Z M 19 11 l 1 0 0 1 -1 0 Z  M 21 11 l 1 0 0 1 -1 0 Z  M 23 11 l 1 0 0 1 -1 0 Z     M 28 11 l 1 0 0 1 -1 0 Z   M 31 11 l 1 0 0 1 -1 0 Z M 32 11 l 1 0 0 1 -1 0 Z  M 1 12 l 1 0 0 1 -1 0 Z M 2 12 l 1 0 0 1 -1 0 Z    M 6 12 l 1 0 0 1 -1 0 Z       M 13 12 l 1 0 0 1 -1 0 Z M 14 12 l 1 0 0 1 -1 0 Z  M 16 12 l 1 0 0 1 -1 0 Z M 17 12 l 1 0 0 1 -1 0 Z  M 19 12 l 1 0 0 1 -1 0 Z  M 21 12 l 1 0 0 1 -1 0 Z   M 24 12 l 1 0 0 1 -1 0 Z M 25 12 l 1 0 0 1 -1 0 Z M 26 12 l 1 0 0 1 -1 0 Z   M 29 12 l 1 0 0 1 -1 0 Z   M 32 12 l 1 0 0 1 -1 0 Z M 0 13 l 1 0 0 1 -1 0 Z M 1 13 l 1 0 0 1 -1 0 Z M 2 13 l 1 0 0 1 -1 0 Z  M 4 13 l 1 0 0 1 -1 0 Z M 5 13 l 1 0 0 1 -1 0 Z   M 8 13 l 1 0 0 1 -1 0 Z M 9 13 l 1 0 0 1 -1 0 Z M 10 13 l 1 0 0 1 -1 0 Z    M 14 13 l 1 0 0 1 -1 0 Z   M 17 13 l 1 0 0 1 -1 0 Z  M 19 13 l 1 0 0 1 -1 0 Z       M 26 13 l 1 0 0 1 -1 0 Z  M 28 13 l 1 0 0 1 -1 0 Z M 29 13 l 1 0 0 1 -1 0 Z M 30 13 l 1 0 0 1 -1 0 Z M 31 13 l 1 0 0 1 -1 0 Z M 32 13 l 1 0 0 1 -1 0 Z M 0 14 l 1 0 0 1 -1 0 Z M 1 14 l 1 0 0 1 -1 0 Z M 2 14 l 1 0 0 1 -1 0 Z M 3 14 l 1 0 0 1 -1 0 Z   M 6 14 l 1 0 0 1 -1 0 Z M 7 14 l 1 0 0 1 -1 0 Z    M 11 14 l 1 0 0 1 -1 0 Z M 12 14 l 1 0 0 1 -1 0 Z M 13 14 l 1 0 0 1 -1 0 Z M 14 14 l 1 0 0 1 -1 0 Z  M 16 14 l 1 0 0 1 -1 0 Z  M 18 14 l 1 0 0 1 -1 0 Z    M 22 14 l 1 0 0 1 -1 0 Z M 23 14 l 1 0 0 1 -1 0 Z  M 25 14 l 1 0 0 1 -1 0 Z M 26 14 l 1 0 0 1 -1 0 Z M 27 14 l 1 0 0 1 -1 0 Z  M 29 14 l 1 0 0 1 -1 0 Z  M 31 14 l 1 0 0 1 -1 0 Z  M 0 15 l 1 0 0 1 -1 0 Z M 1 15 l 1 0 0 1 -1 0 Z    M 5 15 l 1 0 0 1 -1 0 Z  M 7 15 l 1 0 0 1 -1 0 Z M 8 15 l 1 0 0 1 -1 0 Z M 9 15 l 1 0 0 1 -1 0 Z   M 12 15 l 1 0 0 1 -1 0 Z M 13 15 l 1 0 0 1 -1 0 Z M 14 15 l 1 0 0 1 -1 0 Z M 15 15 l 1 0 0 1 -1 0 Z M 16 15 l 1 0 0 1 -1 0 Z M 17 15 l 1 0 0 1 -1 0 Z M 18 15 l 1 0 0 1 -1 0 Z M 19 15 l 1 0 0 1 -1 0 Z M 20 15 l 1 0 0 1 -1 0 Z M 21 15 l 1 0 0 1 -1 0 Z M 22 15 l 1 0 0 1 -1 0 Z  M 24 15 l 1 0 0 1 -1 0 Z  M 26 15 l 1 0 0 1 -1 0 Z M 27 15 l 1 0 0 1 -1 0 Z  M 29 15 l 1 0 0 1 -1 0 Z  M 31 15 l 1 0 0 1 -1 0 Z   M 1 16 l 1 0 0 1 -1 0 Z  M 3 16 l 1 0 0 1 -1 0 Z M 4 16 l 1 0 0 1 -1 0 Z M 5 16 l 1 0 0 1 -1 0 Z M 6 16 l 1 0 0 1 -1 0 Z  M 8 16 l 1 0 0 1 -1 0 Z M 9 16 l 1 0 0 1 -1 0 Z M 10 16 l 1 0 0 1 -1 0 Z  M 12 16 l 1 0 0 1 -1 0 Z  M 14 16 l 1 0 0 1 -1 0 Z  M 16 16 l 1 0 0 1 -1 0 Z M 17 16 l 1 0 0 1 -1 0 Z M 18 16 l 1 0 0 1 -1 0 Z M 19 16 l 1 0 0 1 -1 0 Z M 20 16 l 1 0 0 1 -1 0 Z M 21 16 l 1 0 0 1 -1 0 Z  M 23 16 l 1 0 0 1 -1 0 Z M 24 16 l 1 0 0 1 -1 0 Z  M 26 16 l 1 0 0 1 -1 0 Z M 27 16 l 1 0 0 1 -1 0 Z M 28 16 l 1 0 0 1 -1 0 Z    M 32 16 l 1 0 0 1 -1 0 Z M 0 17 l 1 0 0 1 -1 0 Z M 1 17 l 1 0 0 1 -1 0 Z M 2 17 l 1 0 0 1 -1 0 Z M 3 17 l 1 0 0 1 -1 0 Z M 4 17 l 1 0 0 1 -1 0 Z   M 7 17 l 1 0 0 1 -1 0 Z M 8 17 l 1 0 0 1 -1 0 Z M 9 17 l 1 0 0 1 -1 0 Z M 10 17 l 1 0 0 1 -1 0 Z M 11 17 l 1 0 0 1 -1 0 Z M 12 17 l 1 0 0 1 -1 0 Z M 13 17 l 1 0 0 1 -1 0 Z     M 18 17 l 1 0 0 1 -1 0 Z    M 22 17 l 1 0 0 1 -1 0 Z M 23 17 l 1 0 0 1 -1 0 Z  M 25 17 l 1 0 0 1 -1 0 Z    M 29 17 l 1 0 0 1 -1 0 Z M 30 17 l 1 0 0 1 -1 0 Z     M 2 18 l 1 0 0 1 -1 0 Z M 3 18 l 1 0 0 1 -1 0 Z M 4 18 l 1 0 0 1 -1 0 Z  M 6 18 l 1 0 0 1 -1 0 Z M 7 18 l 1 0 0 1 -1 0 Z M 8 18 l 1 0 0 1 -1 0 Z M 9 18 l 1 0 0 1 -1 0 Z     M 14 18 l 1 0 0 1 -1 0 Z   M 17 18 l 1 0 0 1 -1 0 Z    M 21 18 l 1 0 0 1 -1 0 Z    M 25 18 l 1 0 0 1 -1 0 Z    M 29 18 l 1 0 0 1 -1 0 Z  M 31 18 l 1 0 0 1 -1 0 Z M 32 18 l 1 0 0 1 -1 0 Z  M 1 19 l 1 0 0 1 -1 0 Z M 2 19 l 1 0 0 1 -1 0 Z M 3 19 l 1 0 0 1 -1 0 Z M 4 19 l 1 0 0 1 -1 0 Z   M 7 19 l 1 0 0 1 -1 0 Z M 8 19 l 1 0 0 1 -1 0 Z  M 10 19 l 1 0 0 1 -1 0 Z M 11 19 l 1 0 0 1 -1 0 Z M 12 19 l 1 0 0 1 -1 0 Z   M 15 19 l 1 0 0 1 -1 0 Z  M 17 19 l 1 0 0 1 -1 0 Z M 18 19 l 1 0 0 1 -1 0 Z   M 21 19 l 1 0 0 1 -1 0 Z  M 23 19 l 1 0 0 1 -1 0 Z M 24 19 l 1 0 0 1 -1 0 Z  M 26 19 l 1 0 0 1 -1 0 Z   M 29 19 l 1 0 0 1 -1 0 Z    M 0 20 l 1 0 0 1 -1 0 Z  M 2 20 l 1 0 0 1 -1 0 Z    M 6 20 l 1 0 0 1 -1 0 Z  M 8 20 l 1 0 0 1 -1 0 Z M 9 20 l 1 0 0 1 -1 0 Z  M 11 20 l 1 0 0 1 -1 0 Z  M 13 20 l 1 0 0 1 -1 0 Z  M 15 20 l 1 0 0 1 -1 0 Z M 16 20 l 1 0 0 1 -1 0 Z  M 18 20 l 1 0 0 1 -1 0 Z M 19 20 l 1 0 0 1 -1 0 Z  M 21 20 l 1 0 0 1 -1 0 Z   M 24 20 l 1 0 0 1 -1 0 Z M 25 20 l 1 0 0 1 -1 0 Z    M 29 20 l 1 0 0 1 -1 0 Z  M 31 20 l 1 0 0 1 -1 0 Z    M 2 21 l 1 0 0 1 -1 0 Z M 3 21 l 1 0 0 1 -1 0 Z M 4 21 l 1 0 0 1 -1 0 Z   M 7 21 l 1 0 0 1 -1 0 Z M 8 21 l 1 0 0 1 -1 0 Z M 9 21 l 1 0 0 1 -1 0 Z        M 17 21 l 1 0 0 1 -1 0 Z M 18 21 l 1 0 0 1 -1 0 Z  M 20 21 l 1 0 0 1 -1 0 Z M 21 21 l 1 0 0 1 -1 0 Z   M 24 21 l 1 0 0 1 -1 0 Z  M 26 21 l 1 0 0 1 -1 0 Z M 27 21 l 1 0 0 1 -1 0 Z   M 30 21 l 1 0 0 1 -1 0 Z  M 32 21 l 1 0 0 1 -1 0 Z M 0 22 l 1 0 0 1 -1 0 Z M 1 22 l 1 0 0 1 -1 0 Z  M 3 22 l 1 0 0 1 -1 0 Z   M 6 22 l 1 0 0 1 -1 0 Z M 7 22 l 1 0 0 1 -1 0 Z  M 9 22 l 1 0 0 1 -1 0 Z   M 12 22 l 1 0 0 1 -1 0 Z M 13 22 l 1 0 0 1 -1 0 Z   M 16 22 l 1 0 0 1 -1 0 Z   M 19 22 l 1 0 0 1 -1 0 Z   M 22 22 l 1 0 0 1 -1 0 Z    M 26 22 l 1 0 0 1 -1 0 Z M 27 22 l 1 0 0 1 -1 0 Z M 28 22 l 1 0 0 1 -1 0 Z M 29 22 l 1 0 0 1 -1 0 Z   M 32 22 l 1 0 0 1 -1 0 Z  M 1 23 l 1 0 0 1 -1 0 Z M 2 23 l 1 0 0 1 -1 0 Z   M 5 23 l 1 0 0 1 -1 0 Z  M 7 23 l 1 0 0 1 -1 0 Z M 8 23 l 1 0 0 1 -1 0 Z M 9 23 l 1 0 0 1 -1 0 Z M 10 23 l 1 0 0 1 -1 0 Z   M 13 23 l 1 0 0 1 -1 0 Z     M 18 23 l 1 0 0 1 -1 0 Z   M 21 23 l 1 0 0 1 -1 0 Z M 22 23 l 1 0 0 1 -1 0 Z M 23 23 l 1 0 0 1 -1 0 Z M 24 23 l 1 0 0 1 -1 0 Z  M 26 23 l 1 0 0 1 -1 0 Z M 27 23 l 1 0 0 1 -1 0 Z  M 29 23 l 1 0 0 1 -1 0 Z  M 31 23 l 1 0 0 1 -1 0 Z M 32 23 l 1 0 0 1 -1 0 Z M 0 24 l 1 0 0 1 -1 0 Z     M 5 24 l 1 0 0 1 -1 0 Z M 6 24 l 1 0 0 1 -1 0 Z M 7 24 l 1 0 0 1 -1 0 Z   M 10 24 l 1 0 0 1 -1 0 Z M 11 24 l 1 0 0 1 -1 0 Z  M 13 24 l 1 0 0 1 -1 0 Z M 14 24 l 1 0 0 1 -1 0 Z  M 16 24 l 1 0 0 1 -1 0 Z M 17 24 l 1 0 0 1 -1 0 Z M 18 24 l 1 0 0 1 -1 0 Z M 19 24 l 1 0 0 1 -1 0 Z  M 21 24 l 1 0 0 1 -1 0 Z  M 23 24 l 1 0 0 1 -1 0 Z M 24 24 l 1 0 0 1 -1 0 Z M 25 24 l 1 0 0 1 -1 0 Z M 26 24 l 1 0 0 1 -1 0 Z M 27 24 l 1 0 0 1 -1 0 Z M 28 24 l 1 0 0 1 -1 0 Z             M 8 25 l 1 0 0 1 -1 0 Z     M 13 25 l 1 0 0 1 -1 0 Z M 14 25 l 1 0 0 1 -1 0 Z      M 20 25 l 1 0 0 1 -1 0 Z M 21 25 l 1 0 0 1 -1 0 Z  M 23 25 l 1 0 0 1 -1 0 Z M 24 25 l 1 0 0 1 -1 0 Z    M 28 25 l 1 0 0 1 -1 0 Z M 29 25 l 1 0 0 1 -1 0 Z   M 32 25 l 1 0 0 1 -1 0 Z M 0 26 l 1 0 0 1 -1 0 Z M 1 26 l 1 0 0 1 -1 0 Z M 2 26 l 1 0 0 1 -1 0 Z M 3 26 l 1 0 0 1 -1 0 Z M 4 26 l 1 0 0 1 -1 0 Z M 5 26 l 1 0 0 1 -1 0 Z M 6 26 l 1 0 0 1 -1 0 Z  M 8 26 l 1 0 0 1 -1 0 Z M 9 26 l 1 0 0 1 -1 0 Z  M 11 26 l 1 0 0 1 -1 0 Z      M 17 26 l 1 0 0 1 -1 0 Z    M 21 26 l 1 0 0 1 -1 0 Z   M 24 26 l 1 0 0 1 -1 0 Z  M 26 26 l 1 0 0 1 -1 0 Z  M 28 26 l 1 0 0 1 -1 0 Z  M 30 26 l 1 0 0 1 -1 0 Z M 31 26 l 1 0 0 1 -1 0 Z  M 0 27 l 1 0 0 1 -1 0 Z      M 6 27 l 1 0 0 1 -1 0 Z    M 10 27 l 1 0 0 1 -1 0 Z M 11 27 l 1 0 0 1 -1 0 Z M 12 27 l 1 0 0 1 -1 0 Z M 13 27 l 1 0 0 1 -1 0 Z  M 15 27 l 1 0 0 1 -1 0 Z M 16 27 l 1 0 0 1 -1 0 Z M 17 27 l 1 0 0 1 -1 0 Z M 18 27 l 1 0 0 1 -1 0 Z M 19 27 l 1 0 0 1 -1 0 Z M 20 27 l 1 0 0 1 -1 0 Z M 21 27 l 1 0 0 1 -1 0 Z   M 24 27 l 1 0 0 1 -1 0 Z    M 28 27 l 1 0 0 1 -1 0 Z     M 0 28 l 1 0 0 1 -1 0 Z  M 2 28 l 1 0 0 1 -1 0 Z M 3 28 l 1 0 0 1 -1 0 Z M 4 28 l 1 0 0 1 -1 0 Z  M 6 28 l 1 0 0 1 -1 0 Z   M 9 28 l 1 0 0 1 -1 0 Z M 10 28 l 1 0 0 1 -1 0 Z    M 14 28 l 1 0 0 1 -1 0 Z  M 16 28 l 1 0 0 1 -1 0 Z M 17 28 l 1 0 0 1 -1 0 Z M 18 28 l 1 0 0 1 -1 0 Z M 19 28 l 1 0 0 1 -1 0 Z  M 21 28 l 1 0 0 1 -1 0 Z M 22 28 l 1 0 0 1 -1 0 Z  M 24 28 l 1 0 0 1 -1 0 Z M 25 28 l 1 0 0 1 -1 0 Z M 26 28 l 1 0 0 1 -1 0 Z M 27 28 l 1 0 0 1 -1 0 Z M 28 28 l 1 0 0 1 -1 0 Z M 29 28 l 1 0 0 1 -1 0 Z    M 0 29 l 1 0 0 1 -1 0 Z  M 2 29 l 1 0 0 1 -1 0 Z M 3 29 l 1 0 0 1 -1 0 Z M 4 29 l 1 0 0 1 -1 0 Z  M 6 29 l 1 0 0 1 -1 0 Z  M 8 29 l 1 0 0 1 -1 0 Z   M 11 29 l 1 0 0 1 -1 0 Z      M 17 29 l 1 0 0 1 -1 0 Z M 18 29 l 1 0 0 1 -1 0 Z   M 21 29 l 1 0 0 1 -1 0 Z  M 23 29 l 1 0 0 1 -1 0 Z M 24 29 l 1 0 0 1 -1 0 Z M 25 29 l 1 0 0 1 -1 0 Z M 26 29 l 1 0 0 1 -1 0 Z  M 28 29 l 1 0 0 1 -1 0 Z   M 31 29 l 1 0 0 1 -1 0 Z M 32 29 l 1 0 0 1 -1 0 Z M 0 30 l 1 0 0 1 -1 0 Z  M 2 30 l 1 0 0 1 -1 0 Z M 3 30 l 1 0 0 1 -1 0 Z M 4 30 l 1 0 0 1 -1 0 Z  M 6 30 l 1 0 0 1 -1 0 Z        M 14 30 l 1 0 0 1 -1 0 Z  M 16 30 l 1 0 0 1 -1 0 Z  M 18 30 l 1 0 0 1 -1 0 Z  M 20 30 l 1 0 0 1 -1 0 Z    M 24 30 l 1 0 0 1 -1 0 Z   M 27 30 l 1 0 0 1 -1 0 Z M 28 30 l 1 0 0 1 -1 0 Z  M 30 30 l 1 0 0 1 -1 0 Z M 31 30 l 1 0 0 1 -1 0 Z M 32 30 l 1 0 0 1 -1 0 Z M 0 31 l 1 0 0 1 -1 0 Z      M 6 31 l 1 0 0 1 -1 0 Z  M 8 31 l 1 0 0 1 -1 0 Z  M 10 31 l 1 0 0 1 -1 0 Z     M 15 31 l 1 0 0 1 -1 0 Z  M 17 31 l 1 0 0 1 -1 0 Z M 18 31 l 1 0 0 1 -1 0 Z M 19 31 l 1 0 0 1 -1 0 Z M 20 31 l 1 0 0 1 -1 0 Z M 21 31 l 1 0 0 1 -1 0 Z  M 23 31 l 1 0 0 1 -1 0 Z M 24 31 l 1 0 0 1 -1 0 Z M 25 31 l 1 0 0 1 -1 0 Z M 26 31 l 1 0 0 1 -1 0 Z M 27 31 l 1 0 0 1 -1 0 Z M 28 31 l 1 0 0 1 -1 0 Z     M 0 32 l 1 0 0 1 -1 0 Z M 1 32 l 1 0 0 1 -1 0 Z M 2 32 l 1 0 0 1 -1 0 Z M 3 32 l 1 0 0 1 -1 0 Z M 4 32 l 1 0 0 1 -1 0 Z M 5 32 l 1 0 0 1 -1 0 Z M 6 32 l 1 0 0 1 -1 0 Z  M 8 32 l 1 0 0 1 -1 0 Z M 9 32 l 1 0 0 1 -1 0 Z  M 11 32 l 1 0 0 1 -1 0 Z M 12 32 l 1 0 0 1 -1 0 Z M 13 32 l 1 0 0 1 -1 0 Z M 14 32 l 1 0 0 1 -1 0 Z  M 16 32 l 1 0 0 1 -1 0 Z   M 19 32 l 1 0 0 1 -1 0 Z  M 21 32 l 1 0 0 1 -1 0 Z   M 24 32 l 1 0 0 1 -1 0 Z  M 26 32 l 1 0 0 1 -1 0 Z  M 28 32 l 1 0 0 1 -1 0 Z   M 31 32 l 1 0 0 1 -1 0 Z "
-              fill="#000000"
-            ></path>
-          </svg>
-        </div>
-        <p class="Typography_p8">
-          Scan the QR code to view this event in the app
-        </p>
-      </div>
-    </div>
-    <div class="QRSection_footer">
-      <a
-        rel="noopener noreferrer"
-        data-analytic-label="buyTicketsLink"
-        href="https://apps.snoonu.com/#/scity?event_id=b6d01c75-9d5c-4c71-8a70-88c585f3e6be"
-        ><button
-          class="Button_button Button_primary Button_wide"
-          data-test-id="buyTicketsBtn"
-          data-analytic-label="buySCityTickets"
-        >
-          <span class="Button_content">Buy tickets in Snoonu App</span>
-        </button></a
-      >
-    </div>
+    <EventQRScan />
   </div>
 </template>
 <style scoped>
-.EventDetails_wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-flow: row;
-  margin-top: 24px;
+.Typography_p1,
+.Typography_p2,
+.Typography_p3__dH_h7 {
+  font-size: 20px;
+  line-height: 24px;
 }
-.ImageSection_imageWrapper {
-  position: relative;
-  width: 315px;
-  height: 420px;
-  border-radius: 32px;
+.Accordion_module_enter__k_tBy {
+  opacity: 0;
+  max-height: 0;
   overflow: hidden;
-  flex-shrink: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
 }
-.ImageSection_imageWrapper .ImageSection_image {
-  object-fit: cover;
+.Accordion_module_enterActive {
+  opacity: 1;
+  max-height: 500px;
 }
-
-img {
-  border-style: none;
+.Accordion_module_exit {
+  opacity: 1;
+  max-height: 500px;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
 }
-
-.ContentSection_wrapper {
+.Accordion_module_exitActive {
+  opacity: 0;
+  max-height: 0;
+}
+.Accordion_module_content {
+  text-align: initial;
+}
+.AccordionFAQ_header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.AccordionFAQ_header.AccordionFAQ_open {
+  padding-bottom: 16px;
+}
+@media (max-width: 575px) {
+  .AccordionFAQ_header.AccordionFAQ_open {
+    padding-bottom: 14px;
+  }
+}
+.AccordionFAQ_answer {
+  padding-bottom: 24px;
+}
+.AccordionFAQ_arrowIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+.AccordionFAQ_reverseIcon {
+  transform: rotate(180deg);
+}
+:root[lang="ar"] .AccordionFAQ_header {
+  text-align: right;
+}
+.EventFAQ_wrapper {
+  margin-top: 40px;
+}
+.EventFAQ_list > div {
+  border-bottom: 1px solid var(--border-and-divider-secondary);
+}
+.EventFAQ_list > div:last-of-type {
+  border-bottom: none;
+}
+.EventRoute_wrapper {
+  margin-top: 40px;
+}
+.EventRoute_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+}
+.EventRoute_header .EventRoute_routeButton___NBMB {
+  padding: 10px 20px;
+}
+.EventRoute_imageWrapper__cS_Lz {
+  position: relative;
   width: 100%;
-  min-width: 0;
-  -webkit-margin-start: 32px;
-  margin-inline-start: 32px;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
+  height: 200px;
+  margin-top: 24px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 575px) {
+  .EventRoute_imageWrapper__cS_Lz {
+    height: 160px;
+  }
 }
 .MainInfo_header___Ascn {
   display: flex;
@@ -270,34 +263,18 @@ img {
   justify-content: flex-start;
   flex-flow: row;
 }
-
-.Typography_p10 {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.Typography_p10,
-.Typography_p12,
-.Typography_p1,
-.Typography_p4 {
-  font-weight: 700;
-}
 .MainInfo_header___Ascn .MainInfo_tags {
   color: var(--text-secondary);
 }
-
-.Typography_p8 {
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
+.MainInfo_description__P_fQQ,
+.MainInfo_title {
+  margin-top: 16px;
 }
-
-.Typography_h3 {
-  font-size: 22px;
-  line-height: 26px;
-  font-weight: 700;
+.MainInfo_minified__0Yb_R {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-
 @supports (-webkit-line-clamp: 3) {
   .MainInfo_minified__0Yb_R {
     white-space: normal;
@@ -305,27 +282,6 @@ img {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
-}
-
-.MainInfo_minified__0Yb_R {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.MainInfo_description__P_fQQ,
-.MainInfo_title {
-  margin-top: 16px;
-}
-.Typography_p7,
-.Typography_p8,
-.Typography_p9 {
-  letter-spacing: 0;
-}
-.Typography_p7 {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  font-weight: 400;
 }
 .MainInfo_showMore {
   display: flex;
@@ -336,11 +292,219 @@ img {
   cursor: pointer;
   margin-top: 4px;
 }
+.MainInfo_showMore .MainInfo_chevronIcon {
+  width: 16px;
+  height: 16px;
+}
+.MainInfo_showMore .MainInfo_chevronIcon.MainInfo_reverseChevronIcon {
+  transform: rotate(180deg);
+}
+:root[lang="ar"] .MainInfo_description__P_fQQ,
+:root[lang="ar"] .MainInfo_tags {
+  text-align: right;
+}
+.CardSession_wrapper {
+  width: 100%;
+  padding: 20px 20px 20px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border-radius: 32px;
+  box-shadow: var(--box-shadow-56);
+}
+@media (max-width: 1360px) {
+  .CardSession_wrapper {
+    grid-template-columns: auto 1fr;
+    padding: 16px;
+  }
+}
+.CardSession_date,
+.CardSession_mainInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+  gap: 6px;
+}
+.CardSession_mainInfo {
+  -webkit-margin-start: 24px;
+  margin-inline-start: 24px;
+  -webkit-margin-end: 16px;
+  margin-inline-end: 16px;
+}
+@media (max-width: 1360px) {
+  .CardSession_mainInfo {
+    -webkit-margin-start: 16px;
+    margin-inline-start: 16px;
+    -webkit-margin-end: 0;
+    margin-inline-end: 0;
+  }
+}
+.CardSession_location {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  align-items: flex-start;
+  gap: 4px;
+}
+.CardSession_location .CardSession_locationIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+@media (max-width: 1360px) {
+  .CardSession_buySection___s16b {
+    grid-column-end: span 2;
+    margin-top: 16px;
+  }
+}
+.CardSession_buySection___s16b .CardSession_disabled {
+  pointer-events: none;
+  color: var(--text-secondary);
+  width: 100%;
+}
+.CardSession_buySection___s16b .CardSession_externalTicketsButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+}
+@media (max-width: 1360px) {
+  .CardSession_buySection___s16b .CardSession_externalTicketsButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.CardSession_buySection___s16b .CardSession_buyButtonWrapper {
+  position: relative;
+}
+.CardSession_buySection___s16b
+  .CardSession_buyButtonWrapper
+  .CardSession_tooltip {
+  position: absolute;
+  top: -16px;
+  inset-inline-start: calc(100% - 28px);
+  padding: 2px 8px;
+  background: var(--background-inverted);
+  color: var(--text-invert-primary);
+  border-radius: 8px;
+  text-align: initial;
+  width: max-content;
+  display: none;
+}
+.CardSession_buySection___s16b
+  .CardSession_buyButtonWrapper:hover
+  .CardSession_tooltip {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .CardSession_buySection___s16b
+    .CardSession_buyButtonWrapper:hover
+    .CardSession_tooltip {
+    display: none;
+  }
+}
+.CardSession_buySection___s16b .CardSession_buyButton {
+  position: relative;
+  width: 100%;
+  min-width: 148px;
+  min-height: 48px;
+  justify-content: center;
+  column-gap: 8px;
+  row-gap: 0;
+  padding: 6px 20px;
+}
+@media (max-width: 1024px) {
+  .CardSession_buySection___s16b .CardSession_buyButton {
+    min-height: 44px;
+  }
+}
+.CardSession_buySection___s16b .CardSession_buyButton span {
+  flex-wrap: wrap;
+  row-gap: 0;
+}
+.CardSession_buySection___s16b
+  .CardSession_buyButton
+  span
+  .CardSession_buyButtonSubtitle {
+  flex-basis: 100%;
+  color: var(--text-secondary);
+  width: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.CardSession_buySection___s16b
+  .CardSession_buyButton
+  span
+  .CardSession_freeOptions,
+.CardSession_buySection___s16b
+  .CardSession_buyButton
+  span
+  .CardSession_free__Evb_o {
+  color: var(--text-snoofun-free);
+  font-weight: 600;
+}
+.CardSession_buySection___s16b .CardSession_buyButton .CardSession_badge {
+  position: absolute;
+  top: -6px;
+  inset-inline-end: -4px;
+  color: var(--constant-white);
+  padding: 1px 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.CardSession_buySection___s16b
+  .CardSession_buyButton
+  .CardSession_badge.CardSession_freeBadge {
+  background: var(--background-snoofun-free-badge);
+}
+.CardSession_buySection___s16b
+  .CardSession_buyButton
+  .CardSession_badge.CardSession_soonBadge {
+  background: var(--background-snoofun-soon-badge);
+}
+.CardSession_buySection___s16b
+  .CardSession_buyButton
+  .CardSession_badge.CardSession_closedBadge,
+.CardSession_buySection___s16b
+  .CardSession_buyButton
+  .CardSession_badge.CardSession_soldOutBadge {
+  background-color: var(--background-tertiary);
+  color: var(--text-secondary);
+}
+:root[lang="ar"] .CardSession_arrowIcon {
+  transform: scaleX(-1);
+}
 .SessionList_wrapper {
   margin-top: 32px;
 }
-.Carousel_wrapper {
-  position: relative;
+.SessionList_wrapper .SessionList_carousel {
+  gap: 0;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.SessionList_monthLabel {
+  text-align: initial;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+.SessionList_date {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  border: 1px solid var(--border-and-divider-secondary);
+  cursor: pointer;
+  margin: 12px 6px;
+}
+.SessionList_date.SessionList_selected {
+  border: 3px solid var(--border-and-divider-secondary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .SessionList_sessions {
   display: flex;
@@ -349,5 +513,1446 @@ img {
   flex-flow: column;
   gap: 24px;
   margin-top: 24px;
+}
+.Carousel_wrapper {
+  position: relative;
+}
+@media (max-width: 1360px) {
+  .Carousel_wrapper {
+    margin-right: var(--content-wrapper-side-padding-negative);
+    margin-left: var(--content-wrapper-side-padding-negative);
+  }
+  .Carousel_wrapper .Carousel_navButtonWrapper__gL_66 {
+    display: none;
+  }
+}
+.Carousel_carousel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  gap: 24px;
+}
+.Carousel_carousel::-webkit-scrollbar {
+  display: none;
+}
+.Carousel_enter__Jz_dI {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.Carousel_enterActive__o_jK8 {
+  opacity: 1;
+}
+.Carousel_exit {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+.Carousel_exitActive {
+  opacity: 0;
+}
+@media (max-width: 1360px) {
+  :root[lang="en"] .Carousel_carousel > :first-of-type {
+    padding-left: var(--content-wrapper-side-padding);
+  }
+  :root[lang="ar"] .Carousel_carousel > :first-of-type,
+  :root[lang="en"] .Carousel_carousel > :last-of-type {
+    padding-right: var(--content-wrapper-side-padding);
+  }
+  :root[lang="ar"] .Carousel_carousel > :last-of-type {
+    padding-left: var(--content-wrapper-side-padding);
+  }
+}
+.NavButton_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+  background: var(--control-tertiary);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: var(--box-shadow-56);
+}
+.NavButton_wrapper.NavButton_prev {
+  left: -32px;
+}
+.NavButton_wrapper.NavButton_next__x_uZ2 {
+  right: -32px;
+}
+.SkeletonEventDate_monthLabel {
+  width: 40px;
+  height: 20px;
+  margin-bottom: 12px;
+}
+.SkeletonEventDate_date__5aM_y {
+  width: 64px;
+  height: 64px;
+}
+.SkeletonEventSessions_wrapper {
+  width: 100%;
+  padding: 20px 20px 20px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border-radius: 32px;
+  box-shadow: var(--box-shadow-56);
+}
+@media (max-width: 1360px) {
+  .SkeletonEventSessions_wrapper {
+    grid-template-columns: auto 1fr;
+    padding: 16px;
+  }
+}
+.SkeletonEventSessions_date,
+.SkeletonEventSessions_mainInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+  gap: 6px;
+}
+.SkeletonEventSessions_day,
+.SkeletonEventSessions_hour,
+.SkeletonEventSessions_location__AG_pv,
+.SkeletonEventSessions_title {
+  height: 20px;
+}
+@media (max-width: 575px) {
+  .SkeletonEventSessions_day,
+  .SkeletonEventSessions_hour,
+  .SkeletonEventSessions_location__AG_pv,
+  .SkeletonEventSessions_title {
+    height: 16px;
+  }
+}
+.SkeletonEventSessions_day {
+  width: 42px;
+}
+.SkeletonEventSessions_hour {
+  width: 62px;
+}
+.SkeletonEventSessions_mainInfo {
+  width: 100%;
+  -webkit-margin-start: 24px;
+  margin-inline-start: 24px;
+}
+.SkeletonEventSessions_title {
+  width: 40%;
+}
+.SkeletonEventSessions_location__AG_pv {
+  width: 30%;
+}
+.SkeletonEventSessions_buySection {
+  width: 120px;
+  height: 48px;
+}
+@media (max-width: 1360px) {
+  .SkeletonEventSessions_buySection {
+    grid-column-end: span 2;
+    margin-top: 16px;
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .SkeletonEventSessions_buySection {
+    height: 44px;
+  }
+}
+.ContentSection_wrapper {
+  width: 100%;
+  min-width: 0;
+  -webkit-margin-start: 32px;
+  margin-inline-start: 32px;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+}
+@media (max-width: 1024px) {
+  .ContentSection_wrapper {
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+    margin-top: 32px;
+  }
+}
+@media (max-width: 575px) {
+  .ContentSection_wrapper {
+    margin-top: 24px;
+  }
+}
+.ImageSection_imageWrapper {
+  position: relative;
+  width: 315px;
+  height: 420px;
+  border-radius: 32px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (max-width: 1360px) {
+  .ImageSection_imageWrapper {
+    width: 225px;
+    height: 300px;
+  }
+}
+@media (max-width: 1024px) {
+  .ImageSection_imageWrapper {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 575px) {
+  .ImageSection_imageWrapper {
+    width: calc(100% + 2 * var(--content-wrapper-side-padding));
+    height: 336px;
+    margin-left: var(--content-wrapper-side-padding-negative);
+    margin-right: var(--content-wrapper-side-padding-negative);
+    border-radius: 0;
+  }
+}
+.ImageSection_imageWrapper .ImageSection_image {
+  object-fit: cover;
+}
+.QRSection_wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: column;
+  width: 320px;
+  -webkit-margin-start: 37px;
+  margin-inline-start: 37px;
+  padding: 20px;
+  border-radius: 32px;
+  gap: 16px;
+  box-shadow: var(--box-shadow-m);
+  text-align: center;
+}
+@media (max-width: 1360px) {
+  .QRSection_wrapper {
+    width: 250px;
+  }
+}
+@media (max-width: 1024px) {
+  .QRSection_wrapper {
+    display: none;
+  }
+}
+.QRSection_logoWrapper {
+  position: relative;
+  width: 83px;
+  height: 32px;
+}
+.QRSection_qrContent {
+  width: 100%;
+  background: var(--background-inverted);
+  padding: 24px 16px 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: column;
+  gap: 16px;
+  color: var(--text-invert-primary);
+}
+.QRSection_qrContent .QRSection_qr {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: var(--text-invert-primary);
+}
+.QRSection_qrContent .QRSection_qrCode {
+  width: 100%;
+  height: 100%;
+}
+.QRSection_footer {
+  display: none;
+}
+.EventDetails_wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: row;
+  margin-top: 24px;
+  padding: 60px;
+}
+@media (max-width: 1024px) {
+  .EventDetails_wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+  }
+}
+.CardProductImage_imageWrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 172px;
+  height: 172px;
+  border-radius: 28px;
+  background: var(--constant-white);
+  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  .CardProductImage_imageWrapper {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (max-width: 575px) {
+  .CardProductImage_imageWrapper {
+    width: 134px;
+    height: 134px;
+  }
+}
+.CardProductImage_imageWrapper.CardProductImage_fromCart {
+  width: 84px;
+  height: 84px;
+  filter: brightness(0.96);
+  border-radius: 20px;
+}
+.CardProductImage_discount {
+  position: absolute;
+  top: 12px;
+  inset-inline-end: 12px;
+  color: var(--constant-white);
+  padding: 2px 6px;
+  background: var(--constant-brand);
+  box-shadow: var(--box-shadow-badge-light);
+  border-radius: 12px 12px 0 12px;
+}
+.CardProductImage_productLeft {
+  position: absolute;
+  bottom: 12px;
+  inset-inline-start: 12px;
+  padding: 2px 6px;
+  border-radius: 100px;
+  background: var(--background-toast);
+  color: var(--constant-white);
+}
+.CardProductImage_fromCart .CardProductImage_discount {
+  inset-inline-end: 8px;
+  top: 8px;
+}
+.CardProductImage_fromCart .CardProductImage_productLeft {
+  bottom: 8px;
+  inset-inline-start: 8px;
+}
+.SpecialRequest_modal .SpecialRequest_form {
+  width: 100%;
+  margin-top: 16px;
+}
+.SpecialRequest_modal .SpecialRequest_addRequest {
+  margin-top: 24px;
+}
+@media (max-width: 575px) {
+  .SpecialRequest_modal .SpecialRequest_addRequest {
+    margin-top: 12px;
+  }
+}
+:root[lang="ar"] .SpecialRequest_title {
+  text-align: center;
+}
+.MarketplaceCardProduct_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+}
+.MarketplaceCardProduct_goingToRemove {
+  opacity: 0.5;
+}
+.MarketplaceCardProduct_additional {
+  color: var(--text-secondary);
+}
+.MarketplaceCardProduct_notes {
+  text-align: initial;
+  color: var(--text-secondary);
+  margin: 4px 0;
+}
+.MarketplaceCardProduct_specialRequest {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  width: 150px;
+  margin: 4px 0 10px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border: 1px solid var(--border-and-divider-secondary);
+  border-radius: 8px;
+}
+.MarketplaceCardProduct_productButton___Mk_G {
+  width: 126px;
+  height: 52px;
+  margin: 0 !important;
+}
+.MarketplaceCardProduct_productButton___Mk_G.MarketplaceCardProduct_fromSingleClickCheckout {
+  grid-area: counter;
+}
+@media (max-width: 575px) {
+  .MarketplaceCardProduct_productButton___Mk_G {
+    -webkit-margin-start: auto !important;
+    margin-inline-start: auto !important;
+  }
+}
+.MarketplaceCardProduct_price {
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  margin-top: 14px;
+}
+.MarketplaceCardProduct_price.MarketplaceCardProduct_fromSingleClickCheckout {
+  grid-area: price;
+}
+@media (max-width: 575px) {
+  .MarketplaceCardProduct_price.MarketplaceCardProduct_fromSingleClickCheckout {
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+  }
+}
+:root[lang="ar"] .MarketplaceCardProduct_additional,
+:root[lang="ar"] .MarketplaceCardProduct_name,
+:root[lang="ar"] .MarketplaceCardProduct_notes {
+  text-align: initial;
+}
+.MarketplaceCardProduct_image.MarketplaceCardProduct_fromSingleClickCheckout {
+  grid-area: image;
+}
+.MarketplaceCardProduct_label.MarketplaceCardProduct_fromSingleClickCheckout {
+  grid-area: label;
+}
+.Popup_popup {
+  position: absolute;
+  overflow: auto;
+  border-radius: 24px;
+  background: var(--background-primary);
+  box-shadow: var(--box-shadow-68);
+  transition: all 0.3s linear;
+}
+.Popup_popupEnterDone {
+  opacity: 1;
+}
+.Popup_overlay {
+  position: fixed;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 13;
+}
+.AddressPopup_popup {
+  top: calc(100% + 8px);
+  width: 342px;
+  max-height: 332px;
+  z-index: 12;
+  border-radius: 32px;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-flow: column;
+}
+@media (max-width: 1360px) {
+  .AddressPopup_popup {
+    inset-inline-start: unset;
+  }
+}
+@media (max-width: 575px) {
+  .AddressPopup_popup {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 572px;
+    box-shadow: var(--box-shadow-56);
+    border-radius: 24px 24px 0 0;
+  }
+}
+.AddressPopup_popup .AddressPopup_title__WT_pB {
+  display: none;
+}
+@media (max-width: 575px) {
+  .AddressPopup_popup .AddressPopup_title__WT_pB {
+    display: block;
+    padding: 20px 16px 8px;
+  }
+}
+.AddressPopup_popup .AddressPopup_list {
+  padding-top: 12px;
+  padding-bottom: 9px;
+  -webkit-padding-start: 12px;
+  padding-inline-start: 12px;
+  -webkit-padding-end: 12px;
+  padding-inline-end: 12px;
+}
+@media (max-width: 575px) {
+  .AddressPopup_popup .AddressPopup_list {
+    order: 2;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.AddressPopup_popup .AddressPopup_withCartButton {
+  padding-bottom: 88px;
+}
+.AddressPopup_addAddress {
+  z-index: 2;
+  background: var(--background-primary);
+  box-shadow: var(--box-shadow-56);
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  cursor: pointer;
+  padding: 16px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  gap: 4px;
+  color: var(--control-primary);
+}
+@media (max-width: 575px) {
+  .AddressPopup_addAddress {
+    padding: 16px 16px 8px;
+    box-shadow: none;
+  }
+}
+.AddressLoading_loading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+}
+.AddressLoading_loading .AddressLoading_content {
+  width: 100%;
+  -webkit-margin-start: 40px;
+  margin-inline-start: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+}
+.AddressLoading_loading .AddressLoading_content .AddressLoading_label {
+  width: 30%;
+  height: 20px;
+}
+.AddressLoading_loading .AddressLoading_content .AddressLoading_notes {
+  width: 40%;
+  height: 16px;
+  margin-top: 2px;
+}
+.DeliveryAddress_wrapper {
+  background: var(--background-secondary);
+  padding: 16px 20px;
+  border-radius: 20px;
+}
+@media (max-width: 1024px) {
+  .DeliveryAddress_wrapper {
+    padding: 16px;
+  }
+}
+.DeliveryAddress_addressWrapper {
+  position: relative;
+}
+.DeliveryAddress_popup {
+  top: 0 !important;
+  width: 100% !important;
+  max-height: 356px !important;
+}
+@media (max-width: 575px) {
+  .DeliveryAddress_popup {
+    top: unset !important;
+    max-height: 572px !important;
+  }
+}
+.DeliveryAddress_fromCheckoutDrawer {
+  margin-top: 12px;
+}
+.DeliveryAddress_fromCheckoutDrawer .DeliveryAddress_title {
+  margin-bottom: 12px;
+}
+.PaymentList_title {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  width: 100%;
+  text-align: initial;
+}
+.PaymentList_form {
+  width: 100%;
+}
+.PaymentList_addNewCardButton {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.CreditCardRadio_method {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+}
+.CreditCardRadio_label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+  flex: 1 1;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  -webkit-padding-end: 16px;
+  padding-inline-end: 16px;
+}
+.CreditCardRadio_info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  gap: 16px;
+}
+.CreditCardRadio_needsVerification {
+  margin-top: 4px;
+  padding: 4px 8px;
+  color: var(--text-brand);
+  background: var(--background-error);
+  border-radius: 14px;
+}
+.CreditCardRadio_radio {
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+}
+.PaymentRadio_label,
+.PaymentRadio_method {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+}
+.PaymentRadio_label {
+  gap: 16px;
+  flex: 1 1;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  -webkit-padding-end: 16px;
+  padding-inline-end: 16px;
+}
+.PaymentRadio_info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+}
+.PaymentRadio_desc__nVS__ {
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+.PaymentRadio_radio {
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+}
+.NotAvailablePayment_method__9u__E {
+  opacity: 0.5;
+}
+.NotAvailablePayment_label,
+.NotAvailablePayment_method__9u__E {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+}
+.NotAvailablePayment_label {
+  gap: 16px;
+  flex: 1 1;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  -webkit-padding-end: 16px;
+  padding-inline-end: 16px;
+}
+@media (max-width: 575px) {
+  .PaymentRadioList_list {
+    --drawer-top: 124px;
+    --restModalHeight: 380px;
+    max-height: calc(100vh - var(--drawer-top) - var(--restModalHeight));
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .PaymentRadioList_list::-webkit-scrollbar {
+    display: none;
+  }
+}
+.PaymentRadioList_list > div {
+  border-bottom: 1px solid var(--border-and-divider-primary);
+}
+.PaymentRadioList_list > div:last-of-type {
+  border-bottom: none;
+}
+.ChangePhoneNumber_modalContent {
+  width: 392px;
+  padding: 24px;
+}
+.PhoneForm_title {
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+.PhoneForm_info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  gap: 8px;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  padding: 10px;
+  border-radius: 12px;
+  color: var(--text-warning);
+  background: var(--background-warning);
+}
+.PhoneForm_form {
+  width: 100%;
+}
+.PhoneForm_icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.PhoneForm_infoLabel__4_bo6 {
+  text-align: start;
+}
+.PhoneForm_continueBtn {
+  margin-top: 24px;
+}
+.PinForm_title__r_2BX {
+  margin: 16px 20px 24px;
+}
+.PinForm_form {
+  width: 100%;
+  text-align: start;
+}
+.PinForm_centeredText__sTE_a input {
+  text-align: center;
+  letter-spacing: 22px;
+  text-indent: 22px;
+}
+.PinForm_centeredText__sTE_a input:focus,
+.PinForm_centeredText__sTE_a input:focus-visible,
+.PinForm_centeredText__sTE_a input:hover {
+  outline: none;
+}
+.PinForm_centeredText__sTE_a div {
+  display: none;
+}
+.PinForm_centeredText__sTE_a p {
+  text-align: center !important;
+  -webkit-padding-start: unset !important;
+  padding-inline-start: unset !important;
+}
+.PinForm_filled__ylWT_ input {
+  color: var(--text-success);
+}
+.PinForm_invalid input {
+  color: var(--text-error);
+}
+.PinForm_button__YlK_9 {
+  margin-top: 24px;
+}
+:root[lang="ar"] .PinForm_title__r_2BX {
+  text-align: center;
+}
+.UnlockPaymentMethods_wrapper {
+  background: var(--background-attention);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.UnlockPaymentMethods_wrapper .UnlockPaymentMethods_button {
+  margin-top: 16px;
+  box-shadow: var(--box-shadow-top-54);
+  border: none;
+}
+.PaymentMethodModal_modalContent {
+  width: 408px;
+}
+.PaymentMethods_paymentMethod {
+  background-color: var(--background-secondary);
+  padding: 16px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+@media (max-width: 575px) {
+  .PaymentMethods_paymentMethod {
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+}
+.PaymentMethods_label {
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+}
+.PaymentMethods_icon {
+  width: 32px;
+  height: 32px;
+  -webkit-margin-end: 16px;
+  margin-inline-end: 16px;
+}
+.PaymentMethods_loading {
+  width: 100%;
+  height: 56px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+:root[lang="ar"] .PaymentMethods_rightIcon__Y_bPY {
+  transform: scaleX(-1);
+}
+.LoaderFullscreen_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9999999;
+  background: var(--background-toast);
+}
+svg.LoaderFullscreen_spinner {
+  width: 40px;
+  height: 40px;
+  x: 0;
+  y: 0;
+  viewbox: 0 0 40 40;
+}
+svg.LoaderFullscreen_spinner circle {
+  fill: rgba(0, 0, 0, 0);
+  stroke: var(--background-primary);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 125.6;
+  transform-origin: 20px 20px 0;
+  animation: LoaderFullscreen_spinner 2s linear infinite;
+}
+@keyframes LoaderFullscreen_spinner {
+  0% {
+    transform: rotate(0deg);
+    stroke-dashoffset: 26.4;
+  }
+  50% {
+    transform: rotate(2turn);
+    stroke-dashoffset: 125.6;
+  }
+  to {
+    transform: rotate(3turn);
+    stroke-dashoffset: 26.4;
+  }
+}
+.MarketplaceCardPayment_wrapper {
+  --sticky-cart-width: 392px;
+  width: var(--sticky-cart-width);
+  background: var(--background-primary);
+  border-radius: 32px;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+}
+@media (max-width: 1024px) {
+  .MarketplaceCardPayment_wrapper {
+    max-height: unset;
+    width: auto;
+    overflow: unset;
+  }
+}
+@media (max-width: 575px) {
+  .MarketplaceCardPayment_wrapper.MarketplaceCardPayment_fromSingleClickCheckout
+    .MarketplaceCardPayment_stickyBottomContent,
+  .MarketplaceCardPayment_wrapper.MarketplaceCardPayment_fromSingleClickCheckout
+    .MarketplaceCardPayment_topContent {
+    padding: 0;
+  }
+}
+.MarketplaceCardPayment_topContent {
+  padding: 24px 24px 0;
+}
+@media (max-width: 1024px) {
+  .MarketplaceCardPayment_topContent {
+    padding: 32px 32px 0;
+  }
+}
+@media (max-width: 575px) {
+  .MarketplaceCardPayment_topContent {
+    padding: 16px 16px 0;
+  }
+}
+.MarketplaceCardPayment_stickyBottomContent {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background: var(--background-primary);
+  padding: 4px 24px 24px;
+  z-index: 13;
+}
+@media (max-width: 1024px) {
+  .MarketplaceCardPayment_stickyBottomContent {
+    padding: 4px 32px 32px;
+  }
+}
+@media (max-width: 575px) {
+  .MarketplaceCardPayment_stickyBottomContent {
+    padding: 4px 16px 16px;
+  }
+}
+.MarketplaceCardPayment_stickyBottomContent.MarketplaceCardPayment_withShadowTop {
+  box-shadow: var(--box-shadow-top-10);
+}
+.MarketplaceCardPayment_stickyBottomContent.MarketplaceCardPayment_fromSingleClickCheckout {
+  position: relative;
+  border-radius: 0 0 32px 32px;
+}
+.MarketplaceCardPayment_placeOrder {
+  margin-top: 24px;
+}
+@media (max-width: 1024px) {
+  .MarketplaceCardPayment_placeOrder.MarketplaceCardPayment_fromSingleClickCheckout {
+    display: none;
+  }
+}
+.OrderInfo_wrapper {
+  margin-top: 24px;
+}
+@media (max-width: 575px) {
+  .OrderInfo_wrapper {
+    margin-top: 20px;
+  }
+}
+.OrderInfo_wrapper .OrderInfo_total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+  margin-bottom: 24px;
+}
+.OrderInfo_wrapper .OrderInfo_total .OrderInfo_loading {
+  width: 92px;
+  height: 32px;
+}
+.OrderInfo_wrapper .OrderInfo_prices {
+  display: flex;
+  align-items: baseline;
+  justify-content: normal;
+  flex-flow: row;
+  gap: 4px;
+}
+.OrderInfo_wrapper .OrderInfo_prices .OrderInfo_oldPrice {
+  color: var(--text-secondary);
+}
+.OrderSubCartInfo_cart {
+  margin-top: 24px;
+}
+.OrderSubCartInfo_cart .OrderSubCartInfo_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+  margin-top: 8px;
+}
+.OrderSubCartInfo_cart .OrderSubCartInfo_item .OrderSubCartInfo_price {
+  flex-shrink: 0;
+}
+.OrderSubCartInfo_merchantName {
+  text-align: initial;
+}
+.PriceInfo_total__fL_R_ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+  margin-bottom: 24px;
+}
+.PriceInfo_total__fL_R_ .PriceInfo_loading {
+  width: 92px;
+  height: 32px;
+}
+.PriceInfo_total__fL_R_.PriceInfo_fromSingleClickCheckout {
+  margin-bottom: 0;
+}
+.PriceInfo_prices {
+  display: flex;
+  align-items: baseline;
+  justify-content: normal;
+  flex-flow: row;
+  gap: 4px;
+}
+.PriceInfo_prices .PriceInfo_oldPrice {
+  color: var(--text-secondary);
+}
+.AddVoucherModal_modalContent__09pj_ {
+  padding: 32px;
+  width: 408px;
+  text-align: initial;
+}
+@media (max-width: 575px) {
+  .AddVoucherModal_modalContent__09pj_ {
+    padding: 32px 20px 20px;
+    border-radius: 32px;
+  }
+}
+.AddVoucherModal_title {
+  margin: 0;
+  width: 100%;
+}
+.AddVoucherModal_form__8Yq8_ {
+  width: 100%;
+  margin-top: 16px;
+}
+.AddVoucherModal_input {
+  direction: ltr;
+}
+.AddVoucherModal_info {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  background: #eaf4ff;
+  color: #687b94;
+}
+.AddVoucherModal_button {
+  margin-top: 12px;
+}
+.VoucherInfo_wrapper {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+}
+.VoucherInfo_badge {
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 4px 8px;
+}
+.VoucherInfo_add {
+  background: var(--background-secondary);
+}
+.VoucherInfo_applied__38_qB {
+  background: var(--background-success);
+  color: var(--text-success);
+}
+.VoucherInfoModal_modalContent {
+  padding: 32px;
+  width: 408px;
+}
+@media (max-width: 575px) {
+  .VoucherInfoModal_modalContent {
+    padding: 32px 20px 20px;
+    border-radius: 32px;
+  }
+}
+.VoucherInfoModal_title {
+  margin-top: 16px;
+}
+.VoucherInfoModal_voucher {
+  border-radius: 16px;
+  background: var(--background-success);
+  color: var(--text-success);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 4px 8px;
+}
+.Switch_wrapper__C_D66 {
+  display: inline-flex;
+}
+.Switch_input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.Switch_track {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border-radius: 35px;
+  background-color: var(--border-and-divider-secondary);
+  height: 40px;
+  min-width: 62px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  transition: background-color 0.15s ease;
+}
+input:checked + .Switch_track {
+  background-color: var(--control-primary);
+  border-color: red;
+  transition: background-color 0.15s ease;
+}
+input:focus-visible + .Switch_track {
+  outline-offset: 2px;
+  outline: 2px solid var(--control-primary);
+}
+@media (max-width: 575px) {
+  .Switch_track {
+    height: 32px;
+    min-width: 52px;
+  }
+}
+.Switch_thumb {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--control-tertiary);
+  height: 32px;
+  width: 32px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.09);
+  inset-inline-start: 4px;
+  transition: inset-inline-start 0.15s ease;
+}
+input:checked + * > .Switch_thumb {
+  background: var(--background-primary);
+  inset-inline-start: calc(100% - 32px - 4px);
+}
+@media (max-width: 575px) {
+  input:checked + * > .Switch_thumb {
+    inset-inline-start: calc(100% - 24px - 4px);
+  }
+  .Switch_thumb {
+    height: 24px;
+    width: 24px;
+  }
+}
+.WalletSwitcher_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  text-align: initial;
+  margin-top: 16px;
+}
+@media (max-width: 575px) {
+  .WalletSwitcher_wrapper {
+    margin-top: 12px;
+  }
+}
+.WalletSwitcher_switch {
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+}
+.WalletSwitcher_info {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  text-align: initial;
+  background: #eaf4ff;
+  color: #687b94;
+}
+.ContentWrapper_container {
+  width: 100%;
+  max-width: 1710px;
+  margin: 0 auto;
+  padding: 0 var(--content-wrapper-side-padding);
+}
+@media (max-width: 1360px) {
+  .ContentWrapper_container {
+    max-width: unset;
+  }
+}
+.BackToTop_container__UP_jh {
+  background-color: var(--background-on-color);
+  cursor: pointer;
+}
+.BackToTop_container__UP_jh > p {
+  text-align: center;
+  padding: 16px;
+}
+.Footer_wrapper {
+  background-color: var(--background-secondary);
+  margin-top: 48px;
+}
+@media (max-width: 767px) {
+  .Footer_wrapper {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 355px) {
+  .Footer_wrapper {
+    margin-top: 32px;
+  }
+}
+.Footer_container__W_Eon {
+  margin: 0 auto;
+  padding: 24px var(--content-wrapper-side-padding);
+  max-width: 1710px;
+}
+.Footer_divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-tertiary);
+}
+.Footer_moreServices {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+@media (max-width: 767px) {
+  .Footer_moreServices.Footer_moreServices {
+    align-items: center;
+  }
+  .Footer_moreServices.Footer_moreServices p {
+    display: none;
+  }
+}
+.Footer_servicesContainer {
+  display: flex;
+  gap: 24px;
+}
+.Footer_appStores {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+@media (max-width: 575px) {
+  .Footer_appStores {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.Footer_appStores .Footer_imageWrapper {
+  width: 141px;
+  height: 44px;
+  position: relative;
+}
+.Footer_services {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+@media (max-width: 1360px) {
+  .Footer_services.Footer_services :nth-child(n + 4) {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .Footer_services.Footer_services :nth-child(n + 3) {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .Footer_services.Footer_services {
+    display: none;
+  }
+}
+.Footer_services .Footer_serviceItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  gap: 8px;
+}
+.Footer_services .Footer_serviceItem .Footer_imageWrapper {
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+.Footer_services .Footer_serviceItem .Footer_content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+  gap: 4px;
+}
+.Footer_services .Footer_serviceItem .Footer_content p:last-child {
+  color: var(--text-secondary);
+}
+.Footer_bottomHalfContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .Footer_bottomHalfContainer {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+.Footer_bottomHalfContainer .Footer_legalLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  gap: 32px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  padding: 14px 0;
+}
+.Footer_bottomHalfContainer .Footer_legalLinks a {
+  color: var(--text-secondary);
+}
+@media (max-width: 1360px) {
+  .Footer_bottomHalfContainer .Footer_legalLinks {
+    flex-grow: 1;
+  }
+}
+@media (max-width: 767px) {
+  .Footer_bottomHalfContainer .Footer_legalLinks {
+    order: 1;
+    padding: 0;
+  }
+}
+@media (max-width: 575px) {
+  .Footer_bottomHalfContainer .Footer_legalLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0;
+    row-gap: 16px;
+  }
+  .Footer_bottomHalfContainer .Footer_legalLinks > * {
+    width: 130px;
+    text-align: center;
+  }
+  .Footer_bottomHalfContainer .Footer_legalLinks .Footer_copyright {
+    order: 1;
+  }
+}
+.Footer_bottomHalfContainer .Footer_copyright {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.Footer_bottomHalfContainer .Footer_socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  gap: 16px;
+  position: relative;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+}
+@media (max-width: 575px) {
+  .Footer_bottomHalfContainer .Footer_socialLinks {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .Footer_bottomHalfContainer .Footer_socialLinks {
+    -webkit-margin-start: initial;
+    margin-inline-start: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.Footer_bottomHalfContainer .Footer_socialLinks .Footer_link__J_xuo {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  border-radius: 10px;
+  background: #fff;
+}
+.NoRidersUnderSun_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffeee6;
+  color: var(--text-primary);
+  border-radius: 24px;
+  padding: 16px;
+  gap: 16px;
+  cursor: pointer;
+}
+.NoRidersUnderSun_text___zrjf {
+  text-align: start;
+}
+:root[lang="ar"] .NoRidersUnderSun_hotImage {
+  transform: scaleX(-1);
+}
+.NoRidersUnderSun_skeleton {
+  width: 100%;
+  min-height: 72px;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .NoRidersUnderSun_skeleton {
+    min-height: 80px;
+  }
+}
+.FooterLinks_grid {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 24px 48px;
+  gap: 24px 48px;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .FooterLinks_grid {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .FooterLinks_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px 24px;
+  }
+}
+.FooterLinks_grid a {
+  color: var(--text-secondary);
+}
+.FooterLinks_grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: start;
+}
+@media (max-width: 767px) {
+  .FooterLinks_grid
+    > div:not(
+      .FooterLinks_helpSection,
+      .FooterLinks_snoonuMarket,
+      .FooterLinks_allServices,
+      .FooterLinks_others___J_Gn
+    ) {
+    display: none;
+  }
+}
+.FooterLinks_others___J_Gn,
+.FooterLinks_snoonuMarket {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .FooterLinks_others___J_Gn,
+  .FooterLinks_snoonuMarket {
+    display: flex !important;
+  }
+}
+.FooterLinks_others___J_Gn > p:first-child {
+  height: 14px;
 }
 </style>

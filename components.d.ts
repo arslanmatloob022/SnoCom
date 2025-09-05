@@ -22,6 +22,8 @@ declare module 'vue' {
     EditArticleButton: typeof import('./src/components/EditArticleButton.vue')['default']
     ErrorMessages: typeof import('./src/components/ErrorMessages.vue')['default']
     EventDetailMain: typeof import('./src/components/CommonComponenets/EventsComponents/EventDetailMain.vue')['default']
+    EventImageComponent: typeof import('./src/components/CommonComponenets/EventsComponents/EventImageComponent.vue')['default']
+    EventQRScan: typeof import('./src/components/CommonComponenets/EventsComponents/EventQRScan.vue')['default']
     FamousReturnats: typeof import('./src/components/resturant/FamousReturnats.vue')['default']
     FavoriteButton: typeof import('./src/components/FavoriteButton.vue')['default']
     FollowButton: typeof import('./src/components/FollowButton.vue')['default']
