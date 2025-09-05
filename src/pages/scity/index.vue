@@ -3,9 +3,9 @@
 <template>
   <div class="ContentWrapper_container">
     <BreadCrum
-      :crumbs="[{ name: 'Home Page', href: '/' }, { name: 'Resturants' }]"
+      :crumbs="[{ name: 'Home Page', href: '/' }, { name: 'S City' }]"
     />
-    <h1 class="Typography_h1">Restaurants &amp; Cafes</h1>
+    <h1 class="Typography_h1">S &amp; City</h1>
 
     <p class="Typography_p7 Description_text">
       Snoonu has what you are looking for in the online food delivery.
@@ -13,6 +13,8 @@
     </p>
 
     <FamousReturnats />
-    <resturants-list />
+    <DateFilters />
+    <Scity />
+    <!-- <resturants-list /> -->
   </div>
 </template>
