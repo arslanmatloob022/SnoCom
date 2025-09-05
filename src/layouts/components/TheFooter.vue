@@ -164,12 +164,13 @@ const snoonuServices = ref([
     <!-- Main Footer Links -->
     <div class="Footer_container__W_Eon">
       <div class="FooterLinks_grid">
-        <div v-for="section in footerSections" :key="section.title">
-          <p class="Typography_p12">{{ section.title }}</p>
-          <p v-for="link in section.links" :key="link.label" class="Typography_p9">
-            <a rel="noopener noreferrer" :href="link.href">{{ link.label }}</a>
-          </p>
-        </div>
+        <div v-for="(section, index) in footerSections" :key="section.title" :class="index < 4 ? 'FooterLinks_allServices' : ''">
+  <p class="Typography_p12">{{ section.title }}</p>
+  <p v-for="link in section.links" :key="link.label" class="Typography_p9">
+    <a rel="noopener noreferrer" :href="link.href">{{ link.label }}</a>
+  </p>
+</div>
+
       </div>
     </div>
 
