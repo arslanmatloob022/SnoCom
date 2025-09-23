@@ -6,12 +6,16 @@ export const useUserStore = defineStore('user', () => {
   const isLoggedIn = computed(() => userInfo.value !== null)
   const updateUserInfo = (user: UserInfo) => {
     userInfo.value = user
-    localStorage.setItem('jwt-token', user.token!)
+    // localStorage.setItem('jwt-token', user.token!)
   }
   const handleAuthAction = async (type: string, formStore: { user: User }) => {
-    const { user } = type === 'register' ? await api.register(formStore) : await api.login(formStore)
 
-    updateUserInfo(user)
+    console.log("form data", formStore)
+    
+    const data = type === 'register' ? await api.register(formStore) : await api.login(formStore)
+    console.log("data", data)
+    localStorage.setItem('jwt-token', data)
+    // updateUserInfo(user)
   }
   const getUserInfo = async () => {
     const { user } = await api.getUserInfo()

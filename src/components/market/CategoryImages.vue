@@ -64,19 +64,6 @@ const currentIndex = ref(0);
 
 <template>
     <div class="Carousel_wrapper">
-        <!-- Prev Button -->
-        <!-- <div class="Carousel_navButtonWrapper__gL_66">
-      <div
-        data-analytic-label="carouselButtonPrev"
-        data-analytic-event-content="homeBanners"
-        class="NavButton_wrapper NavButton_prev"
-        @click="prevSlide"
-      >
-        ◀
-      </div>
-    </div> -->
-
-        <!-- Carousel -->
 
 
         <div class="Carousel_carousel TimedBannerList_wrapper MarketPlaceBlocks_banners">
@@ -102,17 +89,7 @@ const currentIndex = ref(0);
 
         </div>
 
-        <!-- Next Button -->
-        <!-- <div class="Carousel_navButtonWrapper__gL_66">
-      <div
-        data-analytic-label="carouselButtonNext"
-        data-analytic-event-content="homeBanners"
-        class="NavButton_wrapper NavButton_next__x_uZ2"
-        @click="nextSlide"
-      >
-        ▶
-      </div>
-    </div> -->
+
     </div>
 </template>
 

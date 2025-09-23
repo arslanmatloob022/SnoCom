@@ -9,14 +9,19 @@ import type {
   User,
   UserInfo,
 } from '@/types'
+import axios from 'axios'
 
-function login(params: { user: User }): Promise<{ user: UserInfo }> {
-  return request({
-    url: '/api/users/login',
-    method: 'post',
-    data: params,
-  })
+
+export function login(params ): Promise<string> {
+  return request.post('/rest/V1/integration/admin/token',params.user)
 }
+
+export function get_categories(): Promise<any> {
+  return request.get('/rest/V1/categories')
+}
+
+
+
 
 function register(params: { user: User }): Promise<{ user: UserInfo }> {
   return request({
@@ -158,4 +163,5 @@ export default {
   deleteArticle,
   updateUser,
   getPofile,
+  get_categories
 }

@@ -12,7 +12,9 @@ const { isLoading, execute: onSubmit } = useAsyncState(
   async () => {
     errors.value = {}
     return await handleAuthAction(route.name.toLowerCase(), { user: formStore.value })
-      .then(() => {
+      .then((token) => {
+        console.log('token', token)
+        // localStorage.setItem('jwt-token', token)
         router.push('/')
       })
       .catch((error) => {
@@ -39,18 +41,18 @@ const { isLoading, execute: onSubmit } = useAsyncState(
           </p>
           <error-messages :errors="errors" />
           <form autocomplete="on" @submit.prevent="() => onSubmit()">
-            <fieldset v-if="isRegister" class="form-group">
+            <fieldset class="form-group">
               <input
                 v-model="formStore.username" required type="text" name="username" placeholder="Your Name"
                 class="form-control form-control-lg"
               >
             </fieldset>
-            <fieldset class="form-group">
+            <!-- <fieldset class="form-group">
               <input
                 v-model="formStore.email" required type="email" name="email" placeholder="Email"
                 class="form-control form-control-lg"
               >
-            </fieldset>
+            </fieldset> -->
             <fieldset class="form-group">
               <input
                 v-model="formStore.password" required name="password" type="password" placeholder="Password"

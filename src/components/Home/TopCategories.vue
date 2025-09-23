@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { link } from 'node:fs';
-
+import { get_categories } from '@/api';
 
 const slideInterval = ref(null);
 const currentSlide = ref(4);
@@ -66,6 +65,10 @@ const slides = ref([
         "image": "https://images.snoonu.com/promo_banners/2024-10/342e0f8c-7930-49af-9698-1d73737964d5_output.png?format=webp"
     }
 ])
+onMounted(() => {
+    get_categories();
+});
+// const categories = ref([]);
 const categories = ref([
     // {
     //     name: "Restaurants",

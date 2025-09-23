@@ -20,17 +20,16 @@ export default defineConfig({
       imports: ['vue', 'pinia', VueRouterAutoImports],
     }),
   ],
-  server: {
-    host: true,
-    open: true,
-    proxy: {
-      '/api': {
-        changeOrigin: true,
-        target: 'https://api.realworld.io/api',
-        rewrite: path => path.replace(/^\/api/, ''),
-      },
+server: {
+  host: true,
+  open: true,
+  proxy: {
+    '/rest': {
+      target: 'https://biparous-nevoid-demi.ngrok-free.dev',
+      changeOrigin: true,
     },
   },
+},
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
