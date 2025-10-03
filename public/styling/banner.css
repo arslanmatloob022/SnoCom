@@ -1,0 +1,156 @@
+@media(max-width: 1360px) {
+    .TopBannersOffers_wrapper {
+        display:none
+    }
+}
+
+@media(max-width: 1024px) {
+    .TopBannersOffers_wrapper {
+        display:grid
+    }
+}
+
+@media(max-width: 575px) {
+    .TopBannersOffers_wrapper {
+        display:none
+    }
+}
+
+.TopBannersOffers_slider {
+    height: 332px;
+    border-radius: 32px;
+    direction: ltr;
+    z-index: 0
+}
+
+@media(max-width: 1024px) {
+    .TopBannersOffers_slider {
+        height:280px
+    }
+}
+
+@media(max-width: 575px) {
+    .TopBannersOffers_slider {
+        height:180px
+    }
+}
+
+.SliderIndicator_dots {
+    position: absolute
+}
+
+.SliderIndicator_dots .SliderIndicator_dot {
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0);
+    padding: 0;
+    cursor: pointer;
+    position: relative
+}
+
+.SliderIndicator_dots .SliderIndicator_dot:focus {
+    outline: none
+}
+
+.SliderIndicator_dots:before {
+    content: "";
+    position: absolute;
+    background: var(--background-overlay-black);
+    opacity: .3;
+    border-radius: 100px
+}
+
+.SliderIndicator_dots.SliderIndicator_vertical {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+    inset-inline-start: 12px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.SliderIndicator_dots.SliderIndicator_vertical:before {
+    left: 4px;
+    width: 2px;
+    height: 100%
+}
+
+.SliderIndicator_dots.SliderIndicator_vertical .SliderIndicator_dot {
+    height: 27px;
+    width: 10px
+}
+
+.SliderIndicator_dots.SliderIndicator_horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.SliderIndicator_dots.SliderIndicator_horizontal:before {
+    bottom: 4px;
+    width: 100%;
+    height: 2px
+}
+
+.SliderIndicator_dots.SliderIndicator_horizontal .SliderIndicator_dot {
+    width: 27px;
+    height: 10px
+}
+
+.SliderIndicator_dots.SliderIndicator_rtl__uVG_Q {
+    direction: rtl
+}
+
+.SliderIndicator_indicator {
+    position: absolute;
+    background: var(--background-inverted);
+    transition: all .3s ease;
+    border-radius: 100px;
+    cursor: pointer
+}
+
+.SliderIndicator_indicator.SliderIndicator_vertical {
+    left: 4px;
+    width: 2px;
+    height: 27px
+}
+
+.SliderIndicator_indicator.SliderIndicator_horizontal {
+    bottom: 4px;
+    width: 27px;
+    height: 2px
+}
+
+.TopBanner_imageWrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%
+}
+
+.TopBanner_image {
+    object-fit: cover
+}
+
+.TopBannersTimedBannersMobile_wrapper {
+    width: 100%;
+    display: none
+}
+
+@media(max-width: 575px) {
+    .TopBannersTimedBannersMobile_wrapper {
+        display:grid
+    }
+}
+
+.TopBannersTimedBannersMobile_slider {
+    width: 100%;
+    aspect-ratio: 336/128;
+    border-radius: 32px;
+    direction: ltr;
+    z-index: 0
+}

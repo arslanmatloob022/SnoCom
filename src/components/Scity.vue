@@ -1,0 +1,2136 @@
+<script lang="ts" setup></script>
+
+<template>
+  <div class="EventList_wrapper">
+    <a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="qatar-event-show"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Qatar Event Show image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-09/fed12838-9ab3-4819-a789-2a702de44d2f_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          1 Jan <br class="CardEvent_breakLine" />4:28 AM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Workshop</p>
+        <p class="Typography_p4 CardEvent_title">Qatar Event Show</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="be-happy---children-and-family-play"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Be Happy - Children &amp; Family Play image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/c573674b-445e-4d97-8cde-70dd71bd8d41_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          4 Sep <br class="CardEvent_breakLine" />9:30 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family • Arabic Only</p>
+        <p class="Typography_p4 CardEvent_title">
+          Be Happy - Children &amp; Family Play
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 195 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="ceramic-cube-pottery-studio"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Ceramic Cube Pottery Studio  image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-07/e8750113-929b-4db6-8269-8c626d4b01cf_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          4 Sep <br class="CardEvent_breakLine" />9:30 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family</p>
+        <p class="Typography_p4 CardEvent_title">Ceramic Cube Pottery Studio</p>
+        <p class="Typography_p8 CardEvent_price">from 80 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="974cruises---houseboat-rental"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="974Cruises - Houseboat Rental (Lusail Marina) image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-09/7d972608-038f-414e-8149-e6191c6241bc_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          4 Sep <br class="CardEvent_breakLine" />10:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Things to Do</p>
+        <p class="Typography_p4 CardEvent_title">
+          974Cruises - Houseboat Rental (Lusail Marina)
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 800 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="974cruises---houseboat-rental"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="974Cruises - Houseboat Rental (Doha Port) image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-09/56a28c71-64d6-4276-932d-a11ed4ef67b5_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          4 Sep <br class="CardEvent_breakLine" />10:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Things to Do</p>
+        <p class="Typography_p4 CardEvent_title">
+          974Cruises - Houseboat Rental (Doha Port)
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 800 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="fällä--self-driven-solar-powered-boat"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Fällä – Self-Driven Solar-Powered Boat image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/17436b22-569e-4444-83ee-d84f22f46996_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          5 Sep <br class="CardEvent_breakLine" />11:00 AM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Things to Do</p>
+        <p class="Typography_p4 CardEvent_title">
+          Fällä – Self-Driven Solar-Powered Boat
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 240 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="société---cookies-baking"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Société - Cookies Baking  image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/18d1b6d0-0d14-46a3-8c5d-fac21fd0c0f4_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          5 Sep <br class="CardEvent_breakLine" />12:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Things to Do</p>
+        <p class="Typography_p4 CardEvent_title">Société - Cookies Baking</p>
+        <p class="Typography_p8 CardEvent_price">from 150 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="qool-qatar---flyboarding"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Qool Qatar - Flyboarding (Buy 1, Get 1 Free) image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/3ceae8b2-f3ab-486b-946d-d3d3d5e36df2_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          5 Sep <br class="CardEvent_breakLine" />12:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family</p>
+        <p class="Typography_p4 CardEvent_title">
+          Qool Qatar - Flyboarding (Buy 1, Get 1 Free)
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 500 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="meryal-waterpark"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Meryal Waterpark image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-09/8392225a-aa2e-4c9d-a054-9cb784f09b9e_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          5 Sep <br class="CardEvent_breakLine" />12:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Things to Do • Giveaway</p>
+        <p class="Typography_p4 CardEvent_title">Meryal Waterpark</p>
+        <p class="Typography_p8 CardEvent_price">from 155 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="fly-over-wonders--flying-cinema"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Fly Over Wonders – Flying Cinema image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/6a844e55-e20f-4546-af08-7e7f3227942c_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          5 Sep <br class="CardEvent_breakLine" />1:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family</p>
+        <p class="Typography_p4 CardEvent_title">
+          Fly Over Wonders – Flying Cinema
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 45 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="doha-quest---35-percent-discount"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Doha Quest - 35% Discount image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-09/671a3408-39c0-46cc-a3b5-9c3e35e6cd59_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          5 Sep <br class="CardEvent_breakLine" />4:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family</p>
+        <p class="Typography_p4 CardEvent_title">Doha Quest - 35% Discount</p>
+        <p class="Typography_p8 CardEvent_price">from 100 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="nakama-cosplay-festival"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Nakama Cosplay Festival  image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/e4f2c6b4-96f2-4f7f-9eb9-58845edbdc1b_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          5 Sep <br class="CardEvent_breakLine" />5:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Festivals</p>
+        <p class="Typography_p4 CardEvent_title">Nakama Cosplay Festival</p>
+        <p class="Typography_p8 CardEvent_price">from 25 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="be-happy---children-and-family-play"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Be Happy - Children &amp; Family Play image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/c573674b-445e-4d97-8cde-70dd71bd8d41_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          5 Sep <br class="CardEvent_breakLine" />7:30 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family • Arabic Only</p>
+        <p class="Typography_p4 CardEvent_title">
+          Be Happy - Children &amp; Family Play
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 195 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="qool-qatar---fishing"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Qool Qatar - Fishing  image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-09/865079db-18ee-48ff-b005-5617b60038b6_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          6 Sep <br class="CardEvent_breakLine" />6:00 AM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">
+          Family • Things to Do • Sports
+        </p>
+        <p class="Typography_p4 CardEvent_title">Qool Qatar - Fishing</p>
+        <p class="Typography_p8 CardEvent_price">from 1500 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="qool-qatar---wakeboarding"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Qool Qatar - Wakeboarding (Buy 1, Get 1 Free) image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/294b7226-ba3e-418a-92a0-8e5754a0b297_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          6 Sep <br class="CardEvent_breakLine" />7:00 AM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family</p>
+        <p class="Typography_p4 CardEvent_title">
+          Qool Qatar - Wakeboarding (Buy 1, Get 1 Free)
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 800 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="qool-qatar---donut-ride"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Qool Qatar - Donut Ride (Buy 1, Get 1 Free) image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/d9ef3f4a-dad9-4e68-b4da-f0a660aa3a20_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          6 Sep <br class="CardEvent_breakLine" />12:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family</p>
+        <p class="Typography_p4 CardEvent_title">
+          Qool Qatar - Donut Ride (Buy 1, Get 1 Free)
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 800 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="qool-qatar---parasailing"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Qool Qatar - Parasailing (10% Discount) image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/23619601-61cc-4632-b8b3-760bce58e503_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          6 Sep <br class="CardEvent_breakLine" />12:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family</p>
+        <p class="Typography_p4 CardEvent_title">
+          Qool Qatar - Parasailing (10% Discount)
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 200 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="qool-qatar---banana-ride"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Qool Qatar - Banana Ride (Buy 1, Get 1 Free) image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-08/b12f0f2b-966e-48f9-a7cd-4f8f1c45d144_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          6 Sep <br class="CardEvent_breakLine" />12:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family</p>
+        <p class="Typography_p4 CardEvent_title">
+          Qool Qatar - Banana Ride (Buy 1, Get 1 Free)
+        </p>
+        <p class="Typography_p8 CardEvent_price">from 800 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div> </a
+    ><a
+      rel="noopener noreferrer"
+      data-analytic-label="scityEventLink"
+      data-analytic-event-content="ceramic-cube-pottery-studio"
+      class="CardEvent_card"
+      href="/scity/event-details"
+    >
+      <div class="CardEvent_imageWrapper">
+        <img
+          alt="Ceramic Cube Pottery Studio  image"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="CardEvent_image"
+          src="https://images.snoonu.com/snoofun/2025-07/e8750113-929b-4db6-8269-8c626d4b01cf_output.png"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+      </div>
+      <div class="CardEvent_content__X_xHx">
+        <p class="Typography_p6 CardEvent_date">
+          6 Sep <br class="CardEvent_breakLine" />3:00 PM
+        </p>
+        <p class="Typography_p8 CardEvent_tags">Family</p>
+        <p class="Typography_p4 CardEvent_title">Ceramic Cube Pottery Studio</p>
+        <p class="Typography_p8 CardEvent_price">from 80 QR</p>
+      </div>
+      <div class="CardEvent_badge CardEvent_inAppRegistration">
+        <span data-test-id="" class="Icon_iconWrapper CardEvent_icon"
+          ><svg
+            width="13"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="Icon_icon"
+          >
+            <g clip-path="url(#snoonu_svg__a)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.128 10.667c2.552 0 4.079-1.392 4.079-3.146 0-2.713-4.489-2.442-4.489-3.363 0-.307.336-.614 1.006-.614 1.08 0 2.16.597 2.625 1.085l1.378-1.718C10.74 2.025 9.231 1.5 7.722 1.5H.727l.014.082C1.05 2.996 1.957 3.87 3.558 4.286c-.392.084-.81.28-1.107.495.552.935 2.178 1.72 3.997 2.224.99.308 1.89.5 1.89 1.004 0 .343-.372.633-.95.633-1.267 0-2.645-.778-3.204-1.357l-1.51 1.79c1.099 1.03 2.795 1.592 4.452 1.592h.002Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="snoonu_svg__a">
+                <path
+                  fill="currentColor"
+                  transform="translate(.227)"
+                  d="M0 0h12v12H0z"
+                ></path>
+              </clipPath>
+            </defs></svg
+        ></span>
+        <p class="Typography_p10">Register</p>
+      </div>
+    </a>
+    <div></div>
+  </div>
+</template>
+
+<style scoped>
+.Carousel_wrapper {
+  position: relative;
+}
+
+@media (max-width: 1360px) {
+  .Carousel_wrapper {
+    margin-right: var(--content-wrapper-side-padding-negative);
+    margin-left: var(--content-wrapper-side-padding-negative);
+  }
+
+  .Carousel_wrapper .Carousel_navButtonWrapper__gL_66 {
+    display: none;
+  }
+}
+
+.Carousel_carousel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  gap: 24px;
+}
+
+.Carousel_carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.Carousel_enter__Jz_dI {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.Carousel_enterActive__o_jK8 {
+  opacity: 1;
+}
+
+.Carousel_exit {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.Carousel_exitActive {
+  opacity: 0;
+}
+
+@media (max-width: 1360px) {
+  :root[lang="en"] .Carousel_carousel > :first-of-type {
+    padding-left: var(--content-wrapper-side-padding);
+  }
+
+  :root[lang="ar"] .Carousel_carousel > :first-of-type,
+  :root[lang="en"] .Carousel_carousel > :last-of-type {
+    padding-right: var(--content-wrapper-side-padding);
+  }
+
+  :root[lang="ar"] .Carousel_carousel > :last-of-type {
+    padding-left: var(--content-wrapper-side-padding);
+  }
+}
+
+.NavButton_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+  background: var(--control-tertiary);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: var(--box-shadow-56);
+}
+
+.NavButton_wrapper.NavButton_prev {
+  left: -32px;
+}
+
+.NavButton_wrapper.NavButton_next__x_uZ2 {
+  right: -32px;
+}
+
+.EventCategory_wrapper {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.EventCategory_imageWrapper {
+  width: 108px;
+  height: 108px;
+  position: relative;
+  border-radius: 76px;
+  background: var(--background-secondary);
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+@media (max-width: 1024px) {
+  .EventCategory_imageWrapper {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+@media (max-width: 575px) {
+  .EventCategory_imageWrapper {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.EventCategory_image {
+  object-fit: cover;
+}
+
+.EventCategory_label__O_3Ff {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .EventCategory_label__O_3Ff {
+    padding: 2px 4px;
+  }
+}
+
+.EventCategory_label__O_3Ff.EventCategory_active {
+  background: var(--background-inverted);
+  color: var(--text-invert-primary);
+}
+
+.EventCategory_cross {
+  position: absolute;
+  inset-block-start: -4px;
+  inset-inline-end: -12px;
+  padding: 4px;
+  background: var(--control-tertiary);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-24);
+  color: var(--text-primary);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.CategorySelector_row__4h_Yp {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: row;
+}
+
+@media (max-width: 575px) {
+  .CategorySelector_row__4h_Yp {
+    gap: 12px;
+  }
+}
+
+.InAppRegisterSelector_wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px 12px 16px;
+  border-radius: 24px;
+  background: var(--background-secondary);
+  cursor: pointer;
+}
+
+.InAppRegisterSelector_wrapper.InAppRegisterSelector_active__YKts_ {
+  background: var(--control-active);
+  color: var(--text-invert-primary);
+}
+
+.InAppRegisterSelector_wrapper .InAppRegisterSelector_icon__d_bhN {
+  width: 20px;
+  height: 20px;
+}
+
+:root[lang="ar"] .InAppRegisterSelector_wrapper {
+  padding: 12px 16px 12px 20px;
+}
+
+.DateFilters_chip__ar_Yb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 24px;
+  background: var(--background-secondary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.DateFilters_chip__ar_Yb.DateFilters_active {
+  background: var(--control-active);
+  color: var(--text-invert-primary);
+}
+
+.rdp-root {
+  --rdp-accent-color: blue;
+  --rdp-accent-background-color: #f0f0ff;
+  --rdp-day-height: 44px;
+  --rdp-day-width: 44px;
+  --rdp-day_button-border-radius: 100%;
+  --rdp-day_button-border: 2px solid transparent;
+  --rdp-day_button-height: 42px;
+  --rdp-day_button-width: 42px;
+  --rdp-selected-border: 2px solid var(--rdp-accent-color);
+  --rdp-disabled-opacity: 0.5;
+  --rdp-outside-opacity: 0.75;
+  --rdp-today-color: var(--rdp-accent-color);
+  --rdp-dropdown-gap: 0.5rem;
+  --rdp-months-gap: 2rem;
+  --rdp-nav_button-disabled-opacity: 0.5;
+  --rdp-nav_button-height: 2.25rem;
+  --rdp-nav_button-width: 2.25rem;
+  --rdp-nav-height: 2.75rem;
+  --rdp-range_middle-background-color: var(--rdp-accent-background-color);
+  --rdp-range_middle-color: inherit;
+  --rdp-range_start-color: white;
+  --rdp-range_start-background: linear-gradient(
+    var(--rdp-gradient-direction),
+    transparent 50%,
+    var(--rdp-range_middle-background-color) 50%
+  );
+  --rdp-range_start-date-background-color: var(--rdp-accent-color);
+  --rdp-range_end-background: linear-gradient(
+    var(--rdp-gradient-direction),
+    var(--rdp-range_middle-background-color) 50%,
+    transparent 50%
+  );
+  --rdp-range_end-color: white;
+  --rdp-range_end-date-background-color: var(--rdp-accent-color);
+  --rdp-week_number-border-radius: 100%;
+  --rdp-week_number-border: 2px solid transparent;
+  --rdp-week_number-height: var(--rdp-day-height);
+  --rdp-week_number-opacity: 0.75;
+  --rdp-week_number-width: var(--rdp-day-width);
+  --rdp-weeknumber-text-align: center;
+  --rdp-weekday-opacity: 0.75;
+  --rdp-weekday-padding: 0.5rem 0rem;
+  --rdp-weekday-text-align: center;
+  --rdp-gradient-direction: 90deg;
+}
+
+.rdp-root[dir="rtl"] {
+  --rdp-gradient-direction: -90deg;
+}
+
+.rdp-root[data-broadcast-calendar="true"] {
+  --rdp-outside-opacity: unset;
+}
+
+.rdp-root {
+  position: relative;
+}
+
+.rdp-root,
+.rdp-root * {
+  box-sizing: border-box;
+}
+
+.rdp-day {
+  width: var(--rdp-day-width);
+  height: var(--rdp-day-height);
+  text-align: center;
+}
+
+.rdp-day_button {
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: var(--rdp-day_button-width);
+  height: var(--rdp-day_button-height);
+  border: var(--rdp-day_button-border);
+  border-radius: var(--rdp-day_button-border-radius);
+}
+
+.rdp-day_button:disabled {
+  cursor: revert;
+}
+
+.rdp-caption_label {
+  z-index: 1;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  border: 0;
+}
+
+.rdp-dropdown:focus-visible ~ .rdp-caption_label {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.rdp-button_next,
+.rdp-button_previous {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  appearance: none;
+  width: var(--rdp-nav_button-width);
+  height: var(--rdp-nav_button-height);
+}
+
+.rdp-button_next:disabled,
+.rdp-button_previous:disabled {
+  cursor: revert;
+  opacity: var(--rdp-nav_button-disabled-opacity);
+}
+
+.rdp-chevron {
+  display: inline-block;
+  fill: var(--rdp-accent-color);
+}
+
+.rdp-root[dir="rtl"] .rdp-nav .rdp-chevron {
+  transform: rotate(180deg);
+  transform-origin: 50%;
+}
+
+.rdp-dropdowns {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rdp-dropdown-gap);
+}
+
+.rdp-dropdown {
+  z-index: 2;
+  opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: inherit;
+  border: none;
+  line-height: inherit;
+}
+
+.rdp-dropdown_root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rdp-dropdown_root[data-disabled="true"] .rdp-chevron {
+  opacity: var(--rdp-disabled-opacity);
+}
+
+.rdp-month_caption {
+  display: flex;
+  align-content: center;
+  height: var(--rdp-nav-height);
+  font-weight: 700;
+  font-size: large;
+}
+
+.rdp-months {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rdp-months-gap);
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.rdp-month_grid {
+  border-collapse: collapse;
+}
+
+.rdp-nav {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  display: flex;
+  align-items: center;
+  height: var(--rdp-nav-height);
+}
+
+.rdp-weekday {
+  opacity: var(--rdp-weekday-opacity);
+  padding: var(--rdp-weekday-padding);
+  font-weight: 500;
+  font-size: smaller;
+  text-align: var(--rdp-weekday-text-align);
+  text-transform: var(--rdp-weekday-text-transform);
+}
+
+.rdp-week_number {
+  opacity: var(--rdp-week_number-opacity);
+  font-weight: 400;
+  font-size: small;
+  height: var(--rdp-week_number-height);
+  width: var(--rdp-week_number-width);
+  border: var(--rdp-week_number-border);
+  border-radius: var(--rdp-week_number-border-radius);
+  text-align: var(--rdp-weeknumber-text-align);
+}
+
+.rdp-today:not(.rdp-outside) {
+  color: var(--rdp-today-color);
+}
+
+.rdp-selected {
+  font-weight: 700;
+  font-size: large;
+}
+
+.rdp-selected .rdp-day_button {
+  border: var(--rdp-selected-border);
+}
+
+.rdp-outside {
+  opacity: var(--rdp-outside-opacity);
+}
+
+.rdp-disabled {
+  opacity: var(--rdp-disabled-opacity);
+}
+
+.rdp-hidden {
+  visibility: hidden;
+  color: var(--rdp-range_start-color);
+}
+
+.rdp-range_start {
+  background: var(--rdp-range_start-background);
+}
+
+.rdp-range_start .rdp-day_button {
+  background-color: var(--rdp-range_start-date-background-color);
+  color: var(--rdp-range_start-color);
+}
+
+.rdp-range_middle {
+  background-color: var(--rdp-range_middle-background-color);
+}
+
+.rdp-range_middle .rdp-day_button {
+  border: unset;
+  border-radius: unset;
+  color: var(--rdp-range_middle-color);
+}
+
+.rdp-range_end {
+  background: var(--rdp-range_end-background);
+  color: var(--rdp-range_end-color);
+}
+
+.rdp-range_end .rdp-day_button {
+  color: var(--rdp-range_start-color);
+  background-color: var(--rdp-range_end-date-background-color);
+}
+
+.rdp-range_start.rdp-range_end {
+  background: revert;
+}
+
+.rdp-focusable {
+  cursor: pointer;
+}
+
+.DateRangePicker_dateWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.DateRangePicker_chip__uKn_1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 24px;
+  background: var(--background-secondary);
+  cursor: pointer;
+}
+
+.DateRangePicker_chip__uKn_1.DateRangePicker_withIcon {
+  -webkit-padding-start: 16px;
+  padding-inline-start: 16px;
+}
+
+.DateRangePicker_chip__uKn_1.DateRangePicker_active {
+  background: var(--control-active);
+  color: var(--text-invert-primary);
+}
+
+.DateRangePicker_popup__wB_ti {
+  top: calc(100% + 8px);
+  z-index: 13;
+  border-radius: 16px;
+  padding: 16px;
+  width: max-content;
+}
+
+@media (max-width: 767px) {
+  .DateRangePicker_popup__wB_ti {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+  }
+}
+
+.DateRangePicker_root {
+  --rdp-accent-color: var(--constant-brand);
+  --rdp-range_middle-background-color: var(--background-secondary);
+  --rdp-day-height: 40px;
+  --rdp-day-width: 40px;
+  --rdp-day_button-height: 36px;
+  --rdp-day_button-width: 36px;
+}
+
+@media (max-width: 767px) {
+  .DateRangePicker_root {
+    --rdp-day-height: calc((100vw - 32px) / 7);
+    --rdp-day-width: calc((100vw - 32px) / 7);
+    --rdp-day_button-height: calc((100vw - 32px) / 7 - 4px);
+    --rdp-day_button-width: calc((100vw - 32px) / 7 - 4px);
+  }
+}
+
+.DateRangePicker_root .DateRangePicker_nav___XrVv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+}
+
+@media (max-width: 767px) {
+  .DateRangePicker_root .DateRangePicker_monthGrid,
+  .DateRangePicker_root .DateRangePicker_month,
+  .DateRangePicker_root .DateRangePicker_months {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.DateRangePicker_root .DateRangePicker_monthCaption {
+  padding: 8px;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  flex-flow: row;
+}
+
+.DateRangePicker_root .DateRangePicker_monthButton {
+  outline: none;
+}
+
+.DateRangePicker_root .DateRangePicker_day {
+  padding: 2px;
+}
+
+.DateRangePicker_root .DateRangePicker_selectedDay__KMK_j {
+  font-weight: 400;
+  font-size: medium;
+}
+
+.DateRangePicker_root
+  .DateRangePicker_selectedDay__KMK_j
+  .DateRangePicker_dayButton {
+  color: var(--text-primary);
+}
+
+.DateRangePicker_root
+  .DateRangePicker_selectedDay__KMK_j
+  .DateRangePicker_dayButton:focus {
+  outline: none;
+}
+
+.DateRangePicker_root .DateRangePicker_rangeEnd___KAiR,
+.DateRangePicker_root .DateRangePicker_rangeStart {
+  background: var(--rdp-range_middle-background-color);
+}
+
+.DateRangePicker_root
+  .DateRangePicker_rangeEnd___KAiR
+  .DateRangePicker_dayButton,
+.DateRangePicker_root .DateRangePicker_rangeStart .DateRangePicker_dayButton {
+  background: var(--control-tertiary);
+  border-color: var(--control-tertiary);
+  filter: drop-shadow(0 4px 22px rgba(0, 0, 0, 0.2));
+}
+
+.DateRangePicker_root .DateRangePicker_rangeStart {
+  border-start-start-radius: 50%;
+  border-end-start-radius: 50%;
+}
+
+.DateRangePicker_root .DateRangePicker_rangeEnd___KAiR {
+  border-end-end-radius: 50%;
+  border-start-end-radius: 50%;
+}
+
+.DateRangePicker_root .DateRangePicker_today {
+  color: initial;
+}
+
+.DateRangePicker_root .DateRangePicker_today .DateRangePicker_dayButton:focus {
+  outline: none;
+}
+
+.DateRangePicker_root .DateRangePicker_chevron__0_luT {
+  fill: var(--icon-tertiary);
+}
+
+.DateRangePicker_footer {
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  flex-flow: row;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+@media (max-width: 767px) {
+  .DateRangePicker_footer {
+    margin-top: 24px;
+  }
+}
+
+:root[lang="ar"] .DateRangePicker_chevron__0_luT {
+  transform: rotate(180deg);
+}
+
+.DateSelector_wrapper {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  gap: 8px;
+}
+
+@media (max-width: 767px) {
+  .DateSelector_wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: auto;
+  }
+
+  .DateSelector_wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.EventList_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 16px;
+}
+
+@media (max-width: 1360px) {
+  .EventList_wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .EventList_wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.SkeletonEventCard_card___MtEZ {
+  box-shadow: var(--box-shadow-xl);
+  border-radius: 20px;
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-flow: row;
+}
+
+.SkeletonEventCard_image {
+  width: 126px;
+  height: 168px;
+  flex-shrink: 0;
+  margin: 10px 0 10px 10px;
+}
+
+.SkeletonEventCard_content {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+}
+
+.SkeletonEventCard_date__rIvc_ {
+  margin-bottom: auto;
+  height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .SkeletonEventCard_date__rIvc_ {
+    height: 16px;
+  }
+}
+
+.SkeletonEventCard_tags {
+  height: 16px;
+}
+
+.SkeletonEventCard_title {
+  margin-top: 6px;
+  height: 20px;
+}
+
+@media (max-width: 575px) {
+  .SkeletonEventCard_title {
+    height: 16px;
+    margin-top: 4px;
+  }
+}
+
+.SkeletonEventCard_price__Ap_55 {
+  margin-top: 6px;
+  height: 16px;
+}
+
+@media (max-width: 575px) {
+  .SkeletonEventCard_price__Ap_55 {
+    margin-top: 4px;
+  }
+}
+
+:root[lang="ar"] .SkeletonEventCard_image {
+  margin: 10px 10px 10px 0;
+}
+
+.CardEvent_card {
+  position: relative;
+  box-shadow: var(--box-shadow-xl);
+  border-radius: 20px;
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-flow: row;
+}
+
+.CardEvent_imageWrapper {
+  position: relative;
+  width: 126px;
+  height: 168px;
+  flex-shrink: 0;
+  margin: 10px 0 10px 10px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 1360px) {
+  .CardEvent_imageWrapper {
+    width: 120px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .CardEvent_imageWrapper {
+    width: 114px;
+    height: 152px;
+    margin: 8px 0 8px 8px;
+  }
+}
+
+.CardEvent_imageWrapper .CardEvent_image {
+  object-fit: cover;
+}
+
+.CardEvent_content__X_xHx {
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+}
+
+.CardEvent_date {
+  margin-bottom: auto;
+}
+
+.CardEvent_date .CardEvent_breakLine {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .CardEvent_date .CardEvent_breakLine {
+    display: block;
+  }
+}
+
+.CardEvent_tags {
+  color: var(--text-secondary);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@supports (-webkit-line-clamp: 1) {
+  .CardEvent_tags {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.CardEvent_title {
+  margin-top: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@supports (-webkit-line-clamp: 3) {
+  .CardEvent_title {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@media (max-width: 575px) {
+  .CardEvent_title {
+    margin-top: 4px;
+  }
+}
+
+.CardEvent_price {
+  margin-top: 6px;
+}
+
+@media (max-width: 575px) {
+  .CardEvent_price {
+    margin-top: 4px;
+  }
+}
+
+.CardEvent_badge {
+  position: absolute;
+  top: 10px;
+  inset-inline-end: 10px;
+  padding: 2px 6px;
+  border-radius: 100px;
+}
+
+@media (max-width: 575px) {
+  .CardEvent_badge {
+    top: 8px;
+    inset-inline-end: 8px;
+  }
+}
+
+.CardEvent_badge.CardEvent_inAppRegistration {
+  background-color: var(--constant-brand);
+  color: var(--text-invert-primary);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  gap: 4px;
+}
+
+.CardEvent_badge.CardEvent_inAppRegistration .CardEvent_icon {
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+}
+
+.CardEvent_badge.CardEvent_soldOut {
+  background-color: var(--background-tertiary);
+  color: var(--text-secondary);
+}
+
+:root[lang="ar"] .CardEvent_imageWrapper {
+  margin: 10px 10px 10px 0;
+}
+
+@media (max-width: 767px) {
+  :root[lang="ar"] .CardEvent_imageWrapper {
+    margin: 8px 8px 8px 0;
+  }
+}
+
+:root[lang="ar"] .CardEvent_date,
+:root[lang="ar"] .CardEvent_title {
+  text-align: right;
+}
+
+.Title_title__pC_5h {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+</style>
