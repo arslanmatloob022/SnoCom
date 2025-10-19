@@ -100,7 +100,7 @@ const products = ref([
     img: "https://images.snoonu.com/brand_product/2025-04/f1ae70cd-7b9a-42b3-a797-f7c6bdcaea3d_output.png?format=webp",
     href: "/product/huawei-pura-70-ultra-16gb-512gb---black/6680045322355445b9c715d9?mpLevel=mp+category",
     rating: null,
-    ratingCount: 0,
+    ratingCount: 5,
   },
   {
     id: "63032e773a271863018e39ed",
