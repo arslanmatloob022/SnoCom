@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { ref } from "vue"
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 import { Swiper, SwiperSlide } from "swiper/vue"
 import "swiper/css"
 import "swiper/css/navigation"
@@ -123,7 +126,7 @@ const brands = ref([
 
 <template>
   <div>
-    <h2 class="Typography_h2">Favourite Brands</h2>
+    <h2 class="Typography_h2">{{ t('navigation.brands') }}</h2>
     <div class="Carousel_wrapper">
       <div class="Carousel_navButtonWrapper__gL_66"></div>
 

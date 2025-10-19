@@ -1,7 +1,11 @@
 <script lang="ts" setup>
 import CartPopup from "@/components/cart/CartPopup.vue";
+import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 import { UsePannelsStore } from "@/stores/UsePannelsStore";
 import { useUserStore } from "@/stores/useUserStore";
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const store = useUserStore();
 
@@ -235,9 +239,7 @@ onBeforeUnmount(() => {
     <div class="Subheader_wrapper">
       <div class="Subheader_leftSide">
         <div class="LocaleSwitcher_wrapper Subheader_locale">
-          <div data-analytic-label="locale[ar]" class="LocaleSwitcher_locale">
-            <p class="Typography_p6">عربى</p>
-          </div>
+          <LanguageSwitcher />
         </div>
         <!-- <div style="border-radius:28px"
 								class="Skeleton_skeleton LocationLoading_loading Skeleton_animate">
@@ -271,13 +273,13 @@ onBeforeUnmount(() => {
                   fill="currentColor"
                 ></path></svg
             ></span>
-            <p class="Typography_p6 Selector_location">Doha, Qatar</p>
+            <p class="Typography_p6 Selector_location">{{ t('header.location') }}</p>
           </div>
           <div v-if="showMap" class="Popup_popupEnterDone">
             <div class="Popup_popup LocationBlock_popup">
-              <p class="Typography_p1">Select your delivery address</p>
+              <p class="Typography_p1">{{ t('header.selectLocation') }}</p>
               <p class="Typography_p6 LocationBlock_desc">
-                Availability of shops and products will depend on your address
+                {{ t('header.locationDesc') }}
               </p>
               <div class="LocationBlock_mapWrapper">
                 <span
@@ -336,7 +338,7 @@ onBeforeUnmount(() => {
                   class="Button_button Button_secondary Button_small LocationBlock_skipButton"
                   data-analytic-label="selectLocationSkip"
                 >
-                  <span class="Button_content">Skip</span></button
+                  <span class="Button_content">{{ t('header.skip') }}</span></button
                 ><button
                   class="Button_button Button_primary Button_small LocationBlock_desktopButton__3j_Su"
                   data-test-id="selectAddressBtn"
@@ -357,7 +359,7 @@ onBeforeUnmount(() => {
                           d="m20.014 5.555-15.347 7.27 5.734 1.434c.448.111.798.461.91.909l1.434 5.734 7.27-15.347Zm-.944-2.32A2.45 2.45 0 0 1 22.334 6.5l-7.39 15.6a2.45 2.45 0 0 1-4.591-.455l-1.286-5.142-5.142-1.286a2.45 2.45 0 0 1-.454-4.59l15.6-7.39Z"
                           fill="currentColor"
                         ></path></svg></span
-                    >Select Address</span
+                    >{{ t('header.selectAddress') }}</span
                   ></button
                 ><button
                   class="Button_button Button_primary Button_small LocationBlock_mobileButton"
@@ -365,7 +367,7 @@ onBeforeUnmount(() => {
                   data-analytic-label="selectLocation"
                   data-analytic-element-location="header"
                 >
-                  <span class="Button_content">Select Address</span>
+                  <span class="Button_content">{{ t('header.selectAddress') }}</span>
                 </button>
               </div>
             </div>
@@ -374,13 +376,13 @@ onBeforeUnmount(() => {
       </div>
       <div class="Subheader_links">
         <a class="Subheader_link Subheader_activeLink" href="/">
-          <p class="Typography_p6">Market</p> </a
+          <p class="Typography_p6">{{ t('header.market') }}</p> </a
         ><a class="Subheader_link" href="/restaurants?source=header">
-          <p class="Typography_p6">Restaurants</p> </a
+          <p class="Typography_p6">{{ t('header.restaurants') }}</p> </a
         ><a class="Subheader_link" href="/grocery">
-          <p class="Typography_p6">Grocery</p> </a
+          <p class="Typography_p6">{{ t('header.grocery') }}</p> </a
         ><a class="Subheader_link" href="/scity?source=header">
-          <p class="Typography_p6">S City</p>
+          <p class="Typography_p6">{{ t('header.scity') }}</p>
         </a>
       </div>
     </div>
@@ -449,7 +451,7 @@ onBeforeUnmount(() => {
                     d="M0 5h20v2.5H0V5ZM20 15H0v-2.5h20V15Z"
                     fill="currentColor"
                   ></path></svg></span
-              ><span class="CatalogButton_text">Catalog</span></span
+              ><span class="CatalogButton_text">{{ t('header.catalog') }}</span></span
             >
           </button>
           <div v-show="isCatalogOpen" class="CatalogDrawer_overlay">
@@ -548,12 +550,7 @@ onBeforeUnmount(() => {
                 <div
                   class="LocaleSwitcher_wrapper CatalogDrawer_languageSwitcher"
                 >
-                  <div
-                    data-analytic-label="locale[ar]"
-                    class="LocaleSwitcher_locale"
-                  >
-                    <p class="Typography_p6">عربى</p>
-                  </div>
+                  <LanguageSwitcher />
                 </div>
               </div>
 
@@ -605,7 +602,7 @@ onBeforeUnmount(() => {
                   <!-- Market Title -->
                   <div class="CatalogCategoryList_titleWrapper">
                     <h3 class="Typography_h3 CatalogCategoryList_title">
-                      Market
+                      {{ t('header.market') }}
                     </h3>
                   </div>
 
@@ -664,7 +661,7 @@ onBeforeUnmount(() => {
                         }
                       "
                     >
-                      Go back
+                      {{ t('common.goBack') }}
                     </p>
                   </div>
                   <!-- dynamic -->
@@ -763,7 +760,7 @@ onBeforeUnmount(() => {
         <form class="Search_searchWrapper__Fa_4X">
           <div class="SearchSelector_wrapper__P_w2s">
             <div class="SearchSelector_selector">
-              <p class="Typography_p8 SearchSelector_label">Market</p>
+              <p class="Typography_p8 SearchSelector_label">{{ t('header.market') }}</p>
               <span
                 data-test-id=""
                 class="Icon_iconWrapper SearchSelector_chevronDown"
@@ -787,7 +784,7 @@ onBeforeUnmount(() => {
               @focus="isFocused = true"
               @blur="isFocused = false"
               class="Autocomplete_input Autocomplete_small Search_input__djH_7"
-              placeholder="Search for stores and products"
+:placeholder="t('header.search')"
               autoComplete="off"
               type="search"
               name="search"
@@ -825,7 +822,7 @@ onBeforeUnmount(() => {
             data-analytic-label="loginButton"
             data-analytic-element-location="header"
           >
-            <span class="Button_content">Login</span>
+            <span class="Button_content">{{ t('header.login') }}</span>
           </button>
         </div>
 

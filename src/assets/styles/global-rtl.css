@@ -1,0 +1,303 @@
+/* Global RTL Typography and Layout Styles */
+
+/* Apply RTL to all text elements when Arabic is selected */
+[dir="rtl"] * {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Specific typography classes */
+[dir="rtl"] .Typography_h1,
+[dir="rtl"] .Typography_h2,
+[dir="rtl"] .Typography_h3,
+[dir="rtl"] .Typography_h4,
+[dir="rtl"] .Typography_h5,
+[dir="rtl"] .Typography_h6,
+[dir="rtl"] .Typography_p1,
+[dir="rtl"] .Typography_p2,
+[dir="rtl"] .Typography_p3,
+[dir="rtl"] .Typography_p4,
+[dir="rtl"] .Typography_p5,
+[dir="rtl"] .Typography_p6,
+[dir="rtl"] .Typography_p7,
+[dir="rtl"] .Typography_p8,
+[dir="rtl"] .Typography_p9,
+[dir="rtl"] .Typography_p10,
+[dir="rtl"] .Typography_p11,
+[dir="rtl"] .Typography_p12,
+[dir="rtl"] .Typography_p13,
+[dir="rtl"] .Typography_p14__r_99o {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* All headings */
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* All paragraphs and text elements */
+[dir="rtl"] p, [dir="rtl"] span, [dir="rtl"] div, [dir="rtl"] label, [dir="rtl"] a {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Lists */
+[dir="rtl"] ul, [dir="rtl"] ol, [dir="rtl"] li {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Form elements */
+[dir="rtl"] input, [dir="rtl"] textarea, [dir="rtl"] select, [dir="rtl"] button {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Specific component classes that need RTL */
+[dir="rtl"] .HiddenTitle_title,
+[dir="rtl"] .CategoryThumbnail_label,
+[dir="rtl"] .ProductInfo_label,
+[dir="rtl"] .BrandCard_title,
+[dir="rtl"] .BrandCard_label,
+[dir="rtl"] .CatalogCategory_label,
+[dir="rtl"] .CatalogMarketplaceCategory_label,
+[dir="rtl"] .MarketplaceCart_title,
+[dir="rtl"] .MarketplaceCart_merchantName,
+[dir="rtl"] .CartProduct_name__zlfe_,
+[dir="rtl"] .CartProduct_additional,
+[dir="rtl"] .Button_content,
+[dir="rtl"] .Selector_location,
+[dir="rtl"] .SearchSelector_label {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Flex containers need special handling */
+[dir="rtl"] .flex, [dir="rtl"] .d-flex {
+  flex-direction: row-reverse !important;
+}
+
+/* Grid containers */
+[dir="rtl"] .grid {
+  direction: rtl !important;
+}
+
+/* Navigation and menu items */
+[dir="rtl"] .nav, [dir="rtl"] .navbar, [dir="rtl"] .menu {
+  direction: rtl !important;
+}
+
+[dir="rtl"] .nav-item, [dir="rtl"] .menu-item {
+  text-align: right !important;
+}
+
+/* Card components */
+[dir="rtl"] .card, [dir="rtl"] .card-body, [dir="rtl"] .card-header, [dir="rtl"] .card-footer {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Modal components */
+[dir="rtl"] .modal, [dir="rtl"] .modal-body, [dir="rtl"] .modal-header, [dir="rtl"] .modal-footer {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Table components */
+[dir="rtl"] .table, [dir="rtl"] .table th, [dir="rtl"] .table td {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Alert components */
+[dir="rtl"] .alert, [dir="rtl"] .alert-title, [dir="rtl"] .alert-message {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Breadcrumb */
+[dir="rtl"] .breadcrumb, [dir="rtl"] .breadcrumb-item {
+  direction: rtl !important;
+  flex-direction: row-reverse !important;
+}
+
+/* Pagination */
+[dir="rtl"] .pagination {
+  flex-direction: row-reverse !important;
+}
+
+/* Dropdown menus */
+[dir="rtl"] .dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .dropdown-item {
+  text-align: right !important;
+}
+
+/* Tooltips and popovers */
+[dir="rtl"] .tooltip, [dir="rtl"] .popover {
+  text-align: right !important;
+}
+
+/* Progress bars */
+[dir="rtl"] .progress {
+  direction: rtl !important;
+}
+
+/* Badges and labels */
+[dir="rtl"] .badge, [dir="rtl"] .label {
+  text-align: right !important;
+}
+
+/* Tabs */
+[dir="rtl"] .nav-tabs, [dir="rtl"] .nav-pills {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .tab-content {
+  text-align: right !important;
+}
+
+/* Carousel/Slider components */
+[dir="rtl"] .carousel, [dir="rtl"] .slider {
+  direction: rtl !important;
+}
+
+[dir="rtl"] .carousel-caption {
+  text-align: right !important;
+}
+
+/* Footer components */
+[dir="rtl"] .footer, [dir="rtl"] .footer-section, [dir="rtl"] .footer-links {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Sidebar components */
+[dir="rtl"] .sidebar, [dir="rtl"] .sidebar-menu {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Search components */
+[dir="rtl"] .search-box, [dir="rtl"] .search-input {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Product components */
+[dir="rtl"] .product-card, [dir="rtl"] .product-title, [dir="rtl"] .product-description {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Price components */
+[dir="rtl"] .price, [dir="rtl"] .product-price {
+  direction: rtl !important;
+}
+
+/* Rating components */
+[dir="rtl"] .rating, [dir="rtl"] .stars {
+  flex-direction: row-reverse !important;
+}
+
+/* Comments and reviews */
+[dir="rtl"] .comment, [dir="rtl"] .review {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* User profile components */
+[dir="rtl"] .profile, [dir="rtl"] .user-info {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Settings and forms */
+[dir="rtl"] .form-group, [dir="rtl"] .form-control, [dir="rtl"] .form-label {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Error messages */
+[dir="rtl"] .error, [dir="rtl"] .error-message, [dir="rtl"] .validation-error {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Success messages */
+[dir="rtl"] .success, [dir="rtl"] .success-message {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Loading states */
+[dir="rtl"] .loading, [dir="rtl"] .spinner {
+  text-align: right !important;
+}
+
+/* Empty states */
+[dir="rtl"] .empty-state, [dir="rtl"] .no-results {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Override any left-aligned text in RTL mode */
+[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-center {
+  text-align: center !important;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+
+/* Ensure all content respects RTL direction */
+[dir="rtl"] .content, [dir="rtl"] .main-content, [dir="rtl"] .page-content {
+  direction: rtl !important;
+}
+
+/* Special handling for numbers and prices */
+[dir="rtl"] .number, [dir="rtl"] .price-number, [dir="rtl"] .currency {
+  direction: ltr !important;
+  display: inline-block;
+}
+
+/* Icon adjustments for RTL */
+[dir="rtl"] .icon-left {
+  margin-left: 0 !important;
+  margin-right: 0.5rem !important;
+}
+
+[dir="rtl"] .icon-right {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+/* Ensure proper text rendering for Arabic */
+[dir="rtl"] {
+  font-family: 'Roboto', 'Noto Sans Arabic', 'Arial', sans-serif !important;
+}
+
+/* Media queries for responsive RTL */
+@media (max-width: 768px) {
+  [dir="rtl"] .mobile-text {
+    text-align: right !important;
+    direction: rtl !important;
+  }
+}
+
+@media (max-width: 576px) {
+  [dir="rtl"] .small-text {
+    text-align: right !important;
+    direction: rtl !important;
+  }
+}

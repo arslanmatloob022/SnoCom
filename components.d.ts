@@ -28,6 +28,7 @@ declare module 'vue' {
     FavoriteButton: typeof import('./src/components/FavoriteButton.vue')['default']
     FollowButton: typeof import('./src/components/FollowButton.vue')['default']
     ForYouProducts: typeof import('./src/components/Home/ForYouProducts.vue')['default']
+    LanguageSwitcher: typeof import('./src/components/LanguageSwitcher.vue')['default']
     ProductCard: typeof import('./src/components/product/ProductCard.vue')['default']
     ProductDetail: typeof import('./src/components/product/ProductDetail.vue')['default']
     ProductImages: typeof import('./src/components/product/ProductImages.vue')['default']
@@ -41,5 +42,6 @@ declare module 'vue' {
     Scity: typeof import('./src/components/Scity.vue')['default']
     TagList: typeof import('./src/components/TagList.vue')['default']
     TopCategories: typeof import('./src/components/Home/TopCategories.vue')['default']
+    TranslateWrapper: typeof import('./src/components/TranslateWrapper.vue')['default']
   }
 }

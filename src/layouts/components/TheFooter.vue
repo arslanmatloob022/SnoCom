@@ -1,19 +1,22 @@
 <script lang="ts" setup>
 import { ref } from "vue"
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 // Footer link sections
 const footerSections = ref([
   {
-    title: "Let us help you",
+    title: t('footer.help'),
     links: [
-      { label: "Help", href: "" },
-      { label: "My Orders", href: "" },
-      { label: "My Favorites", href: "" },
-      { label: "Deals & Offers", href: "/deals" },
+      { label: t('footer.help'), href: "" },
+      { label: t('user.orders'), href: "" },
+      { label: t('user.wishlist'), href: "" },
+      { label: t('navigation.deals'), href: "/deals" },
     ]
   },
   {
-    title: "Electronics",
+    title: t('categories.electronics'),
     links: [
       { label: "Mobiles", href: "/snoonu-market/electronics/mobiles" },
       { label: "Tablets", href: "/snoonu-market/electronics/tablets" },
@@ -158,7 +161,7 @@ const snoonuServices = ref([
 <template>
   <footer class="Footer_wrapper">
     <div class="BackToTop_container__UP_jh">
-      <p class="Typography_p8">Back to top</p>
+      <p class="Typography_p8">{{ t('common.goBack') }}</p>
     </div>
 
     <!-- Main Footer Links -->
@@ -178,7 +181,7 @@ const snoonuServices = ref([
     <div class="Footer_container__W_Eon">
 
       <div class="Footer_moreServices">
-        <p class="Typography_p10">More Services in Snoonu app</p>
+        <p class="Typography_p10">{{ t('footer.downloadApp') }}</p>
 
         <div class="Footer_servicesContainer">
           <!-- App Stores -->
@@ -214,7 +217,7 @@ const snoonuServices = ref([
     <div class="Footer_container__W_Eon pt-0" >
       <div class="Footer_bottomHalfContainer">
         <div class="Footer_legalLinks">
-          <p class="Typography_p9 Footer_copyright">© 2025 Snoonu</p>
+          <p class="Typography_p9 Footer_copyright">{{ t('footer.copyright') }}</p>
           <a v-for="link in legalLinks" :key="link.label" :href="link.href" :target="link.target"
             rel="noopener noreferrer" data-analytic-label="legalLink" class="Typography_p9">
             {{ link.label }}

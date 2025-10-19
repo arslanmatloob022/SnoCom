@@ -1,15 +1,18 @@
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const activeTab = ref("ForYou");
 const tabs = [
     {
         name: "ForYou",
-        label: "For You",
+        label: t('common.recommended'),
         activeIcon: "fa-solid fa-star text-white-500",
         inactiveIcon: "fa-regular fa-star text-black-500",
     },
     {
         name: "Popular",
-        label: "Popular",
+        label: t('common.popular'),
         activeIcon: "fa-solid fa-fire text-white-500",
         inactiveIcon: "fa-solid fa-fire text-black-500",
     },
@@ -114,7 +117,7 @@ const setActiveTab = (tabName: string) => {
                                 d="M12.389.891a.517.517 0 0 0-.61.099l-9.143 9.458a.48.48 0 0 0-.125.439.502.502 0 0 0 .305.35l3.51 1.395c.73.29 1.158 1.05 1.027 1.825l-.697 4.14a.482.482 0 0 0 .274.517.513.513 0 0 0 .596-.102l9.001-9.186a.474.474 0 0 0 .125-.452.488.488 0 0 0-.321-.347l-3.642-1.265a1.667 1.667 0 0 1-1.075-1.957l1.032-4.373a.48.48 0 0 0-.257-.54Z"
                                 fill="currentColor"></path>
                         </svg></span>
-                    <p class="Typography_p1">Trendy categories</p>
+                    <p class="Typography_p1">{{ t('common.trending') }} {{ t('navigation.categories') }}</p>
                 </div>
                 <div class="TrendingCategories_grid__Q7ua_">
                     <a v-for="(cat, i) in trendingCategories" :key="i" class="TrendingCategories_card" :href="cat.href"
@@ -138,6 +141,6 @@ const setActiveTab = (tabName: string) => {
 
 
         </div><button class="Button_button Button_secondary MarketplaceContent_showMoreButton mb-4"
-            data-analytic-label=""><span class="Button_content">Show more</span></button>
+            data-analytic-label=""><span class="Button_content">{{ t('common.showAll') }}</span></button>
     </div>
 </template>

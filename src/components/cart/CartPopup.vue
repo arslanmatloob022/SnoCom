@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { UsePannelsStore } from '@/stores/UsePannelsStore'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const popupRef = ref<HTMLElement | null>(null)
 const pannel= UsePannelsStore()
@@ -39,7 +42,7 @@ onMounted(() => {
             <div ref="popupRef" class="Popup_popup CartButton_cart">
                 <div  class="MarketplaceCart_cart">
                     <div class="MarketplaceCart_header__C_sTJ">
-                        <h3 class="Typography_h3 MarketplaceCart_title">Cart</h3>
+                        <h3 class="Typography_h3 MarketplaceCart_title">{{ t('cart.cart') }}</h3>
                     </div>
                     <div class="MarketplaceCart_productsWrapper">
                         <div></div>
@@ -309,7 +312,7 @@ onMounted(() => {
                     <div class="MarketplaceCart_checkoutButtonWrapper__jxF_s">
                         <div class="MarketplaceCart_checkoutButton" data-test-id="checkoutBtn">
                             <h5 class="Typography_h5">541 QR</h5>
-                            <h5 class="Typography_h5">Checkout</h5>
+                            <h5 class="Typography_h5">{{ t('cart.checkout') }}</h5>
                         </div>
                     </div>
                 </div>
