@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 
-conconst { t } = useI18n()
+const { t } = useI18n()
 const products = ref([
   {
     id: "653a14c7a05a1ab3a7d71541",

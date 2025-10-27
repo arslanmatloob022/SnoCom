@@ -1,18 +1,20 @@
 <script lang="ts" setup>
 import CartPopup from "@/components/cart/CartPopup.vue";
+import Login from "@/components/auth/Login.vue";
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 import { UsePannelsStore } from "@/stores/UsePannelsStore";
 import { useUserStore } from "@/stores/useUserStore";
 import { useI18n } from 'vue-i18n';
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const { t } = useI18n();
 
-const store = useUserStore();
-
+const userSession = useUserStore();
+const showProfilePopup = ref(false);
 const drawer = ref(false);
 const mapContainer = ref(false);
 const isFocused = ref(false);
-const { isLoggedIn, userInfo } = storeToRefs(store);
 const showMap = ref(false);
 const isCatalogOpen = ref(false);
 const isShowingChild = ref(false);
@@ -21,6 +23,12 @@ const pannel = UsePannelsStore();
 
 function openCart() {
   cartPopup.value?.open();
+}
+
+const movetoFavourite = ()=>{
+  console.log("clicked")
+  router.push("/favorites")
+  console.log("pushed")
 }
 const catalogCategories = ref([
   {
@@ -246,33 +254,17 @@ onBeforeUnmount(() => {
 							</div> -->
 
         <div ref="mapContainer" class="LocationBlock_wrapper">
-          <div
-            @click="
-              () => {
-                showMap = !showMap;
-              }
-            "
-            class="Selector_wrapper"
-            data-analytic-label="locationSelector"
-            data-test-id="locationBtnOnHeader"
-          >
-            <span
-              data-test-id=""
-              class="Icon_iconWrapper Selector_icon"
-              style="width: 20px; height: 20px"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 25 25"
-                fill="none"
-                class="Icon_icon"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+          <div @click="
+            () => {
+              showMap = !showMap;
+            }
+          " class="Selector_wrapper" data-analytic-label="locationSelector" data-test-id="locationBtnOnHeader">
+            <span data-test-id="" class="Icon_iconWrapper Selector_icon" style="width: 20px; height: 20px"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none" class="Icon_icon">
+                <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M7.06 4.406a8 8 0 0 1 13.656 5.657c0 4.829-3.922 9.212-8 12-4.078-2.788-8-7.171-8-12A8 8 0 0 1 7.06 4.406Zm7.906 5.657a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
-                  fill="currentColor"
-                ></path></svg
-            ></span>
+                  fill="currentColor"></path>
+              </svg></span>
             <p class="Typography_p6 Selector_location">{{ t('header.location') }}</p>
           </div>
           <div v-if="showMap" class="Popup_popupEnterDone">
@@ -282,8 +274,7 @@ onBeforeUnmount(() => {
                 {{ t('header.locationDesc') }}
               </p>
               <div class="LocationBlock_mapWrapper">
-                <span
-                  style="
+                <span style="
                     box-sizing: border-box;
                     display: block;
                     overflow: hidden;
@@ -295,9 +286,7 @@ onBeforeUnmount(() => {
                     margin: 0px;
                     padding: 0px;
                     position: relative;
-                  "
-                  ><span
-                    style="
+                  "><span style="
                       box-sizing: border-box;
                       display: block;
                       width: initial;
@@ -307,14 +296,8 @@ onBeforeUnmount(() => {
                       border: 0px;
                       margin: 0px;
                       padding: 44.4444% 0px 0px;
-                    "
-                  ></span
-                  ><img
-                    alt="map"
-                    decoding="async"
-                    data-nimg="responsive"
-                    src="/static/media/map.527f1b44.png"
-                    style="
+                    "></span><img alt="map" decoding="async" data-nimg="responsive"
+                    src="/static/media/map.527f1b44.png" style="
                       position: absolute;
                       inset: 0px;
                       box-sizing: border-box;
@@ -330,43 +313,24 @@ onBeforeUnmount(() => {
                       max-height: 100%;
                       object-fit: cover;
                       object-position: center center;
-                    " /><noscript></noscript
-                ></span>
+                    " /><noscript></noscript></span>
               </div>
               <div class="LocationBlock_mapButtons">
-                <button
-                  class="Button_button Button_secondary Button_small LocationBlock_skipButton"
-                  data-analytic-label="selectLocationSkip"
-                >
-                  <span class="Button_content">{{ t('header.skip') }}</span></button
-                ><button
+                <button class="Button_button Button_secondary Button_small LocationBlock_skipButton"
+                  data-analytic-label="selectLocationSkip">
+                  <span class="Button_content">{{ t('header.skip') }}</span></button><button
                   class="Button_button Button_primary Button_small LocationBlock_desktopButton__3j_Su"
-                  data-test-id="selectAddressBtn"
-                  data-analytic-label="selectLocation"
-                  data-analytic-element-location="header"
-                >
-                  <span class="Button_content"
-                    ><span data-test-id="" class="Icon_iconWrapper Button_icon"
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 25 25"
-                        fill="none"
-                        class="Icon_icon"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
+                  data-test-id="selectAddressBtn" data-analytic-label="selectLocation"
+                  data-analytic-element-location="header">
+                  <span class="Button_content"><span data-test-id="" class="Icon_iconWrapper Button_icon"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none" class="Icon_icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
                           d="m20.014 5.555-15.347 7.27 5.734 1.434c.448.111.798.461.91.909l1.434 5.734 7.27-15.347Zm-.944-2.32A2.45 2.45 0 0 1 22.334 6.5l-7.39 15.6a2.45 2.45 0 0 1-4.591-.455l-1.286-5.142-5.142-1.286a2.45 2.45 0 0 1-.454-4.59l15.6-7.39Z"
-                          fill="currentColor"
-                        ></path></svg></span
-                    >{{ t('header.selectAddress') }}</span
-                  ></button
-                ><button
+                          fill="currentColor"></path>
+                      </svg></span>{{ t('header.selectAddress') }}</span></button><button
                   class="Button_button Button_primary Button_small LocationBlock_mobileButton"
-                  data-test-id="selectAddressBtn"
-                  data-analytic-label="selectLocation"
-                  data-analytic-element-location="header"
-                >
+                  data-test-id="selectAddressBtn" data-analytic-label="selectLocation"
+                  data-analytic-element-location="header">
                   <span class="Button_content">{{ t('header.selectAddress') }}</span>
                 </button>
               </div>
@@ -376,31 +340,21 @@ onBeforeUnmount(() => {
       </div>
       <div class="Subheader_links">
         <a class="Subheader_link Subheader_activeLink" href="/">
-          <p class="Typography_p6">{{ t('header.market') }}</p> </a
-        ><a class="Subheader_link" href="/restaurants?source=header">
-          <p class="Typography_p6">{{ t('header.restaurants') }}</p> </a
-        ><a class="Subheader_link" href="/grocery">
-          <p class="Typography_p6">{{ t('header.grocery') }}</p> </a
-        ><a class="Subheader_link" href="/scity?source=header">
+          <p class="Typography_p6">{{ t('header.market') }}</p>
+        </a><a class="Subheader_link" href="/restaurants?source=header">
+          <p class="Typography_p6">{{ t('header.restaurants') }}</p>
+        </a><a class="Subheader_link" href="/grocery">
+          <p class="Typography_p6">{{ t('header.grocery') }}</p>
+        </a><a class="Subheader_link" href="/scity?source=header">
           <p class="Typography_p6">{{ t('header.scity') }}</p>
         </a>
       </div>
     </div>
     <div class="Header_nav">
       <div class="Header_logoWithCatalog">
-        <a
-          rel="noopener noreferrer"
-          data-analytic-label="logo"
-          data-analytic-element-location="header"
-          data-test-id="snoonulogo"
-          class="Logo_logo__oq6_b"
-          href="/"
-          ><img
-            alt="Snoonu"
-            decoding="async"
-            data-nimg="fill"
-            class="Logo_fullLogo"
-            style="
+        <a rel="noopener noreferrer" data-analytic-label="logo" data-analytic-element-location="header"
+          data-test-id="snoonulogo" class="Logo_logo__oq6_b" href="/"><img alt="Snoonu" decoding="async"
+            data-nimg="fill" class="Logo_fullLogo" style="
               position: absolute;
               height: 100%;
               width: 100%;
@@ -409,118 +363,52 @@ onBeforeUnmount(() => {
               right: 0;
               bottom: 0;
               color: transparent;
-            "
-            src="/static/media/logo.6da502f3.svg" /><span
-            data-test-id=""
-            class="Icon_iconWrapper Logo_miniLogo"
-            ><svg
-              width="35"
-              height="36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="Icon_icon"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+            " src="/static/media/logo.6da502f3.svg" /><span data-test-id="" class="Icon_iconWrapper Logo_miniLogo"><svg
+              width="35" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+              <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M20.366 32.5c8.12 0 12.979-4.404 12.979-9.953 0-8.582-14.282-7.723-14.282-10.638 0-.972 1.068-1.943 3.199-1.943 3.439 0 6.872 1.889 8.354 3.433L35 7.964C31.857 5.162 27.06 3.5 22.256 3.5H0l.045.26c.978 4.473 3.87 7.237 8.964 8.554-1.247.264-2.578.885-3.523 1.565 1.756 2.958 6.928 5.44 12.716 7.038 3.154.972 6.017 1.582 6.017 3.174 0 1.085-1.186 2.002-3.026 2.002-4.031 0-8.415-2.46-10.194-4.29l-4.803 5.661C9.69 30.724 15.087 32.5 20.36 32.5h.006Z"
-                fill="currentColor"
-              ></path></svg></span
-        ></a>
+                fill="currentColor"></path>
+            </svg></span></a>
         <div class="CatalogMenu_wrapper">
-          <button
-            @click.stop="
-              () => {
-                isCatalogOpen = !isCatalogOpen;
-              }
-            "
-            class="Button_button Button_secondary Button_small CatalogButton_button"
-            data-analytic-label="catalogMenuButton"
-            data-analytic-element-location="header"
-          >
-            <span class="Button_content"
-              ><span data-test-id="" class="Icon_iconWrapper Button_icon"
-                ><svg
-                  width="20"
-                  height="20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="Icon_icon"
-                >
-                  <path
-                    d="M0 5h20v2.5H0V5ZM20 15H0v-2.5h20V15Z"
-                    fill="currentColor"
-                  ></path></svg></span
-              ><span class="CatalogButton_text">{{ t('header.catalog') }}</span></span
-            >
+          <button @click.stop="
+            () => {
+              isCatalogOpen = !isCatalogOpen;
+            }
+          " class="Button_button Button_secondary Button_small CatalogButton_button"
+            data-analytic-label="catalogMenuButton" data-analytic-element-location="header">
+            <span class="Button_content"><span data-test-id="" class="Icon_iconWrapper Button_icon"><svg width="20"
+                  height="20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                  <path d="M0 5h20v2.5H0V5ZM20 15H0v-2.5h20V15Z" fill="currentColor"></path>
+                </svg></span><span class="CatalogButton_text">{{ t('header.catalog') }}</span></span>
           </button>
           <div v-show="isCatalogOpen" class="CatalogDrawer_overlay">
-            <div
-              class="CatalogDrawer_drawer catalog-drawer"
-              :class="{ CatalogDrawer_open: isCatalogOpen }"
-            >
-              <span
-                data-test-id=""
-                @click="
+            <div class="CatalogDrawer_drawer catalog-drawer" :class="{ CatalogDrawer_open: isCatalogOpen }">
+              <span data-test-id="" @click="
+                () => {
+                  isCatalogOpen = false;
+                }
+              " class="Icon_iconWrapper CatalogDrawer_icon CatalogDrawer_open" style="width: 24px; height: 24px"><svg
+                  viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.82 10 18 3.82 16.18 2 10 8.18 3.82 2 2 3.82 8.18 10 2 16.18 3.82 18 10 11.82 16.18 18 18 16.18 11.82 10Z"
+                    fill="currentColor"></path>
+                </svg></span>
+              <div class="CatalogDrawer_header">
+                <div class="CatalogDrawer_cross" @click="
                   () => {
                     isCatalogOpen = false;
                   }
-                "
-                class="Icon_iconWrapper CatalogDrawer_icon CatalogDrawer_open"
-                style="width: 24px; height: 24px"
-                ><svg
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="Icon_icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M11.82 10 18 3.82 16.18 2 10 8.18 3.82 2 2 3.82 8.18 10 2 16.18 3.82 18 10 11.82 16.18 18 18 16.18 11.82 10Z"
-                    fill="currentColor"
-                  ></path></svg
-              ></span>
-              <div class="CatalogDrawer_header">
-                <div
-                  class="CatalogDrawer_cross"
-                  @click="
-                    () => {
-                      isCatalogOpen = false;
-                    }
-                  "
-                >
-                  <span
-                    data-test-id=""
-                    class="Icon_iconWrapper"
-                    style="width: 16px; height: 16px"
-                    ><svg
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="Icon_icon"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                ">
+                  <span data-test-id="" class="Icon_iconWrapper" style="width: 16px; height: 16px"><svg
+                      viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M11.82 10 18 3.82 16.18 2 10 8.18 3.82 2 2 3.82 8.18 10 2 16.18 3.82 18 10 11.82 16.18 18 18 16.18 11.82 10Z"
-                        fill="currentColor"
-                      ></path></svg
-                  ></span>
+                        fill="currentColor"></path>
+                    </svg></span>
                 </div>
-                <a
-                  rel="noopener noreferrer"
-                  data-analytic-label="logo"
-                  data-analytic-element-location="header"
-                  data-test-id="snoonulogo"
-                  class="Logo_logo__oq6_b Logo_isFullForm"
-                  href="/"
-                  ><img
-                    alt="Snoonu"
-                    decoding="async"
-                    data-nimg="fill"
-                    class="Logo_fullLogo"
-                    style="
+                <a rel="noopener noreferrer" data-analytic-label="logo" data-analytic-element-location="header"
+                  data-test-id="snoonulogo" class="Logo_logo__oq6_b Logo_isFullForm" href="/"><img alt="Snoonu"
+                    decoding="async" data-nimg="fill" class="Logo_fullLogo" style="
                       position: absolute;
                       height: 100%;
                       width: 100%;
@@ -529,27 +417,14 @@ onBeforeUnmount(() => {
                       right: 0;
                       bottom: 0;
                       color: transparent;
-                    "
-                    src="/static/media/logo.6da502f3.svg" /><span
-                    data-test-id=""
-                    class="Icon_iconWrapper Logo_miniLogo"
-                    ><svg
-                      width="35"
-                      height="36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="Icon_icon"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                    " src="/static/media/logo.6da502f3.svg" /><span data-test-id=""
+                    class="Icon_iconWrapper Logo_miniLogo"><svg width="35" height="36" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M20.366 32.5c8.12 0 12.979-4.404 12.979-9.953 0-8.582-14.282-7.723-14.282-10.638 0-.972 1.068-1.943 3.199-1.943 3.439 0 6.872 1.889 8.354 3.433L35 7.964C31.857 5.162 27.06 3.5 22.256 3.5H0l.045.26c.978 4.473 3.87 7.237 8.964 8.554-1.247.264-2.578.885-3.523 1.565 1.756 2.958 6.928 5.44 12.716 7.038 3.154.972 6.017 1.582 6.017 3.174 0 1.085-1.186 2.002-3.026 2.002-4.031 0-8.415-2.46-10.194-4.29l-4.803 5.661C9.69 30.724 15.087 32.5 20.36 32.5h.006Z"
-                        fill="currentColor"
-                      ></path></svg></span
-                ></a>
-                <div
-                  class="LocaleSwitcher_wrapper CatalogDrawer_languageSwitcher"
-                >
+                        fill="currentColor"></path>
+                    </svg></span></a>
+                <div class="LocaleSwitcher_wrapper CatalogDrawer_languageSwitcher">
                   <LanguageSwitcher />
                 </div>
               </div>
@@ -559,13 +434,8 @@ onBeforeUnmount(() => {
                   <!-- First List -->
                   <div class="CatalogCategoryList_list">
                     <template v-for="cat in catalogCategories" :key="cat.label">
-                      <a
-                        v-if="cat.external"
-                        class="CatalogCategory_category"
-                        :href="cat.href"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a v-if="cat.external" class="CatalogCategory_category" :href="cat.href" target="_blank"
+                        rel="noopener noreferrer">
                         <div class="CatalogCategory_imageWrapper">
                           <img :alt="cat.alt" :src="cat.img" />
                         </div>
@@ -574,24 +444,16 @@ onBeforeUnmount(() => {
                         </p>
                       </a>
 
-                      <div
-                        v-else
-                        class="CatalogCategory_category"
-                        @click="isShowingChild = true"
-                      >
+                      <div v-else class="CatalogCategory_category" @click="isShowingChild = true">
                         <div class="CatalogCategory_imageWrapper">
                           <img :alt="cat.alt" :src="cat.img" />
                         </div>
                         <p class="Typography_p5 CatalogCategory_label">
                           {{ cat.label }}
                         </p>
-                        <span
-                          v-if="cat.hasIcon"
-                          class="Icon_iconWrapper CatalogCategory_icon"
-                        >
+                        <span v-if="cat.hasIcon" class="Icon_iconWrapper CatalogCategory_icon">
                           <i
-                            class="fas fa-chevron-right text-gray-500 bg-white rounded-full p-1 shadow-sm hover:text-gray-700"
-                          ></i>
+                            class="fas fa-chevron-right text-gray-500 bg-white rounded-full p-1 shadow-sm hover:text-gray-700"></i>
 
                           <!-- <FontAwesomeIcon :icon="faChevronRight" /> -->
                         </span>
@@ -608,125 +470,69 @@ onBeforeUnmount(() => {
 
                   <!-- Market List -->
                   <div class="CatalogCategoryList_list">
-                    <div
-                      v-for="cat in marketCategories"
-                      :key="cat.label"
-                      class="CatalogCategory_category"
-                      @click="isShowingChild = true"
-                    >
+                    <div v-for="cat in marketCategories" :key="cat.label" class="CatalogCategory_category"
+                      @click="isShowingChild = true">
                       <div class="CatalogCategory_imageWrapper">
                         <img :alt="cat.alt" :src="cat.img" />
                       </div>
                       <p class="Typography_p5 CatalogCategory_label">
                         {{ cat.label }}
                       </p>
-                      <span
-                        v-if="cat.hasIcon"
-                        class="Icon_iconWrapper CatalogCategory_icon"
-                      >
+                      <span v-if="cat.hasIcon" class="Icon_iconWrapper CatalogCategory_icon">
                         <i
-                          class="fas fa-chevron-right text-gray-500 bg-white rounded-full p-1 shadow-sm hover:text-gray-700"
-                        ></i>
+                          class="fas fa-chevron-right text-gray-500 bg-white rounded-full p-1 shadow-sm hover:text-gray-700"></i>
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div
-                  v-if="isShowingChild"
-                  class="CatalogMarketplaceCategory_wrapper"
-                >
+                <div v-if="isShowingChild" class="CatalogMarketplaceCategory_wrapper">
                   <div class="CatalogMarketplaceCategory_back">
-                    <span
-                      data-test-id=""
-                      class="Icon_iconWrapper CatalogMarketplaceCategory_backIcon CatalogMarketplaceCategory_backIconGray"
-                      ><svg
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="Icon_icon"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
+                    <span data-test-id=""
+                      class="Icon_iconWrapper CatalogMarketplaceCategory_backIcon CatalogMarketplaceCategory_backIconGray"><svg
+                        viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
                           d="m1 10 9.325-8L12 3.956 6.412 8.75H19v2.5H6.412L12 16.044 10.325 18 1 10Z"
-                          fill="currentColor"
-                        ></path></svg
-                    ></span>
-                    <p
-                      class="Typography_p6"
-                      @click="
-                        () => {
-                          isShowingChild = false;
-                        }
-                      "
-                    >
+                          fill="currentColor"></path>
+                      </svg></span>
+                    <p class="Typography_p6" @click="
+                      () => {
+                        isShowingChild = false;
+                      }
+                    ">
                       {{ t('common.goBack') }}
                     </p>
                   </div>
                   <!-- dynamic -->
                   <div>
                     <!-- Category Title -->
-                    <a
-                      :href="category.href"
-                      class="CatalogMarketplaceCategory_title"
-                      rel="noopener noreferrer"
-                      data-analytic-label="category"
-                    >
+                    <a :href="category.href" class="CatalogMarketplaceCategory_title" rel="noopener noreferrer"
+                      data-analytic-label="category">
                       <h3 class="Typography_h3">{{ category.title }}</h3>
-                      <span
-                        data-test-id=""
-                        class="Icon_iconWrapper CatalogMarketplaceCategory_rightIcon"
-                      >
-                        <svg
-                          viewBox="0 0 21 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="Icon_icon"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="m7.8 2 9.325 8L7.8 18l-1.675-1.956L13.17 10 6.125 3.956 7.8 2Z"
-                            fill="currentColor"
-                          />
+                      <span data-test-id="" class="Icon_iconWrapper CatalogMarketplaceCategory_rightIcon">
+                        <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="m7.8 2 9.325 8L7.8 18l-1.675-1.956L13.17 10 6.125 3.956 7.8 2Z" fill="currentColor" />
                         </svg>
                       </span>
                     </a>
 
                     <!-- Subcategories -->
                     <div class="CatalogMarketplaceCategory_list">
-                      <a
-                        v-for="(item, index) in category.items"
-                        :key="index"
-                        :href="item.href"
-                        class="CatalogMarketplaceCategory_category"
-                        rel="noopener noreferrer"
-                        data-analytic-label="category"
-                        :data-analytic-event-content="item.name"
-                        data-analytic-element-location="catalog"
-                      >
-                        <div
-                          class="CatalogMarketplaceCategory_imageWrapper___jHu5"
-                        >
-                          <img
-                            :src="item.img"
-                            :alt="item.name"
-                            decoding="async"
-                            loading="lazy"
-                            data-nimg="fill"
-                            style="
+                      <a v-for="(item, index) in category.items" :key="index" :href="item.href"
+                        class="CatalogMarketplaceCategory_category" rel="noopener noreferrer"
+                        data-analytic-label="category" :data-analytic-event-content="item.name"
+                        data-analytic-element-location="catalog">
+                        <div class="CatalogMarketplaceCategory_imageWrapper___jHu5">
+                          <img :src="item.img" :alt="item.name" decoding="async" loading="lazy" data-nimg="fill" style="
                               position: absolute;
                               height: 100%;
                               width: 100%;
                               inset: 0px;
                               color: transparent;
-                            "
-                          />
+                            " />
                         </div>
-                        <p
-                          class="Typography_p5 CatalogMarketplaceCategory_label"
-                        >
+                        <p class="Typography_p5 CatalogMarketplaceCategory_label">
                           {{ item.name }}
                         </p>
                       </a>
@@ -735,23 +541,12 @@ onBeforeUnmount(() => {
                 </div>
               </div>
 
-              <span
-                data-test-id=""
-                class="Icon_iconWrapper CatalogDrawer_icon"
-                style="width: 24px; height: 24px"
-                ><svg
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="Icon_icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+              <span data-test-id="" class="Icon_iconWrapper CatalogDrawer_icon" style="width: 24px; height: 24px"><svg
+                  viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M11.82 10 18 3.82 16.18 2 10 8.18 3.82 2 2 3.82 8.18 10 2 16.18 3.82 18 10 11.82 16.18 18 18 16.18 11.82 10Z"
-                    fill="currentColor"
-                  ></path></svg
-              ></span>
+                    fill="currentColor"></path>
+                </svg></span>
             </div>
           </div>
         </div>
@@ -761,99 +556,142 @@ onBeforeUnmount(() => {
           <div class="SearchSelector_wrapper__P_w2s">
             <div class="SearchSelector_selector">
               <p class="Typography_p8 SearchSelector_label">{{ t('header.market') }}</p>
-              <span
-                data-test-id=""
-                class="Icon_iconWrapper SearchSelector_chevronDown"
-                style="width: 16px; height: 16px"
-                ><svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="Icon_icon"
-                >
-                  <path
-                    d="m12 13.232-6-6L4.232 9 12 16.768 19.768 9 18 7.232l-6 6Z"
-                    fill="currentColor"
-                  ></path></svg
-              ></span>
+              <span data-test-id="" class="Icon_iconWrapper SearchSelector_chevronDown"
+                style="width: 16px; height: 16px"><svg viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                  <path d="m12 13.232-6-6L4.232 9 12 16.768 19.768 9 18 7.232l-6 6Z" fill="currentColor"></path>
+                </svg></span>
             </div>
           </div>
           <div class="Autocomplete_wrapper">
-            <input
-              data-test-id="searchField"
-              @focus="isFocused = true"
-              @blur="isFocused = false"
-              class="Autocomplete_input Autocomplete_small Search_input__djH_7"
-:placeholder="t('header.search')"
-              autoComplete="off"
-              type="search"
-              name="search"
-              value=""
-            />
+            <input data-test-id="searchField" @focus="isFocused = true" @blur="isFocused = false"
+              class="Autocomplete_input Autocomplete_small Search_input__djH_7" :placeholder="t('header.search')"
+              autoComplete="off" type="search" name="search" value="" />
             <div class="Autocomplete_rightSection">
               <button data-test-id="searchFieldBtn" class="SearchButton_button">
-                <span
-                  data-test-id=""
-                  class="Icon_iconWrapper SearchButton_searchIcon"
-                  style="width: 20px; height: 20px"
-                  ><svg
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="Icon_icon"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                <span data-test-id="" class="Icon_iconWrapper SearchButton_searchIcon"
+                  style="width: 20px; height: 20px"><svg viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M9 .75a8.25 8.25 0 1 0 4.883 14.9l3.467 3.468 1.768-1.768-3.467-3.467A8.25 8.25 0 0 0 9 .75ZM3.25 9a5.75 5.75 0 1 1 11.5 0 5.75 5.75 0 0 1-11.5 0Z"
-                      fill="currentColor"
-                    ></path></svg
-                ></span>
+                      fill="currentColor"></path>
+                  </svg></span>
               </button>
             </div>
           </div>
         </form>
       </div>
+      <div v-if="userSession.isLoggedIn" class="MyOrdersButton_wrapper__bZ_YY"><router-link to="/order-history">
+          <div class="MyOrdersButton_myOrder__L_Ta6">
+            <div class="MyOrdersButton_iconContainer"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg" class="MyOrdersButton_icon">
+                <path
+                  d="M18.3332 5.76004V14.2381C18.3335 14.4652 18.2686 14.6876 18.1463 14.8793C18.0239 15.0709 17.8491 15.2238 17.6424 15.32L10.5128 18.6375C10.3534 18.7116 10.1795 18.75 10.0035 18.75C9.82757 18.75 9.65373 18.7116 9.49428 18.6375L2.3591 15.32C2.15248 15.2236 1.97767 15.0706 1.85504 14.8791C1.73242 14.6875 1.66703 14.4652 1.6665 14.2381V5.76004C1.6673 5.53333 1.73271 5.31149 1.85515 5.12031C1.97758 4.92913 2.15201 4.77645 2.35817 4.68001L9.49336 1.3625C9.65281 1.2884 9.82664 1.25 10.0026 1.25C10.1786 1.25 10.3524 1.2884 10.5119 1.3625L12.9454 2.40132L5.01795 6.26887C4.90381 6.3219 4.80727 6.40627 4.73969 6.51206C4.6721 6.61785 4.63629 6.74066 4.63647 6.86602V9.83888C4.6365 9.91927 4.6595 9.998 4.70278 10.0659C4.74606 10.1338 4.80784 10.188 4.88092 10.2222L6.29018 10.8793C6.33252 10.899 6.37918 10.9077 6.42582 10.9047C6.47246 10.9017 6.51759 10.887 6.55701 10.862C6.59643 10.837 6.62888 10.8025 6.65135 10.7617C6.67382 10.7209 6.68558 10.6751 6.68555 10.6286V7.87049C6.68539 7.76771 6.71465 7.66702 6.76992 7.58019C6.82518 7.49337 6.90415 7.42401 6.99758 7.38024L15.2174 3.54837L17.6424 4.67816C17.8492 4.77424 18.024 4.92711 18.1464 5.11878C18.2688 5.31046 18.3336 5.53294 18.3332 5.76004Z"
+                  fill="currentColor"></path>
+              </svg></div>
+            <p class="Typography_p11">My orders</p>
+          </div>
+        </router-link></div>
+
+
+      <router-link style="margin-right: 10px;" v-if="userSession.isLoggedIn" class="FavouritesButton_wrapper" data-test-id="favoriteBtn" to="favorites">
+        <div class="FavouritesButton_iconContainer"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg" class="FavouritesButton_icon">
+            <path
+              d="M14.4542 2.5C12.4577 2.5 10.6858 4.09133 10.0001 5.90448C9.33737 4.10599 7.54621 2.5 5.54972 2.5C3.17282 2.5 0.833496 4.31682 0.833496 7.19331C0.833496 11.8417 5.8238 15.8429 10.0001 17.6249C14.1764 15.8429 19.1667 11.8417 19.1667 7.19331C19.1667 4.31682 16.8311 2.5 14.4542 2.5Z"
+              fill="currentColor"></path>
+          </svg></div>
+        <p class="Typography_p11 FavouritesButton_label">Favorites</p>
+      </router-link>
+
+
+
       <div class="Header_sideWrapper">
-        <div class="LoginButton_wrapper__by23_">
-          <button
-            class="Button_button Button_secondary Button_small"
-            data-test-id="loginBtn"
-            data-analytic-label="loginButton"
-            data-analytic-element-location="header"
-          >
-            <span class="Button_content">{{ t('header.login') }}</span>
+
+        <div class="UserPreview_wrapper" v-if="userSession.isLoggedIn">
+          <div @click="()=>{showProfilePopup = !showProfilePopup}" data-analytic-label="userPreview" data-test-id="profileIcon" data-analytic-element-location="header"
+            class="UserPreview_avatar__CgMH_">f</div>
+          <div v-show="showProfilePopup" class="Popup_popupEnterDone">
+            <div class="Popup_popup UserPreviewPopup_popup">
+              <div class="UserPreviewPopup_nameWrapper___2Izb">
+                <p class="Typography_p2 UserPreviewPopup_name__87_Kt">farhan</p>
+              </div>
+              <div class="Wallet_wrapper">
+                <div class="Wallet_iconWrapper"><span data-test-id=""
+                    class="Icon_iconWrapper Wallet_icon"><svg xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25" fill="none" class="Icon_icon">
+                      <path
+                        d="M20.693 4.25H3.945a2.625 2.625 0 0 0-2.626 2.625V7.89h22V6.875a2.625 2.625 0 0 0-2.626-2.625Z"
+                        fill="currentColor"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.32 10.407h22v7.213a2.626 2.626 0 0 1-2.626 2.626H3.944A2.625 2.625 0 0 1 1.32 17.62v-7.213Zm8.88 6.927H5.11c-.699 0-.897-.566-.897-1.265s.198-1.265.897-1.265h5.092c.699 0 .897.566.897 1.265s-.198 1.265-.897 1.265Z"
+                        fill="currentColor"></path>
+                    </svg></span></div>
+                <div class="Wallet_info">
+                  <p class="Typography_p6 Wallet_balance">0 QR</p>
+                  <p class="Typography_p8 Wallet_label">Snoonu Wallet</p>
+                </div>
+              </div>
+              <div data-analytic-label="myAccount" @click="()=>{pannel.profileModalOpen = true, showProfilePopup = false}" data-test-id="myAccountBtn"
+                data-analytic-element-location="profile_popup" class="UserPreviewPopup_option">
+                <p class="Typography_p6">My Account</p>
+              </div><router-link to="/order-history?source=profile" @click = "showProfilePopup = false" data-analytic-label="orderHistoryLink"
+                data-analytic-element-location="profile_popup"
+                class="UserPreviewPopup_option UserPreviewPopup_link"
+                href="/order-history?source=profile">
+                <p class="Typography_p6">Orders</p>
+              </router-link><router-link to="/favorites" @click = "showProfilePopup = false" data-analytic-label="favouritesLink" data-test-id="favoriteProfileBtn"
+                data-analytic-element-location="profile_popup"
+                class="UserPreviewPopup_option UserPreviewPopup_link">
+                <p class="Typography_p6">Favorites</p>
+            </router-link>
+              <div data-analytic-label="savedCards" data-test-id="savedCardsBtn"
+                data-analytic-element-location="profile_popup" class="UserPreviewPopup_option">
+                <p class="Typography_p6">Saved cards</p>
+              </div>
+              <div data-analytic-label="myAddresses" data-test-id="myAddressesBtn"
+                data-analytic-element-location="profile_popup" class="UserPreviewPopup_option">
+                <p class="Typography_p6">My Addresses</p>
+              </div>
+              <div data-analytic-label="chatWithUs" data-analytic-element-location="profile_popup"
+                class="UserPreviewPopup_option">
+                <p class="Typography_p6">Chat with us</p>
+              </div>
+              <div @click="()=>{userSession.userInfo = null; showProfilePopup = false; router.push('/')}" data-analytic-label="logout" data-analytic-element-location="profile_popup"
+                class="UserPreviewPopup_option UserPreviewPopup_logout">
+                <p class="Typography_p6">Log out</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="!userSession.isLoggedIn" class="LoginButton_wrapper__by23_">
+          <button class="Button_button Button_secondary Button_small" data-test-id="loginBtn"
+            data-analytic-label="loginButton" data-analytic-element-location="header">
+            <span class="Button_content" @click.stop="pannel.setLoginModal(true)">{{ t('header.login') }}</span>
           </button>
         </div>
 
         <div class="CartButton_wrapper__DN_bX">
-          <button
-            @click.stop="pannel.setCartModal(true)"
-            class="Button_button Button_primary Button_small"
-            data-test-id="cartBtn"
-            data-analytic-label="cartButton"
-            data-analytic-element-location="header"
-          >
-            <span class="Button_content"
-              ><span data-test-id="" class="Icon_iconWrapper Button_icon"
-                ><svg
-                  viewBox="0 0 20 19"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="Icon_icon"
-                >
+          <button @click.stop="pannel.setCartModal(true)" class="Button_button Button_primary Button_small"
+            data-test-id="cartBtn" data-analytic-label="cartButton" data-analytic-element-location="header">
+            <span class="Button_content"><span data-test-id="" class="Icon_iconWrapper Button_icon"><svg
+                  viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon_icon">
                   <path
                     d="M4.784 13.668c-.561.306-.983.813-1.179 1.417a2.468 2.468 0 0 0 .124 1.832 2.5 2.5 0 0 0 1.359 1.249c.597.229 1.26.223 1.852-.017a2.5 2.5 0 0 0 1.336-1.272 2.467 2.467 0 0 0 .091-1.834h3.571a2.463 2.463 0 0 0 .187 2.016 2.502 2.502 0 0 0 1.64 1.208 2.522 2.522 0 0 0 2.002-.405 2.47 2.47 0 0 0 .406-3.676 2.515 2.515 0 0 0-1.867-.825H6.462l-.211-1.694h11.326L20 3.343l-15.352.328-.154-1.379L.848.833 0 2.293l2.917 1.05 1.867 10.325Z"
-                    fill="currentColor"
-                  ></path></svg
-              ></span>
+                    fill="currentColor"></path>
+                </svg></span>
               <div class="CartButton_cartButton">541 QR</div>
             </span>
           </button>
         </div>
       </div>
+
+
+
     </div>
 
     <CartPopup v-if="pannel.cartModalOpen" />
+    <Login v-if="pannel.loginModalOpen" />
+    <ProfileModal v-if="pannel.profileModalOpen"/>
   </header>
 </template>

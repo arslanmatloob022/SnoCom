@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { UsePannelsStore } from '@/stores/UsePannelsStore'
 import { useI18n } from 'vue-i18n'
-
+import { useRouter } from 'vue-router'
 const { t } = useI18n()
-
+const router = useRouter()
 const popupRef = ref<HTMLElement | null>(null)
 const pannel= UsePannelsStore()
 
@@ -310,7 +310,7 @@ onMounted(() => {
                         <div></div>
                     </div>
                     <div class="MarketplaceCart_checkoutButtonWrapper__jxF_s">
-                        <div class="MarketplaceCart_checkoutButton" data-test-id="checkoutBtn">
+                        <div class="MarketplaceCart_checkoutButton" @click="()=>{router.push('/checkout'); pannel.cartModalOpen = false}" data-test-id="checkoutBtn">
                             <h5 class="Typography_h5">541 QR</h5>
                             <h5 class="Typography_h5">{{ t('cart.checkout') }}</h5>
                         </div>

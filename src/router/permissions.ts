@@ -6,7 +6,7 @@ router.beforeEach(async (to) => {
   const token = localStorage.getItem('jwt-token')
   const WHITE_LIST = ['Root', 'Login', 'Register', 'ArticleId?']
 
-  if (!store.isLoggedIn) {
+  if (store.isLoggedIn) {
     return true
   } else {
     if (token) {
